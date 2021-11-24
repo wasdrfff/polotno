@@ -3,17 +3,17 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import { MainPage } from './pages/main';
-import { QuestionnairePage } from './pages/questionnaire';
+import { MainPage } from "./pages/main";
+import { QuestionnairePage } from "./pages/questionnaire";
 
 export const App=()=>(
   <div>
     <Router>
       <Switch>
-        <Route path='/questionnaire'>
+        <Route path="/questionnaire">
           <QuestionnairePage/>
         </Route>
-        <Route path='/'>
+        <Route path="/">
           <MainPage/>
         </Route>
         </Switch>

@@ -1,0 +1,24 @@
+.footers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
+    border-top: 1px solid #2f2a2b; 
+    background-color: #f9f4f5;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+.footers__icons{
+    display: flex;
+    flex-direction: row;
+    width:10vw;
+    justify-content: space-around;
+    padding-bottom:6px;
+}
+.footers span{
+    display: flex;
+    justify-content: space-around;
+    width:13vw;
+    padding-bottom:6px;
+}

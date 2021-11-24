@@ -4,6 +4,7 @@ import pinterest from "./images/pinterest.svg"
 import telegram from "./images/telegram.svg"
 import phone from "./images/phone.svg"
 import email from "./images/email.svg"
+
 export const Footer = () => {
     return (
         <footer className="footer">

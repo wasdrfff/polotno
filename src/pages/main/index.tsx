@@ -1,6 +1,7 @@
 import { Footer } from "../../components/footer/footer"
 import { Header } from "../../components/header/header"
 import "./style.css"
+
 export const MainPage = () => {
     return (
         <div className="main-page">

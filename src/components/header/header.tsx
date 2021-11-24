@@ -1,9 +1,10 @@
-import './style.css'
+import "./style.css"
+
 export const Header=()=>{
     return(
-        <header className='header'>
-            <img src='' alt='logo'/>
-            <div className='header__content'>
+        <header className="header">
+            <img src="" alt="logo"/>
+            <div className="header__content">
             <span>услуги</span>
             <span>портфолио</span>
             <span>магазин</span>

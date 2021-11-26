@@ -1,4 +1,5 @@
 import "./style.scss";
+
 type TProps = {
   title: string;
   time: string;
@@ -6,6 +7,7 @@ type TProps = {
   subtitle: string;
   days: string;
 };
+
 export const ContactCard = (props: TProps) => {
   return (
     <div className="contact-card">

@@ -1,22 +1,22 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ContactsPage } from "./pages/contacts";
 import { MainPage } from "./pages/main";
 import { QuestionnairePage } from "./pages/questionnaire";
 
-export const App=()=>(
+export const App = () => (
   <div>
     <Router>
       <Switch>
         <Route path="/questionnaire">
-          <QuestionnairePage/>
+          <QuestionnairePage />
+        </Route>
+        <Route path="/contacts">
+          <ContactsPage />
         </Route>
         <Route path="/">
-          <MainPage/>
+          <MainPage />
         </Route>
-        </Switch>
+      </Switch>
     </Router>
-    </div>
-)
+  </div>
+);

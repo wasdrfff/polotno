@@ -1,0 +1,59 @@
+.contacts-page {
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+  &__information {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    align-items: center;
+    padding: 0 30px;
+    background-color: #a7a7a7;
+    max-width: 400px;
+    color: #f6f1f1;
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  &__content input {
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  &__content button {
+    background-color: #fff99d;
+    color: #7b7777;
+    padding: 10px;
+    border: 0;
+  }
+  &__content b {
+    color: #fff99d;
+  }
+  &__cards {
+    display: flex;
+    padding: 10px 0;
+  }
+  &__bank-details {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+  &__bank-details h2 {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+  border-top: 1px solid #2f2a2b;
+  background-color: #f9f4f5;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    justify-content: space-around;
+    padding-bottom: 6px;
+  }
+  span {
+    display: flex;
+    padding-bottom: 6px;
+  }
+}

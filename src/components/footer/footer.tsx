@@ -9,17 +9,17 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__icons">
-        <img src={pinterest} alt="пинтерест" />
-        <img src={inst} alt="инст" />
-        <img src={telegram} alt="телега" />
+        <img src={pinterest} alt="pinterest" />
+        <img src={inst} alt="instagram" />
+        <img src={telegram} alt="telegram" />
       </div>
 
       <span>
-        <img src={phone} alt="телефон" />
+        <img src={phone} alt="handy" />
         +79126187687
       </span>
       <span>
-        <img src={email} alt="почта" />
+        <img src={email} alt="mail" />
         malykhm@mail.ru
       </span>
       <span>© полотно 2021</span>

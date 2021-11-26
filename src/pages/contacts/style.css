@@ -1,0 +1,67 @@
+.contacts-page__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacts-page__wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+.contacts-page__information{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contacts-page__form{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    align-items: center;
+    padding:0 30px;
+    background-color: #a7a7a7;
+    max-width: 400px;
+    color:#f6f1f1;
+}
+.contacts-page__content{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.contacts-page__content input{
+    padding:10px 0;
+    margin-bottom: 20px;
+}
+.contacts-page__content button{
+    background-color: #fff99d;
+    color:#7b7777;
+    padding:10px;
+    border:0;
+}
+.contacts-page__blocks{
+    display: flex;
+    padding:10px 0;
+    justify-content: space-around;
+}
+.contacts-page__block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border:1px solid #a7a7a7;
+    width:160px;
+    height: 160px;
+    padding:0 20px;
+    margin-left:10px;
+    background-color: #f9f4f5;
+}
+.contacts-page__requisites{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.contacts-page__requisites h2{
+    text-decoration: underline;
+}

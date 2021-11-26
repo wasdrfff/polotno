@@ -1,22 +1,24 @@
-.questionnaire-page__main{
-    display:flex;
+.questionnaire-page {
+  &__main {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     background-color: #a7a7a7;
     max-width: 400px;
-    padding:50px
-}
-.questionnaire-page__content{
+    padding: 50px;
+  }
+  &__content {
     display: flex;
     justify-content: center;
-    padding:50px 0;
-}
-.questionnaire-page__row{
+    padding: 50px 0;
+  }
+  &__row {
     display: flex;
     align-items: center;
-    padding:10px 0;
-}
-.questionnaire-page__actions{
+    padding: 10px 0;
+  }
+  &__actions {
     display: flex;
     justify-content: space-between;
+  }
 }

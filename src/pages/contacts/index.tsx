@@ -1,8 +1,8 @@
-import { ContactCard } from "../../components/contact-card/contact-card";
-import { Footer } from "../../components/footer/footer";
-import { Header } from "../../components/header/header";
-import camera from "./images/camera.svg";
-import cup from "./images/cup.svg";
+import { ContactCard } from "../../components/contact-card/index";
+import { Footer } from "../../components/footer/index";
+import { Header } from "../../components/header/index";
+import camera from "./assets/camera.svg";
+import cup from "./assets/cup.svg";
 import "./style.scss";
 
 export const ContactsPage = () => {
@@ -17,7 +17,7 @@ export const ContactsPage = () => {
           <main className="contacts-page__information">
             <h3>Связаться с Нами</h3>
             <h4>+79126187687</h4>
-            <h5>malykhm@mail.ru</h5>
+            <h4>malykhm@mail.ru</h4>
             <span>Вам нужна консультация?</span>
             <span>Вы хотите обсудить организационные вопросы?</span>
             <span>Позвоните или напишите нами и мы договоримся о встрече</span>

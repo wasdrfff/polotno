@@ -1,6 +1,6 @@
 import "./style.scss";
 
-type TProps = {
+export type TProps = {
   title: string;
   time: string;
   img: string;

@@ -9,18 +9,24 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__icons">
-        <a><img src={pinterest} alt="pinterest" /></a>
-        <a><img src={inst} alt="instagram" /></a>
-        <a><img src={telegram} alt="telegram" /></a>
+        <a href="pinterest.com">
+          <img src={pinterest} alt="pinterest" />
+        </a>
+        <a href="instagram.com">
+          <img src={inst} alt="instagram" />
+        </a>
+        <a href="web.telegram.org">
+          <img src={telegram} alt="telegram" />
+        </a>
       </div>
 
-      <a>
+      <a href="google.com">
         <span>
           <img src={phone} alt="handy" />
-        +79126187687
+          +79126187687
         </span>
       </a>
-      <a>
+      <a href="malykhm@mail.ru">
         <span>
           <img src={email} alt="mail" />
           malykhm@mail.ru

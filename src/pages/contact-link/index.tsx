@@ -31,9 +31,16 @@ export const ContactPage = () => {
             />
           </div>
           <h2>Пишите нам:</h2>
-          <span>
-            Оставьте заявку и мы свяжемся с вами в течение 1 рабочего дня
-          </span>
+          <div className="contact-page__form">
+            <span>
+              Оставьте заявку и мы свяжемся с вами в течение 1 рабочего дня
+            </span>
+            <input placeholder="Имя" />
+            <input placeholder="Телефон" />
+            <input placeholder="Электронная почта" />
+            <input placeholder="Сообщение" />
+            <button>Отправить сообщение</button>
+          </div>
         </main>
       </div>
       <Footer />

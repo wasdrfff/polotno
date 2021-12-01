@@ -2,7 +2,7 @@
   &__blocks {
     display: flex;
     max-width: 100vw;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
     padding: 100px 0;
   }
@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 42px;
-    max-width: 100vw;
+    width: 100vw;
   }
   &__descriptions {
     display: flex;

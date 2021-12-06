@@ -20,13 +20,13 @@ export const Footer = () => {
         </a>
       </div>
 
-      <a href="google.com">
+      <a href="tel:+78142332211">
         <span>
           <img src={phone} alt="handy" />
           +79126187687
         </span>
       </a>
-      <a href="malykhm@mail.ru">
+      <a href="mailto:malykhm@mail.ru">
         <span>
           <img src={email} alt="mail" />
           malykhm@mail.ru

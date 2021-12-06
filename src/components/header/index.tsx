@@ -1,16 +1,20 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { MobileMenu } from "../mobile-menu";
 import "./style.scss";
 
 export const Header = () => {
   return (
     <header className="header">
-      <img src="" alt="logo" />
       <div className="header__content">
-        <Link to="/"><span>услуги</span></Link>
-        <Link to="/"><span>портфолио</span></Link>
-        <Link to="/"><span>магазин</span></Link>
-        <Link to="/contact"><span>контакты</span></Link>
+        <img src="" alt="logo" />
+        <div className="header__menu">
+          <Link to="/">услуги</Link>
+          <Link to="/">портфолио</Link>
+          <Link to="/">магазин</Link>
+          <Link to="/contact">контакты</Link>
+        </div>
       </div>
+      <MobileMenu />
     </header>
   );
 };

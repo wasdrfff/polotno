@@ -4,23 +4,28 @@ import "slick-carousel/slick/slick-theme.css";
 import "./style.scss";
 import leftArrow from "./assets/image/left-arrow.svg";
 import rightArrow from "./assets/image/right-arrow.svg";
-const settings = {
+
+const SlickButtonFix = ({currentSlide, slideCount, children, ...props}:any) => (
+  <span {...props}>{children}</span>
+);
+
+const SETTINGS = {
   dots: true,
   fade: true,
   infinite: true,
   speed: 500,
-  nextArrow: <img src={rightArrow} alt="next slide" />,
-  prevArrow: <img src={leftArrow} alt="prev slide" />,
+  nextArrow: <SlickButtonFix><img src={rightArrow} alt="next slide" /></SlickButtonFix>,
+  prevArrow: <SlickButtonFix><img src={leftArrow} alt="prev slide" /></SlickButtonFix>,
 };
 
-type TProps = {
+type Props = {
   children: JSX.Element[];
 };
 
-export const CustomSlider = ({ children }: TProps) => {
+export const CustomSlider = ({ children }: Props) => {
   return (
     <div>
-      <Slider {...settings} className="custom-slider">
+      <Slider {...SETTINGS} className="custom-slider">
         {children}
       </Slider>
     </div>

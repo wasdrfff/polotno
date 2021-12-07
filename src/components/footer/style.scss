@@ -1,13 +1,11 @@
 .footer {
   display: flex;
-  justify-content: center;
   align-items: center;
   max-width: 100vw;
   flex-direction: column;
   border-top: 1px solid #2f2a2b;
   background-color: #f9f4f5;
   padding-top: 20px;
-  flex-wrap: wrap;
   &__icons {
     display: flex;
     flex-direction: row;

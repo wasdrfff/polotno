@@ -15,8 +15,8 @@ export const CustomSlider = ({ children }: TProps) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <img src={Arrow} alt="nextSlide" className="right-arrow" />,
-    prevArrow: <img src={Arrow} alt="prevSlide" className="left-arrow" />,
+    nextArrow: <img src={Arrow} alt="nextSlide" />,
+    prevArrow: <img src={Arrow} alt="prevSlide" />,
   };
   return (
     <div>

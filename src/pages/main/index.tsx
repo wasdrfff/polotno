@@ -29,8 +29,13 @@ export const MainPage = () => {
           <span>
             КАЖДЫЙ ЧЕЛОВЕК ПО СВОЕЙ ПРИРОДЕ ТВОРЕЦ.ДАВАЙТЕ СОЗДАВАТЬ ВМЕСТЕ!
           </span>
-          <img className="main-page__slider" src="" alt="слайдер" />
         </div>
+        <CustomSlider>
+          <img src={image3} alt="slider" />
+          <img src={image26} alt="slider" />
+          <img src={image2617} alt="slider" />
+          <img src={image2622} alt="slider" />
+        </CustomSlider>
       </main>
       <Footer />
     </div>

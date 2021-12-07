@@ -2,10 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./style.scss";
+import Arrow from "./assets/image/arrow.svg";
 type TProps = {
   children: JSX.Element[];
 };
-export const CustomSlider = (props: TProps) => {
+
+export const CustomSlider = ({ children }: TProps) => {
   var settings = {
     dots: true,
     fade: true,
@@ -13,11 +15,13 @@ export const CustomSlider = (props: TProps) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <img src={Arrow} alt="nextSlide" className="right-arrow" />,
+    prevArrow: <img src={Arrow} alt="prevSlide" className="left-arrow" />,
   };
   return (
     <div>
       <Slider {...settings} className="custom-slider">
-        {props.children}
+        {children}
       </Slider>
     </div>
   );

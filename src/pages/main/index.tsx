@@ -6,7 +6,6 @@ import image3 from "./assets/images/IMG_3.jpg";
 import image26 from "./assets/images/IMG_26.jpg";
 import image2617 from "./assets/images/IMG_2617.jpg";
 import image2622 from "./assets/images/IMG_2622.jpg";
-// import Images from "./assets/index";
 
 export const MainPage = () => {
   return (

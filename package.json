@@ -46,6 +46,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-slick": "^0.23.7"
+    "@types/react-slick": "^0.23.8"
   }
 }

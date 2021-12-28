@@ -5,7 +5,6 @@ import "./style.scss";
 import leftArrow from "./assets/image/left-arrow.svg";
 import rightArrow from "./assets/image/right-arrow.svg";
 
-
 type TProps = {
   children: JSX.Element[];
 };

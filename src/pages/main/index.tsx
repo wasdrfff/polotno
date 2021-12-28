@@ -1,7 +1,7 @@
 import { Footer } from "../../components/footer/index";
 import { Header } from "../../components/header/index";
 import "./style.scss";
-import { Custom } from "../../components/slider/index";
+import { CustomSlider } from "../../components/slider/index";
 import image3 from "./assets/images/IMG_3.jpg";
 import image26 from "./assets/images/IMG_26.jpg";
 import image2617 from "./assets/images/IMG_2617.jpg";
@@ -17,24 +17,24 @@ export const MainPage = () => {
             <span>СОЗДАЕМ ДИЗАЙН-ПРОЕКТЫ ИНТЕРЬЕРА. РЕАЛИЗУЕМ</span>
             <span>ДЕКОРИРУЕМ ИНТЕРЬЕР ТЕКСТИЛЕМ.</span>
           </div>
-          <Custom>
+          <CustomSlider>
             <img src={image3} alt="slider" />
             <img src={image26} alt="slider" />
             <img src={image2617} alt="slider" />
             <img src={image2622} alt="slider" />
-          </Custom>
+          </CustomSlider>
         </div>
         <div className="main-page__block">
           <span>
             КАЖДЫЙ ЧЕЛОВЕК ПО СВОЕЙ ПРИРОДЕ ТВОРЕЦ.ДАВАЙТЕ СОЗДАВАТЬ ВМЕСТЕ!
           </span>
         </div>
-        <Custom>
+        <CustomSlider>
           <img src={image3} alt="slider" />
           <img src={image26} alt="slider" />
           <img src={image2617} alt="slider" />
           <img src={image2622} alt="slider" />
-        </Custom>
+        </CustomSlider>
       </main>
       <Footer />
     </div>

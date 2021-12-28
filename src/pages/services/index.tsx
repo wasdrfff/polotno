@@ -1,6 +1,6 @@
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
-import { Custom } from "../../components/slider";
+import { CustomSlider } from "../../components/slider/";
 import "./style.scss";
 import sketch from "./assets/images/sketch.svg";
 import consultation from "./assets/images/consultation.svg";
@@ -17,12 +17,12 @@ export const ServicesDecoration = () => {
       <Header />
       <div className="service-page">
         <h2>ДЕКОРИРОВАНИЕ ИНТЕРЬЕРА ТЕКСТИЛЕМ.</h2>
-        <Custom>
+        <CustomSlider>
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
-        </Custom>
+        </CustomSlider>
         <h4>ПОСЛЕДОВАТЕЛЬНОСТЬ И ОБЪЕМ РАБОТ</h4>
         <div className="service-page__sequence">
           <div className="service-page__stage">

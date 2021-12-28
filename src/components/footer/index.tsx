@@ -22,7 +22,7 @@ export const Footer = () => {
 
       <a href="tel:+78142332211">
         <span>
-          <img src={phone} alt="handy" />
+          <img src={phone} alt="tel" />
           +79126187687
         </span>
       </a>

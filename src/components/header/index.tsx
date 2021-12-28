@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
 import { MobileMenu } from "../mobile-menu";
 import "./style.scss";
+import logo from "./assets/images/logo.svg";
+import { DropdownServices } from "../dropdown-services";
 
 export const Header = () => {
   return (
     <header className="header">
       <div className="header__content">
-        <img src="" alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         <div className="header__menu">
-          <Link to="/">услуги</Link>
-          <Link to="/">портфолио</Link>
+          <DropdownServices />
+          <Link to="/portfolio">портфолио</Link>
           <Link to="/">магазин</Link>
           <Link to="/contact">контакты</Link>
         </div>

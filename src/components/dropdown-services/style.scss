@@ -1,0 +1,26 @@
+.dropdown-services {
+  cursor: pointer;
+  span:hover {
+    border-bottom: 1px solid black;
+  }
+  &__links {
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    background-color: #f9f4f5;
+    border: 1px solid #2f2a2b;
+    a {
+      font-size: 16px;
+      margin: 0;
+      padding: 12px;
+    }
+    a:hover {
+      border: 0;
+      background-color: aqua;
+    }
+  }
+}

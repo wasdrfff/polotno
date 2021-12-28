@@ -1,0 +1,21 @@
+.portfolioPage {
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    padding: 24px 0;
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    img {
+      width: 700px;
+      max-height: 300px;
+      object-fit: cover;
+    }
+  }
+}

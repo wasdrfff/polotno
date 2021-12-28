@@ -16,13 +16,17 @@ export const MobileMenu = () => {
   return (
     <div className="mobile-menu">
       <img src={menu} alt="menu" onClick={openModal} />
+
       {showMenu && (
         <div className="mobile-menu__modal-menu">
+          <header>
+            <img src="" alt="logo" />
+            <img src={close} alt="close" onClick={closeModal} />
+          </header>
           <Link to="/">услуги</Link>
           <Link to="/">портфолио</Link>
           <Link to="/">магазин</Link>
           <Link to="/contact">контакты</Link>
-          <img src={close} alt="close" onClick={closeModal} />
         </div>
       )}
     </div>

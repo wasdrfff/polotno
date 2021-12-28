@@ -1,0 +1,41 @@
+.service-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+  padding: 12px;
+  &__sequence {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    img {
+      width: 42px;
+      height: 42px;
+    }
+    span {
+      padding-top: 6px;
+    }
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    img {
+      width: 800px;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+}

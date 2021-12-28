@@ -1,3 +1,5 @@
+@import "/src/assets/variables.scss";
+
 .dropdown-services {
   cursor: pointer;
   span:hover {
@@ -11,8 +13,8 @@
     justify-content: flex-start;
     flex-direction: column;
 
-    background-color: #f9f4f5;
-    border: 1px solid #2f2a2b;
+    background-color: $pink-light;
+    border: 1px solid $dark;
     a {
       font-size: 16px;
       margin: 0;

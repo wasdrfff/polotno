@@ -1,8 +1,10 @@
 import "./style.scss";
+
 type TProps = {
   img: string;
   description: string;
 };
+
 export const CardDecor = (props: TProps) => {
   return (
     <div className="card-decor">

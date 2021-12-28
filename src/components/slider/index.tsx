@@ -5,30 +5,6 @@ import "./style.scss";
 import leftArrow from "./assets/image/left-arrow.svg";
 import rightArrow from "./assets/image/right-arrow.svg";
 
-// const SlickButtonFix = ({
-//   currentSlide,
-//   slideCount,
-//   children,
-//   ...props
-// }: any) => <span {...props}>{children}</span>;
-
-// const SETTINGS = {
-//   dots: true,
-//   fade: true,
-//   infinite: true,
-//   speed: 500,
-//   nextArrow: (
-//     <SlickButtonFix>
-//       <img src={rightArrow} alt="next slide" />
-//     </SlickButtonFix>
-//   ),
-//   prevArrow: (
-//     <SlickButtonFix>
-//       <img src={leftArrow} alt="prev slide" />
-//     </SlickButtonFix>
-//   ),
-// };
-
 type TProps = {
   children: JSX.Element[];
 };
@@ -41,7 +17,6 @@ export const CustomSlider = ({ children }: TProps) => {
         "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
       }
       aria-hidden="true"
-      // aria-disabled={currentSlide === 0 ? true : false}
       type="button"
       src={leftArrow}
       alt="prev slide"
@@ -55,7 +30,6 @@ export const CustomSlider = ({ children }: TProps) => {
         (currentSlide === slideCount - 1 ? " slick-disabled" : "")
       }
       aria-hidden="true"
-      // aria-disabled={currentSlide === slideCount - 1 ? true : false}
       type="button"
       src={rightArrow}
       alt="next slide"

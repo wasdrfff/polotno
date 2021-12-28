@@ -5,16 +5,29 @@ import "./style.scss";
 import leftArrow from "./assets/image/left-arrow.svg";
 import rightArrow from "./assets/image/right-arrow.svg";
 
-// const settings = {
-//   dots: true,
-//   fade: true,
-//   infinite: true,
-//   speed: 500,
-//   nextArrow: <img src={rightArrow} alt="next slide" />,
-//   prevArrow: <img src={leftArrow} alt="prev slide" />,
-//   currentSlide: 0,
-//   slideCount:
-// };
+const SlickButtonFix = ({
+  currentSlide,
+  slideCount,
+  children,
+  ...props
+}: any) => <span {...props}>{children}</span>;
+
+const SETTINGS = {
+  dots: true,
+  fade: true,
+  infinite: true,
+  speed: 500,
+  nextArrow: (
+    <SlickButtonFix>
+      <img src={rightArrow} alt="next slide" />
+    </SlickButtonFix>
+  ),
+  prevArrow: (
+    <SlickButtonFix>
+      <img src={leftArrow} alt="prev slide" />
+    </SlickButtonFix>
+  ),
+};
 
 type TProps = {
   children: JSX.Element[];
@@ -58,11 +71,14 @@ export const Custom = ({ children }: TProps) => {
     currentslide: 0,
     slidecount: children.length,
   };
-  return (
-    <div>
-      <Slider {...settings} className="custom-slider">
-        {children}
-      </Slider>
-    </div>
-  );
+  // =======
+  // export const CustomSlider = ({ children }: Props) => {
+  // // >>>>>>> 09a40c0286bb6ee944488823835f3225bdea4d27
+  // //   return (
+  // //     <div>
+  // //       <Slider {...SETTINGS} className="custom-slider">
+  // //         {children}
+  // //       </Slider>
+  // //     </div>
+  // //   );
 };

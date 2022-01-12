@@ -9,45 +9,77 @@ export const MaterialPage = () => {
       <div className="material-page">
         <h1>Название бренда</h1>
         <div className="material-page__content">
-          <div className="material-page__row">
-            <img src={imaage} alt="22222" />
-            <span>Название коллекции.</span>
-            <span>характеристика</span>
+          <div className="material-page__collection-card">
+            <div>
+              <img src={imaage} alt="22222" />
+            </div>
+            <div className="material-page__collection-card_description">
+              <span>Название коллекции.</span>
+              <span>характеристика</span>
+            </div>
           </div>
-          <div className="material-page__row-inversion">
-            <span>Название коллекции.</span>
-            <span>характеристика</span>
-            <img src={imaage} alt="22222" />
+          <div className="material-page__collection-card">
+            <div>
+              <img src={imaage} alt="22222" />
+            </div>
+            <div className="material-page__collection-card_description">
+              <span>Название коллекции.</span>
+              <span>характеристика</span>
+            </div>
           </div>
-          <div className="material-page__row">
-            <img src={imaage} alt="22222" />
-            <span>Название коллекции.</span>
-            <span>характеристика</span>
+          <div className="material-page__collection-card">
+            <div>
+              <img src={imaage} alt="22222" />
+            </div>
+            <div className="material-page__collection-card_description">
+              <span>Название коллекции.</span>
+              <span>характеристика</span>
+            </div>
           </div>
-          <div className="material-page__row-inversion">
-            <span>Название коллекции.</span>
-            <span>характеристика</span>
-            <img src={imaage} alt="22222" />
+          <div className="material-page__collection-card">
+            <div>
+              <img src={imaage} alt="22222" />
+            </div>
+            <div className="material-page__collection-card_description">
+              <span>Название коллекции.</span>
+              <span>характеристика</span>
+            </div>
           </div>
-          <div className="material-page__row">
-            <img src={imaage} alt="22222" />
-            <span>Название коллекции.</span>
-            <span>характеристика</span>
+          <div className="material-page__collection-card">
+            <div>
+              <img src={imaage} alt="22222" />
+            </div>
+            <div className="material-page__collection-card_description">
+              <span>Название коллекции.</span>
+              <span>характеристика</span>
+            </div>
           </div>
-          <div className="material-page__row-inversion">
-            <span>Название коллекции.</span>
-            <span>характеристика</span>
-            <img src={imaage} alt="22222" />
+          <div className="material-page__collection-card">
+            <div>
+              <img src={imaage} alt="22222" />
+            </div>
+            <div className="material-page__collection-card_description">
+              <span>Название коллекции.</span>
+              <span>характеристика</span>
+            </div>
           </div>
-          <div className="material-page__row">
-            <img src={imaage} alt="22222" />
-            <span>Название коллекции.</span>
-            <span>характеристика</span>
+          <div className="material-page__collection-card">
+            <div>
+              <img src={imaage} alt="22222" />
+            </div>
+            <div className="material-page__collection-card_description">
+              <span>Название коллекции.</span>
+              <span>характеристика</span>
+            </div>
           </div>
-          <div className="material-page__row-inversion">
-            <span>Название коллекции.</span>
-            <span>характеристика</span>
-            <img src={imaage} alt="22222" />
+          <div className="material-page__collection-card">
+            <div>
+              <img src={imaage} alt="22222" />
+            </div>
+            <div className="material-page__collection-card_description">
+              <span>Название коллекции.</span>
+              <span>характеристика</span>
+            </div>
           </div>
         </div>
       </div>

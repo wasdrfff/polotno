@@ -7,6 +7,7 @@ import { MainPage } from "./pages/main";
 import { MaterialPage } from "./pages/material-name";
 import { PortfolioPage } from "./pages/portfolio";
 import { QuestionnairePage } from "./pages/questionnaire";
+import { RoomPage } from "./pages/room";
 import { ServicesDecoration } from "./pages/services";
 
 export const App = () => (
@@ -33,6 +34,9 @@ export const App = () => (
         </Route>
         <Route path="/portfolio">
           <PortfolioPage />
+        </Route>
+        <Route path="/room">
+          <RoomPage />
         </Route>
         <Route path="/">
           <MainPage />

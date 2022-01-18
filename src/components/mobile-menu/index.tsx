@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 import menu from "./assets/menu.svg";
 import close from "./assets/close.svg";
+import { Dropdown } from "../dropdown";
 
 export const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -23,8 +24,11 @@ export const MobileMenu = () => {
             <img src="" alt="logo" />
             <img src={close} alt="close" onClick={closeModal} />
           </header>
-          <Link to="/">услуги</Link>
-          <Link to="/">портфолио</Link>
+          <Dropdown title="услуги">
+            <Link to="/services">Декорирование интерьера</Link>
+            <Link to="/decor">Дизайн интерьера</Link>
+          </Dropdown>
+          <Link to="/portfolio">портфолио</Link>
           <Link to="/">магазин</Link>
           <Link to="/contact">контакты</Link>
         </div>

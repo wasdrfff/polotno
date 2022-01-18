@@ -40,8 +40,8 @@ export const CustomSlider = ({ children }: TProps) => {
     fade: true,
     infinite: true,
     speed: 500,
-    nextArrow: <SlickArrowLeft />,
-    prevArrow: <SlickArrowRight />,
+    nextArrow: <SlickArrowRight />,
+    prevArrow: <SlickArrowLeft />,
     currentslide: 0,
     slidecount: children.length,
   };

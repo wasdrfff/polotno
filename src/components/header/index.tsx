@@ -16,7 +16,6 @@ export const Header = () => {
             <Link to="/services">Декорирование интерьера</Link>
             <Link to="/decor">Дизайн интерьера</Link>
           </Dropdown>
-
           <Link to="/portfolio">портфолио</Link>
           <Link to="/">магазин</Link>
           <Link to="/contact">контакты</Link>

@@ -1,3 +1,5 @@
+@import "/src/assets/variables.scss";
+
 .mobile-menu {
   img {
     display: none;
@@ -12,11 +14,7 @@
     width: 100vw;
     background-color: white;
     font-size: 24px;
-    // img {
-    //   position: absolute;
-    //   right: 0;
-    //   cursor: pointer;
-    // }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -25,7 +23,7 @@
   }
   a {
     text-decoration: none;
-    color: #2f2a2b;
+    color: $dark;
     margin-left: 12px;
     width: 100px;
     margin: 12px;

@@ -1,3 +1,5 @@
+@import "/src/assets/variables.scss";
+
 .contact-card {
   display: flex;
   align-items: center;
@@ -8,5 +10,5 @@
   height: 160px;
   padding: 0 20px;
   margin-left: 10px;
-  background-color: #f9f4f5;
+  background-color: $pink-light;
 }

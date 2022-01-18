@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { MobileMenu } from "../mobile-menu";
-import "./style.scss";
+import { Dropdown } from "../dropdown";
 import logo from "./assets/images/logo.svg";
-import { DropdownServices } from "../dropdown-services";
+import "./style.scss";
 
 export const Header = () => {
   return (
@@ -12,7 +12,11 @@ export const Header = () => {
           <img src={logo} alt="logo" />
         </Link>
         <div className="header__menu">
-          <DropdownServices />
+          <Dropdown title="услуги">
+            <Link to="/services">Декорирование интерьера</Link>
+            <Link to="/decor">Дизайн интерьера</Link>
+          </Dropdown>
+
           <Link to="/portfolio">портфолио</Link>
           <Link to="/">магазин</Link>
           <Link to="/contact">контакты</Link>

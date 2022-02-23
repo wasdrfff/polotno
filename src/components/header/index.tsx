@@ -14,7 +14,7 @@ export const Header = () => {
         <div className="header__menu">
           <Dropdown title="услуги">
             <Link to="/services">Декорирование интерьера</Link>
-            <Link to="/decor">Дизайн интерьера</Link>
+            <Link to="/interior-design">Дизайн интерьера</Link>
           </Dropdown>
           <Link to="/portfolio">портфолио</Link>
           <Link to="/">магазин</Link>

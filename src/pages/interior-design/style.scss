@@ -1,0 +1,106 @@
+.interior-design {
+  h2 {
+    text-align: center;
+  }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &__project {
+    display: flex;
+    border: 1px solid black;
+    margin: 12px;
+    align-items: center;
+    width: 90vw;
+    padding-left: 24px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    #name {
+      text-transform: uppercase;
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    ul {
+      margin-left: 24px;
+      margin-right: 0;
+      padding: 0;
+    }
+  }
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    width: 200px;
+    span {
+      border: 1px solid black;
+      text-align: center;
+      margin: 12px;
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    margin-bottom: 12px;
+    a {
+      text-decoration: none;
+      border: 1px solid black;
+      color: black;
+      padding: 4px;
+    }
+  }
+  @media screen and(max-width:550px) {
+    .interior-design {
+      &__project {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 2px;
+        padding: 0;
+        width: 100%;
+        border: 0;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      &__description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      &__details {
+        display: block;
+        width: 100%;
+        order: 3;
+      }
+      &__actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+        order: 2;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      &__image {
+        order: 4;
+        display: none;
+      }
+      &__links {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        a {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+}

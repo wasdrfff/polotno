@@ -14,8 +14,11 @@ export const MainPage = () => {
       <main className="main-page__blocks">
         <div className="main-page__block">
           <div className="main-page__descriptions">
-            <span>СОЗДАЕМ ДИЗАЙН-ПРОЕКТЫ ИНТЕРЬЕРА. РЕАЛИЗУЕМ</span>
-            <span>ДЕКОРИРУЕМ ИНТЕРЬЕР ТЕКСТИЛЕМ.</span>
+            <span>
+              СОЗДАЕМ ДИЗАЙН-ПРОЕКТЫ ИНТЕРЬЕРА.{" "}
+              <span id="span_none">РЕАЛИЗУЕМ</span>
+            </span>
+            <span id="span">ДЕКОРИРУЕМ ИНТЕРЬЕР ТЕКСТИЛЕМ.</span>
           </div>
           <CustomSlider>
             <img src={image3} alt="slider" />
@@ -25,7 +28,7 @@ export const MainPage = () => {
           </CustomSlider>
         </div>
         <div className="main-page__block">
-          <span>
+          <span id="span_none">
             КАЖДЫЙ ЧЕЛОВЕК ПО СВОЕЙ ПРИРОДЕ ТВОРЕЦ.ДАВАЙТЕ СОЗДАВАТЬ ВМЕСТЕ!
           </span>
         </div>

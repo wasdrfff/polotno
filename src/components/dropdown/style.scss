@@ -10,15 +10,15 @@
     display: flex;
     width: fit-content;
     height: fit-content;
-    justify-content: flex-start;
+
     flex-direction: column;
 
     background-color: $pink-light;
     border: 1px solid $dark;
     a {
       font-size: 16px;
-      margin: 0;
-      padding: 12px;
+      margin: 0 !important;
+      padding: 12px 0;
     }
     a:hover {
       border: 0;

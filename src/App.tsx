@@ -3,6 +3,7 @@ import { ContactPage } from "./pages/contact-link";
 import { ContactsPage } from "./pages/contacts";
 import { FurniturePage } from "./pages/custom-furniture";
 import { DecorPage } from "./pages/decor";
+import { InteriorDesign } from "./pages/interior-design";
 import { MainPage } from "./pages/main";
 import { MaterialPage } from "./pages/material-name";
 import { PortfolioPage } from "./pages/portfolio";
@@ -25,6 +26,9 @@ export const App = () => (
         </Route>
         <Route path="/decor">
           <DecorPage />
+        </Route>
+        <Route path="/interior-design">
+          <InteriorDesign />
         </Route>
         <Route path="/contacts">
           <ContactsPage />

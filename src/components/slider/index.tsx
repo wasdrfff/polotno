@@ -46,10 +46,8 @@ export const CustomSlider = ({ children }: TProps) => {
     slidecount: children.length,
   };
   return (
-    <div>
-      <Slider {...settings} className="custom-slider">
-        {children}
-      </Slider>
-    </div>
+    <Slider {...settings} className="custom-slider">
+      {children}
+    </Slider>
   );
 };

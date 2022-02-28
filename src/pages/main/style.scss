@@ -1,8 +1,10 @@
 .main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__blocks {
     display: flex;
-    max-width: 100vw;
-    justify-content: center;
+    max-width: 992px;
     flex-direction: column;
     align-items: center;
     padding: 100px 0;
@@ -11,20 +13,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 84px;
-    width: 100vw;
   }
   &__descriptions {
     display: flex;
-    width: 90vw;
     justify-content: space-between;
+    width: 100%;
     font-size: 16px;
-  }
-  &__slider {
-    max-width: 600px;
-    max-height: 400px;
-    display: flex;
-    flex-direction: row;
   }
 }
 @media screen and(max-width:550px) {

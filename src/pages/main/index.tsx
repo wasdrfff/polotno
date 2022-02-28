@@ -20,6 +20,7 @@ export const MainPage = () => {
             </span>
             <span id="span">ДЕКОРИРУЕМ ИНТЕРЬЕР ТЕКСТИЛЕМ.</span>
           </div>
+
           <CustomSlider>
             <img src={image3} alt="slider" />
             <img src={image26} alt="slider" />

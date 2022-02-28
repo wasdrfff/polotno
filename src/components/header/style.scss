@@ -2,9 +2,9 @@
 
 .header {
   display: flex;
+  width: 100%;
   justify-content: center;
   height: 40px;
-
   border-bottom: 1px solid $dark;
   background-color: $pink-light;
   &__content {
@@ -16,14 +16,14 @@
   &__menu {
     display: flex;
     padding: 8px;
-    font-size: 24px;
+    font-size: 14px;
     align-items: center;
     a {
       margin-left: 32px;
       text-decoration: none;
       color: $dark;
       &:hover {
-        border-bottom: 1px solid black;
+        color: gray;
       }
     }
   }

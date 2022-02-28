@@ -3,26 +3,23 @@
 .dropdown {
   cursor: pointer;
   span:hover {
-    border-bottom: 1px solid black;
+    color: gray;
   }
   &__links {
     position: absolute;
+    top: 42px;
     display: flex;
-    width: fit-content;
-    height: fit-content;
-
     flex-direction: column;
-
-    background-color: $pink-light;
-    border: 1px solid $dark;
+    background-color: white;
+    padding: 0;
     a {
       font-size: 16px;
       margin: 0 !important;
-      padding: 12px 0;
+      padding: 3px 0;
     }
     a:hover {
-      border: 0;
-      background-color: aqua;
+      color: gray;
+      border-bottom: 0 !important;
     }
   }
 }

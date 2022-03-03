@@ -8,7 +8,9 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header__content">
-        <Link to="/">{/* <img src={logo} alt="logo" /> */}</Link>
+        <Link to="/" id="logo">
+          <img src={logo} alt="logo"></img>
+        </Link>
         <div className="header__menu">
           <Dropdown title="услуги">
             <Link to="/interior-design">Дизайн интерьеров</Link>

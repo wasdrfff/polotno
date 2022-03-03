@@ -8,13 +8,14 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header__content">
-        <Link to="/">
-          <img src={logo} alt="logo" />
+        <Link to="/" id="logo">
+          <img src={logo} alt="logo"></img>
         </Link>
         <div className="header__menu">
           <Dropdown title="услуги">
-            <Link to="/services">Декорирование интерьера</Link>
-            <Link to="/interior-design">Дизайн интерьера</Link>
+            <Link to="/interior-design">Дизайн интерьеров</Link>
+            <Link to="/services">Декорирование интерьеров</Link>
+            <Link to="/">Изготовление мебели на заказ</Link>
           </Dropdown>
           <Link to="/portfolio">портфолио</Link>
           <Link to="/">магазин</Link>

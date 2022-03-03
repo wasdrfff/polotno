@@ -1,4 +1,5 @@
 {
+  "homepage": "http://wasdrfff.github.io/polotno",
   "name": "polotno",
   "version": "0.1.0",
   "private": true,
@@ -25,7 +26,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './config/git/commitlint.js'"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +54,18 @@
     ]
   },
   "devDependencies": {
-    "@types/react-slick": "^0.23.8"
+    "@commitlint/cli": "^16.1.0",
+    "@types/react-slick": "^0.23.8",
+    "cz-customizable": "^6.3.0",
+    "gh-pages": "^3.2.3",
+    "husky": "^7.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
+    }
   }
 }

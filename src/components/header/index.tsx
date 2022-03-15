@@ -15,7 +15,9 @@ export const Header = () => {
           <Dropdown title="услуги">
             <Link to="/interior-design">Дизайн интерьеров</Link>
             <Link to="/services">Декорирование интерьеров</Link>
-            <Link to="/">Изготовление мебели на заказ</Link>
+            <Link to="/furniture-manufacturing">
+              Изготовление мебели на заказ
+            </Link>
           </Dropdown>
           <Link to="/portfolio">портфолио</Link>
           <Link to="/">магазин</Link>

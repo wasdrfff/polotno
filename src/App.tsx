@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ContactPage } from "./pages/contact-link";
-import { ContactsPage } from "./pages/contacts";
 import { FurniturePage } from "./pages/custom-furniture";
 import { DecorPage } from "./pages/decor";
+import { ManufacturingPage } from "./pages/furniture-manufacturing";
 import { InteriorDesign } from "./pages/interior-design";
 import { MainPage } from "./pages/main";
 import { MaterialPage } from "./pages/material-name";
@@ -30,8 +30,8 @@ export const App = () => (
         <Route path="/interior-design">
           <InteriorDesign />
         </Route>
-        <Route path="/contacts">
-          <ContactsPage />
+        <Route path="/furniture-manufacturing">
+          <ManufacturingPage />
         </Route>
         <Route path="/contact">
           <ContactPage />

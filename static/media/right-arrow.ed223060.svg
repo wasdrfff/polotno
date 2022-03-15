@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit Оценочная версия) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="5.15mm" height="9.7mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 515 970"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#D1BEBE;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:white;stroke-width:50.8;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+   <clipPath id="id0">
+    <rect x="15065.9" y="-10239.47" width="50807.08" height="25033.06"/>
+   </clipPath>
+ </defs>
+ <rect class="fil0" width="515" height="970"/>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g style="clip-path:url(#id0)">
+   <image id="слайдер_x0020_пример.png" x="15065.9" y="-10239.47" width="50807.08" height="25033.06" xlink:href="стрелка пр_Images\стрелка пр_ImgID1.png"/>
+  </g>
+  <polyline class="fil1 str0" points="18.86,18.34 477.9,483.34 19.74,948.95 "/>
+  <polyline class="fil1 str0" points="31798.53,1914.21 31339.49,2379.21 31797.65,2844.82 "/>
+  <rect class="fil0 str1" x="1437.43" y="187.5" width="534.47" height="994.85"/>
+  <polyline class="fil1 str0" points="1934.18,219.61 1475.14,684.61 1933.3,1150.22 "/>
+ </g>
+</svg>

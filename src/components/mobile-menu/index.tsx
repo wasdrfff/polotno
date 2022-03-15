@@ -12,7 +12,7 @@ export const MobileMenu = () => {
     setShowMenu(false);
   };
   const openModal = () => {
-    setShowMenu(true);
+    setShowMenu(!showMenu);
   };
   return (
     <div className="mobile-menu">
@@ -21,14 +21,19 @@ export const MobileMenu = () => {
       {showMenu && (
         <div className="mobile-menu__modal-menu">
           <header>
-            <img src={logo} alt="logo" />
+            {/* <img src={logo} alt="logo" /> */}
             <img src={close} alt="close" onClick={closeModal} />
           </header>
           <div className="mobile-menu__content">
+            <div className='mobile-menu__dropdown'>
             <Dropdown title="услуги">
               <Link to="/services">Декорирование интерьера</Link>
               <Link to="/decor">Дизайн интерьера</Link>
+              <Link to="/furniture-manufacturing">
+                Изготовление мебели на заказ
+              </Link>
             </Dropdown>
+            </div>
             <Link to="/portfolio">портфолио</Link>
             <Link to="/">магазин</Link>
             <Link to="/contact">контакты</Link>

@@ -16,14 +16,14 @@ export const ServicesDecoration = () => {
     <div>
       <Header />
       <div className="service-page">
-        <h2>ДЕКОРИРОВАНИЕ ИНТЕРЬЕРА ТЕКСТИЛЕМ.</h2>
+        <span>ДЕКОРИРОВАНИЕ ИНТЕРЬЕРА ТЕКСТИЛЕМ.</span>
         <CustomSlider>
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
         </CustomSlider>
-        <h4>ПОСЛЕДОВАТЕЛЬНОСТЬ И ОБЪЕМ РАБОТ</h4>
+        <span>ПОСЛЕДОВАТЕЛЬНОСТЬ И ОБЪЕМ РАБОТ</span>
         <div className="service-page__sequence">
           <div className="service-page__stage">
             <img src={consultation} alt="consultation" />

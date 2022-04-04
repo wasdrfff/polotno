@@ -5,12 +5,14 @@
   span:hover {
     color: gray;
   }
+
   &__links {
     position: absolute;
     top: 42px;
     display: flex;
     flex-direction: column;
     background-color: white;
+    box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
     padding: 0;
     a {
       font-size: 14px;

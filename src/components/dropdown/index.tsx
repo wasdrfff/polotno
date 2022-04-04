@@ -9,12 +9,12 @@ type TProps = {
 
 export const Dropdown = (props: TProps) => {
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
-  const TogleDropdownList = () => {
+  const toggleDropdownList = () => {
     setIsOpenDropdown(!isOpenDropdown);
   };
   return (
     <div className="dropdown">
-      <span onClick={TogleDropdownList}>{props.title}</span>
+      <span onClick={toggleDropdownList}>{props.title}</span>
       {isOpenDropdown && (
         <div className="dropdown__links">{props.children}</div>
       )}

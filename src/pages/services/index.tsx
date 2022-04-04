@@ -16,14 +16,14 @@ export const ServicesDecoration = () => {
     <div>
       <Header />
       <div className="service-page">
-        <span>ДЕКОРИРОВАНИЕ ИНТЕРЬЕРА ТЕКСТИЛЕМ.</span>
+        <p>ДЕКОРИРОВАНИЕ ИНТЕРЬЕРА ТЕКСТИЛЕМ.</p>
         <CustomSlider>
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
           <img src={slider1} alt="work" />
         </CustomSlider>
-        <span>ПОСЛЕДОВАТЕЛЬНОСТЬ И ОБЪЕМ РАБОТ</span>
+        <p>ПОСЛЕДОВАТЕЛЬНОСТЬ И ОБЪЕМ РАБОТ</p>
         <div className="service-page__sequence">
           <div className="service-page__stage">
             <img src={consultation} alt="consultation" />
@@ -57,22 +57,22 @@ export const ServicesDecoration = () => {
         <div className="service-page__block">
           <img src={slider1} alt="work" />
           <Link to="/decor">
-            <span>ткани,декор</span>
+            <p>ткани,декор</p>
           </Link>
         </div>
         <div className="service-page__block">
           <img src={slider1} alt="work" />
           <Link to="/decor">
-            <span>ткани,декор</span>
+            <p>ткани,декор</p>
           </Link>
         </div>
         <div className="service-page__block">
           <img src={slider1} alt="work" />
-          <span>карнизы</span>
+          <p>карнизы</p>
         </div>
         <div className="service-page__block">
           <img src={slider1} alt="work" />
-          <span>солнцезащитные системы</span>
+          <p>солнцезащитные системы</p>
         </div>
         <button>смотреть портфолио</button>
       </div>

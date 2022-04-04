@@ -6,17 +6,22 @@
   img {
     display: none;
   }
-  &__modal-menu {
+  &__wrapper {
+    width: 100vw;
+    background-color: rgba(100, 100, 100, 0.5);
+
     position: fixed;
     left: 0;
-    top: 42px;
+    top: 41px;
+    z-index: 1000;
+  }
+  &__modal-menu {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     width: 60vw;
     background-color: white;
     font-size: 24px;
-    z-index: 1000;
     header {
       display: flex;
       justify-content: space-between;
@@ -37,12 +42,6 @@
       margin: 24px 0;
     }
   }
-  // &__dropdown {
-  //   a {
-  //     font-size: 6px;
-  //   }
-  // }
-
   @media screen and (max-width: 650px) {
     img {
       display: block;

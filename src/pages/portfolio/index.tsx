@@ -8,46 +8,38 @@ export const PortfolioPage = () => {
     <div className="portfolioPage">
       <Header />
       <main className="portfolioPage__main">
-        <h1>Декорирование интерьера</h1>
+        <p>Декорирование интерьера текстилем</p>
         <div className="portfolioPage__block">
           <Link to="/room">
             <img src={work} alt="work" />
           </Link>
-          <span>Описание особенностей-текст</span>
+          <span>гостиные</span>
         </div>
         <div className="portfolioPage__block">
           <Link to="/room">
             <img src={work} alt="work" />
           </Link>
-          <span>Описание особенностей-текст</span>
+          <span>кухни,столовые</span>
         </div>
         <div className="portfolioPage__block">
           <Link to="/room">
             <img src={work} alt="work" />
           </Link>
-          <span>Описание особенностей-текст</span>
-        </div>
-        <button>Смотреть все проекты</button>
-        <h1>Дизайн интерьера</h1>
-        <div className="portfolioPage__block">
-          <Link to="/room">
-            <img src={work} alt="work" />
-          </Link>
-          <span>Описание особенностей-текст</span>
+          <span>спальни,кабинеты</span>
         </div>
         <div className="portfolioPage__block">
           <Link to="/room">
             <img src={work} alt="work" />
           </Link>
-          <span>Описание особенностей-текст</span>
+          <span>детские</span>
         </div>
         <div className="portfolioPage__block">
           <Link to="/room">
             <img src={work} alt="work" />
           </Link>
-          <span>Описание особенностей-текст</span>
+          <span>другие помещения</span>
         </div>
-        <button>Смотреть все проекты</button>
+        <button>смотреть портфолио дизайн интерьера</button>
       </main>
       <Footer />
     </div>

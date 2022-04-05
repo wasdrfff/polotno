@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   padding: 12px;
+
   &__sequence {
     display: flex;
     justify-content: space-around;
@@ -35,6 +36,10 @@
     img {
       object-fit: cover;
       width: 100%;
+    }
+    a {
+      text-decoration: none;
+      color: black;
     }
   }
   button {

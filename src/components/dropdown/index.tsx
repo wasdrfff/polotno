@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
 import "./style.scss";
 
 type TProps = {
@@ -7,17 +6,16 @@ type TProps = {
   children: JSX.Element[];
 };
 
-export const Dropdown = (props: TProps) => {
+export const Dropdown = ({ title, children }: TProps) => {
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
   const toggleDropdownList = () => {
     setIsOpenDropdown(!isOpenDropdown);
   };
+
   return (
     <div className="dropdown">
-      <span onClick={toggleDropdownList}>{props.title}</span>
-      {isOpenDropdown && (
-        <div className="dropdown__links">{props.children}</div>
-      )}
+      <span onClick={toggleDropdownList}>{title}</span>
+      {isOpenDropdown && <div className="dropdown__links">{children}</div>}
     </div>
   );
 };

@@ -10,7 +10,7 @@ export const PortfolioPage = () => {
       <main className="portfolioPage__main">
         <p>Декорирование интерьера текстилем</p>
         <div className="portfolioPage__block">
-          <Link to="/room">
+          <Link to="/portfolio/room">
             <img src={work} alt="work" />
           </Link>
           <span>гостиные</span>

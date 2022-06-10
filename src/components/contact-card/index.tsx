@@ -8,14 +8,14 @@ export type TProps = {
   days: string;
 };
 
-export const ContactCard = (props: TProps) => {
+export const ContactCard = ({ title, time, img, subtitle, days }: TProps) => {
   return (
     <div className="contact-card">
-      <span>{props.title}</span>
-      <span>{props.subtitle}</span>
-      <span>{props.days}</span>
-      <span>{props.time}</span>
-      <img src={props.img} alt="pict" />
+      <span>{title}</span>
+      <span>{subtitle}</span>
+      <span>{days}</span>
+      <span>{time}</span>
+      <img src={img} alt="pict" />
     </div>
   );
 };

@@ -7,10 +7,10 @@ export const FurniturePage = () => {
     <div className="furniture-page">
       <Header />
       <div className="furniture-page__content">
-        <h2>
+        <p>
           ПРОЕКТИРОВАНИЕ И ИЗГОТОВЛЕНИЕ КОПРУСНОЙ МЕБЕЛИ ПО ИНДИВИДУАЛЬНЫМ
           РАЗМЕРАМ
-        </h2>
+        </p>
         <div className="furniture-page__examples-works">
           <img src={image} alt="work" />
           <button>Примеры работ</button>

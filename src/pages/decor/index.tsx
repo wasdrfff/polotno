@@ -8,7 +8,7 @@ export const DecorPage = () => {
     <div>
       <Header />
       <div className="decor-page">
-        <h2>Ткани,декор.</h2>
+        <p>Ткани,декор.</p>
         <div className="decor-page__items">
           <CardDecor img={cart} description="123" />
           <CardDecor img={cart} description="777" />

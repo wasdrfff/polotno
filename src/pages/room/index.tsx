@@ -12,7 +12,7 @@ export const RoomPage = () => {
     <div>
       <Header />
       <div className="room-page">
-        <h2>Название проекта</h2>
+        <p>Название проекта</p>
         <img src={image} alt="1" />
         <div className="room-page__services">
           <div className="room-page__service">

@@ -8,11 +8,11 @@ export const InteriorDesign = () => {
     <div>
       <Header />
       <div className="interior-design">
-        <h2>
+        <p>
           РАЗРАБОТКА ДИЗАЙН-ПРОЕКТОВ ИНТЕРЬЕРА ЖИЛЫХ И ОБЩЕСТВЕННЫХ ПОМЕЩЕНИЙ
-        </h2>
+        </p>
         <img alt="картинка" />
-        <h2>УСЛУГИ ПО ПРОЕКТИРОВАНИЮ ПРОЕКТА</h2>
+        <p>УСЛУГИ ПО ПРОЕКТИРОВАНИЮ ПРОЕКТА</p>
         <div className="interior-design__project">
           <div className="interior-design__description">
             <p id="name">Проект-мини</p>
@@ -79,7 +79,7 @@ export const InteriorDesign = () => {
             <img alt="картинка" />
           </div>
         </div>
-        <h2>УСЛУГИ НА ЭТАПЕ СТРОИТЕЛЬСТВА</h2>
+        <p>УСЛУГИ НА ЭТАПЕ СТРОИТЕЛЬСТВА</p>
         <div className="interior-design__project">
           <div className="interior-design__description">
             <p id="name">авторский надзор</p>

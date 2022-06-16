@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/polotno/static/css/main.0e7f24ce.chunk.css",
-    "main.js": "/polotno/static/js/main.601a8ae4.chunk.js",
-    "main.js.map": "/polotno/static/js/main.601a8ae4.chunk.js.map",
-    "runtime-main.js": "/polotno/static/js/runtime-main.843d3b1e.js",
-    "runtime-main.js.map": "/polotno/static/js/runtime-main.843d3b1e.js.map",
+    "main.css": "/polotno/static/css/main.cf84b4f5.chunk.css",
+    "main.js": "/polotno/static/js/main.b51709c0.chunk.js",
+    "main.js.map": "/polotno/static/js/main.b51709c0.chunk.js.map",
+    "runtime-main.js": "/polotno/static/js/runtime-main.a7bc1c2c.js",
+    "runtime-main.js.map": "/polotno/static/js/runtime-main.a7bc1c2c.js.map",
     "static/css/2.61314709.chunk.css": "/polotno/static/css/2.61314709.chunk.css",
-    "static/js/2.51495092.chunk.js": "/polotno/static/js/2.51495092.chunk.js",
-    "static/js/2.51495092.chunk.js.map": "/polotno/static/js/2.51495092.chunk.js.map",
-    "static/js/3.ad0a774a.chunk.js": "/polotno/static/js/3.ad0a774a.chunk.js",
-    "static/js/3.ad0a774a.chunk.js.map": "/polotno/static/js/3.ad0a774a.chunk.js.map",
+    "static/js/2.3715f311.chunk.js": "/polotno/static/js/2.3715f311.chunk.js",
+    "static/js/2.3715f311.chunk.js.map": "/polotno/static/js/2.3715f311.chunk.js.map",
+    "static/js/3.cec88b09.chunk.js": "/polotno/static/js/3.cec88b09.chunk.js",
+    "static/js/3.cec88b09.chunk.js.map": "/polotno/static/js/3.cec88b09.chunk.js.map",
     "index.html": "/polotno/index.html",
     "static/css/2.61314709.chunk.css.map": "/polotno/static/css/2.61314709.chunk.css.map",
-    "static/css/main.0e7f24ce.chunk.css.map": "/polotno/static/css/main.0e7f24ce.chunk.css.map",
-    "static/js/2.51495092.chunk.js.LICENSE.txt": "/polotno/static/js/2.51495092.chunk.js.LICENSE.txt",
+    "static/css/main.cf84b4f5.chunk.css.map": "/polotno/static/css/main.cf84b4f5.chunk.css.map",
+    "static/js/2.3715f311.chunk.js.LICENSE.txt": "/polotno/static/js/2.3715f311.chunk.js.LICENSE.txt",
     "static/media/IMG_26.7d27063d.jpg": "/polotno/static/media/IMG_26.7d27063d.jpg",
     "static/media/IMG_2622.d29b9fae.jpg": "/polotno/static/media/IMG_2622.d29b9fae.jpg",
     "static/media/IMG_3.a0ff859d.jpg": "/polotno/static/media/IMG_3.a0ff859d.jpg",
@@ -32,7 +32,7 @@
     "static/media/house.5e8f78f2.svg": "/polotno/static/media/house.5e8f78f2.svg",
     "static/media/inst.0dba9ef2.svg": "/polotno/static/media/inst.0dba9ef2.svg",
     "static/media/left-arrow.61a60ce9.svg": "/polotno/static/media/left-arrow.61a60ce9.svg",
-    "static/media/logo.2819cd10.svg": "/polotno/static/media/logo.2819cd10.svg",
+    "static/media/logo.bbf8ff2d.svg": "/polotno/static/media/logo.bbf8ff2d.svg",
     "static/media/menu.126d5806.svg": "/polotno/static/media/menu.126d5806.svg",
     "static/media/metering.baca682e.svg": "/polotno/static/media/metering.baca682e.svg",
     "static/media/phone.b4704d98.svg": "/polotno/static/media/phone.b4704d98.svg",
@@ -48,10 +48,10 @@
     "static/media/work_2.34778c1c.jpg": "/polotno/static/media/work_2.34778c1c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.843d3b1e.js",
+    "static/js/runtime-main.a7bc1c2c.js",
     "static/css/2.61314709.chunk.css",
-    "static/js/2.51495092.chunk.js",
-    "static/css/main.0e7f24ce.chunk.css",
-    "static/js/main.601a8ae4.chunk.js"
+    "static/js/2.3715f311.chunk.js",
+    "static/css/main.cf84b4f5.chunk.css",
+    "static/js/main.b51709c0.chunk.js"
   ]
 }

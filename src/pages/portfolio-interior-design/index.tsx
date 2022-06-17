@@ -9,7 +9,7 @@ export const PortfolioInteriorDesignPage = () => {
     <div>
       <Header />
       <div className="portfolio-interior-design-page">
-        <p>дизайн интерьера</p>
+        <p className='portfolio-interior-design-page__title'>дизайн интерьера</p>
         <div className="portfolio-interior-design-page__blocks">
           <CardDesign
             title="Квартира в Екатеринбурге,167 кв.м"

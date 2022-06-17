@@ -39,7 +39,9 @@ export const PortfolioPage = () => {
           </Link>
           <span>другие помещения</span>
         </div>
-        <button>смотреть портфолио дизайн интерьера</button>
+        <Link to="/" className="portfolioPage__action">
+          дизайн интерьера
+        </Link>
       </main>
       <Footer />
     </div>

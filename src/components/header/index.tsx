@@ -14,21 +14,17 @@ export const Header = () => {
           <div className="header__item">
             <span>услуги</span>
             <div className="item__links">
-              <Link to="/interior-design">Дизайн интерьеров</Link>
-              <Link to="/services">Декорирование интерьеров</Link>
+              <Link to="/interior-design">дизайн интерьеров</Link>
+              <Link to="/services">декорирование интерьеров</Link>
               <Link to="/furniture-manufacturing">
-                Изготовление мебели на заказ
+                изготовление мебели на заказ
               </Link>
             </div>
           </div>
           <div className="header__item">
-            <span>портфолио</span>
-            <div className="item__links">
-              <Link to="/portfolio/interiordesign">Дизайн интерьеров</Link>
-              <Link to="/portfolio">Декорирование интерьера</Link>
-            </div>
+            <Link to="/portfolio/interiordesign">дизайн интерьеров</Link>
           </div>
-          <Link to="/">магазин</Link>
+          <Link to="/portfolio">декорирование</Link>
           <Link to="/contact">контакты</Link>
         </div>
       </div>

@@ -74,7 +74,9 @@ export const ServicesDecoration = () => {
           <img src={slider1} alt="work" />
           <p>солнцезащитные системы</p>
         </div>
-        <button>смотреть портфолио</button>
+        <Link to="/" className="service-page__action">
+          все проекты
+        </Link>
       </div>
       <Footer />
     </div>

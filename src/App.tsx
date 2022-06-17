@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { ContactPage } from "./pages/contact-link";
 import { FurniturePage } from "./pages/custom-furniture";
 import { DecorPage } from "./pages/decor";

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { ContactPage } from "./pages/contact-link";
 import { FurniturePage } from "./pages/custom-furniture";
 import { DecorPage } from "./pages/decor";
@@ -10,6 +10,9 @@ import { PortfolioPage } from "./pages/portfolio";
 import { QuestionnairePage } from "./pages/questionnaire";
 import { RoomPage } from "./pages/room";
 import { ServicesDecoration } from "./pages/services";
+import { PortfolioInteriorDesignPage } from "./pages/portfolio-interior-design";
+import { PlanPage } from "./pages/portfolio-interior-design/pages-interior-design/plan";
+import { BlueprintPage } from "./pages/portfolio-interior-design/pages-interior-design/blueprint";
 
 export const App = () => (
   <div>
@@ -36,14 +39,23 @@ export const App = () => (
         <Route path="/contact">
           <ContactPage />
         </Route>
-        <Route path="/portfolio">
+        <Route path="/portfolio" exact>
           <PortfolioPage />
         </Route>
-        <Route path="/room">
+        <Route path="/portfolio/interiordesign" exact>
+          <PortfolioInteriorDesignPage />
+        </Route>
+        <Route path="/portfolio/room">
           <RoomPage />
         </Route>
         <Route path="/custom-furniture">
           <FurniturePage />
+        </Route>
+        <Route path="/portfolio/interiordesign/plan/:id">
+          <PlanPage />
+        </Route>
+        <Route path="/portfolio/interiordesign/blueprint/:id">
+          <BlueprintPage />
         </Route>
         <Route path="/">
           <MainPage />

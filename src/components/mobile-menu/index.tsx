@@ -31,8 +31,11 @@ export const MobileMenu = () => {
                     Изготовление мебели на заказ
                   </Link>
                 </Dropdown>
+                <Dropdown title="портфолио">
+                  <Link to="/portfolio/interiordesign">Дизайн интерьеров</Link>
+                  <Link to="/portfolio">Декорирование интерьеров</Link>
+                </Dropdown>
               </div>
-              <Link to="/portfolio">портфолио</Link>
               <Link to="/">магазин</Link>
               <Link to="/contact">контакты</Link>
             </div>

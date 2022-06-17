@@ -19,7 +19,6 @@ export const Footer = () => {
           <img src={telegram} alt="telegram" />
         </a>
       </div>
-
       <a href="tel:+78142332211">
         <span>
           <img src={phone} alt="tel" />

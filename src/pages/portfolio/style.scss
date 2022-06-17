@@ -12,7 +12,6 @@
     p {
       text-transform: uppercase;
       text-align: center;
-      font-weight: 500;
     }
     button {
       text-transform: uppercase;
@@ -35,5 +34,11 @@
       max-height: 496px;
       overflow: hidden;
     }
+  }
+  &__action {
+    padding: 12px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
   }
 }

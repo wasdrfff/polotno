@@ -8,13 +8,13 @@ export const QuestionnairePage = () => {
       <Header />
       <div className="questionnaire-page__content">
         <main className="questionnaire-page__main">
-          <h2>АНКЕТА С ПОЖЕЛАНИЯМИ</h2>
+          <p>АНКЕТА С ПОЖЕЛАНИЯМИ</p>
           <ul>
             <li>вы можете заполнить или отправить анкету до консультации</li>
             <li>мы будем более информированы</li>
             <li>вы можете менять свои пожелания после отправки анкеты</li>
           </ul>
-          <h3>Электронная почта:</h3>
+          <p>Электронная почта:</p>
           <input placeholder="Ваш адрес электронный почты" />
           <p>Состав семьи</p>
           <span>

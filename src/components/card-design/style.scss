@@ -1,0 +1,45 @@
+.card-design {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 725px;
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 12px;
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__plan {
+    display: flex;
+    margin-left: 50px;
+    max-height: 355px;
+    max-width: 262px;
+    width: 100%;
+  }
+  &__blueprint {
+    width: 100%;
+    max-width: 463px;
+    max-height: 355px;
+    img {
+      object-fit: contain;
+      width: 100%;
+      max-height: 355px;
+    }
+  }
+}
+.card-title {
+  display: block;
+  text-align: center;
+  padding-bottom: 12px;
+}

@@ -7,7 +7,7 @@ export const MaterialPage = () => {
     <div>
       <Header />
       <div className="material-page">
-        <h1>Название бренда</h1>
+        <p>Название бренда</p>
         <div className="material-page__content">
           <div className="material-page__collection-card">
             <div className="material-page__image">

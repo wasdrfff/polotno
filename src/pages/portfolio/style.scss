@@ -35,4 +35,10 @@
       overflow: hidden;
     }
   }
+  &__action {
+    padding: 12px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+  }
 }

@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW 2018 (64-Bit Оценочная версия) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="60" height="40" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 2844.78 1625.58"
+
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="60px" height="90px" version="1.0" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2844.78 4690.52"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <font id="FontID0" horiz-adv-x="666" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
@@ -22,24 +20,18 @@ viewBox="0 0 2844.78 1625.58"
   <style type="text/css">
    <![CDATA[
     @font-face { font-family:"Arial";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
-    .str0 {stroke:#4088CA;stroke-width:33.86;stroke-miterlimit:22.9256}
+    .str0 {stroke:#4088CA;stroke-width:25.39;stroke-miterlimit:22.9256}
     .fil1 {fill:none}
     .fil0 {fill:#2B2A29}
     .fnt0 {font-weight:normal;font-size:784.05px;font-family:'Arial'}
    ]]>
   </style>
-   <clipPath id="id0">
-    <rect x="11023.64" y="-11335.03" width="50799.98" height="70555.54"/>
-   </clipPath>
  </defs>
  <g id="Слой_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <g transform="matrix(0.981236 0 0 1 -1433.41 212.681)">
-   <text x="1422.39" y="812.79"  class="fil0 fnt0">полотно</text>
+   <text x="1422.39" y="2345.26"  class="fil0 fnt0">полотно</text>
   </g>
-  <rect class="fil1 str0" x="378.4" y="6.2" width="2049.08" height="1612.38"/>
-  <g style="clip-path:url(#id0)">
-   <image id="сайт_x0020_-_x0020_главная_x0020_стр2.jpg" x="11023.64" y="-11335.03" width="50799.98" height="70555.54" xlink:href="лого новый3_Images\лого новый3_ImgID1.png"/>
-  </g>
+  <rect class="fil1 str0" x="378.4" y="33.45" width="2049.08" height="4621.72"/>
  </g>
 </svg>

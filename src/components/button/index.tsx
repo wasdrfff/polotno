@@ -1,4 +1,7 @@
 import "./style.scss";
-export const Button = () => {
-  return <button className="button">Отправить сообщение </button>;
+type TProps = {
+  children?: JSX.Element | string;
+};
+export const Button = ({ children }: TProps) => {
+  return <button className="button">{children}</button>;
 };

@@ -1,14 +1,26 @@
 @import "/src/assets/variables.scss";
 
 .button {
+  font-family: Heebo;
   font-size: 25px;
   width: 100%;
   padding: 20px;
   cursor: pointer;
   color: $black;
-  background-color: $blue;
+  background-color: $light-blue;
+  border: 0;
+  &:hover {
+    background-color: $blue;
+  }
   &:active {
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset,
-      0 2px 3px rgba(0, 0, 0, 0.5) inset, 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-color: $active-button;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .button {
+    font-size: 15px;
+    padding: 2px 25px;
+    height: 30px;
   }
 }

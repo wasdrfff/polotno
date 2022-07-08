@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./style.scss";
 import menu from "./assets/menu.svg";
 import close from "./assets/close.svg";
@@ -13,6 +13,7 @@ export const MobileMenu = () => {
       setIsOpen(!isOpen);
     }
   };
+
   return (
     <div className="mobile-menu">
       <img src={menu} alt="menu" onClick={toggleModal} />
@@ -25,16 +26,50 @@ export const MobileMenu = () => {
             <div className="mobile-menu__content">
               <div className="mobile-menu__dropdown">
                 <Dropdown title="услуги">
-                  <Link to="/services">Декорирование интерьера</Link>
-                  <Link to="/decor">Дизайн интерьера</Link>
-                  <Link to="/furniture-manufacturing">
+                  <NavLink
+                    activeClassName="selected"
+                    className="mobile-menu__link"
+                    to="/services"
+                  >
+                    Декорирование интерьера
+                  </NavLink>
+                  <NavLink
+                    activeClassName="selected"
+                    className="mobile-menu__link"
+                    to="/decor"
+                  >
+                    Дизайн интерьера
+                  </NavLink>
+                  <NavLink
+                    activeClassName="selected"
+                    className="mobile-menu__link"
+                    to="/furniture-manufacturing"
+                  >
                     Изготовление мебели на заказ
-                  </Link>
+                  </NavLink>
                 </Dropdown>
               </div>
-              <Link to="/interiordesign">дизайн интерьеров</Link>
-              <Link to="/portfolio">декорирование интерьеров</Link>
-              <Link to="/contact">контакты</Link>
+              <NavLink
+                activeClassName="selected"
+                className="mobile-menu__link"
+                to="/interiordesign"
+              >
+                дизайн интерьеров
+              </NavLink>
+              <NavLink
+                activeClassName="selected"
+                className="mobile-menu__link"
+                to="/portfolio"
+              >
+                декорирование интерьеров
+              </NavLink>
+              <NavLink
+                activeClassName="selected"
+                className="mobile-menu__link"
+                to="/contact"
+              >
+                контакты
+              </NavLink>
             </div>
           </div>
         </div>

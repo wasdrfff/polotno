@@ -70,6 +70,7 @@ export const ContactPage = () => {
                 Оставьте заявку (мы свяжемся с вами в течение 1 рабочего дня)
               </span>
               <Input
+                required
                 name="name"
                 value={name}
                 onChange={setName}
@@ -78,6 +79,7 @@ export const ContactPage = () => {
               ></Input>
               <Input
                 mask={"+7 (999) 999-99-99"}
+                required
                 name="phone"
                 value={phone}
                 onChange={setPhone}
@@ -85,7 +87,7 @@ export const ContactPage = () => {
                 placeholder="+7 (999)"
               ></Input>
               <Input
-                type="email"
+                required
                 name="email"
                 value={email}
                 placeholder="E-mail"

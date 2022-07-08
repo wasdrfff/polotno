@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/polotno/static/css/main.6c628ca7.chunk.css",
-    "main.js": "/polotno/static/js/main.84ae72d3.chunk.js",
-    "main.js.map": "/polotno/static/js/main.84ae72d3.chunk.js.map",
+    "main.js": "/polotno/static/js/main.de47a734.chunk.js",
+    "main.js.map": "/polotno/static/js/main.de47a734.chunk.js.map",
     "runtime-main.js": "/polotno/static/js/runtime-main.9a3bcca8.js",
     "runtime-main.js.map": "/polotno/static/js/runtime-main.9a3bcca8.js.map",
     "static/css/2.61314709.chunk.css": "/polotno/static/css/2.61314709.chunk.css",
@@ -54,6 +54,6 @@
     "static/css/2.61314709.chunk.css",
     "static/js/2.9ead4a1c.chunk.js",
     "static/css/main.6c628ca7.chunk.css",
-    "static/js/main.84ae72d3.chunk.js"
+    "static/js/main.de47a734.chunk.js"
   ]
 }

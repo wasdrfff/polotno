@@ -3,6 +3,7 @@
 .mobile-menu {
   display: flex;
   align-items: center;
+
   img {
     display: none;
   }
@@ -11,7 +12,7 @@
     background-color: rgba(100, 100, 100, 0.5);
     position: fixed;
     left: 0;
-    top: 120px;
+    top: 125px;
     z-index: 1000;
   }
   &__modal-menu {
@@ -21,6 +22,8 @@
     width: 60vw;
     background-color: white;
     font-size: 24px;
+    transform: translateX(0%);
+    animation: ani 1s forwards; //???
     header {
       display: flex;
       justify-content: space-between;
@@ -34,18 +37,34 @@
     display: flex;
     padding-left: 24px;
     flex-direction: column;
+    transform: translateY(-150%);
+    animation: aniY 3s forwards;
+  } //???
 
-    a {
-      text-decoration: none;
-      color: $dark;
-      margin: 24px 0;
-    }
-  }
-
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: $tablet-width) {
     img {
       display: block;
       cursor: pointer;
     }
   }
+  &__link {
+    text-decoration: none;
+    color: $dark;
+    margin: 24px 0;
+    &.selected {
+      color: red;
+    }
+  }
 }
+@keyframes ani {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} ///???
+@keyframes aniY {
+  0% {transform: translateY(-150%);}
+  100% {transform: translateY(0);}
+} ///?

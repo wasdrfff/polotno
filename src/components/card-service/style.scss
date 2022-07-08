@@ -1,0 +1,15 @@
+.card-service {
+  margin-bottom: 24px;
+  &__example-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  &__image {
+    max-width: 800px;
+    width: 100%;
+  }
+  &__description {
+    color: black;
+  }
+}

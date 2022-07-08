@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 import { MobileMenu } from "../mobile-menu";
 import logo from "./assets/images/logo.svg";
 import "./style.scss";
-
+import select from "./assets/images/arrow-bottom.svg";
 export const Header = () => {
   return (
     <header className="header">
       <div className="header__content">
         <Link to="/" id="logo">
-          <img src={logo} alt="logo"></img>
+          <img src={logo} alt="logo" className="header__logo"></img>
         </Link>
         <div className="header__menu">
           <div className="header__item">
             <span>услуги</span>
+            <img src={select} alt="select" />
             <div className="item__links">
               <Link to="/interior-design">дизайн интерьеров</Link>
               <Link to="/services">декорирование интерьеров</Link>
@@ -21,9 +22,7 @@ export const Header = () => {
               </Link>
             </div>
           </div>
-          <div className="header__item">
-            <Link to="/portfolio/interiordesign">дизайн интерьеров</Link>
-          </div>
+          <Link to="/portfolio/interiordesign">интерьеры</Link>
           <Link to="/portfolio">декорирование</Link>
           <Link to="/contact">контакты</Link>
         </div>

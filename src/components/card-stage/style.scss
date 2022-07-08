@@ -1,0 +1,11 @@
+.card-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 12px;
+  text-align: center;
+  &__image {
+    height: 42px;
+  }
+}

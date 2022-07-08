@@ -12,11 +12,24 @@
     padding: 15px;
     border: 2px solid $light-blue;
     gap: 10px;
+    @media screen and (max-width: $tablet-width) {
+      width: 155px;
+      height: 115px;
+      gap: 5px;
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
   }
   &__social {
     display: flex;
     gap: 15px;
     margin-bottom: 5px;
+    @media screen and (max-width: $tablet-width) {
+      gap: 10px;
+      margin: 0;
+    }
   }
 
   &__link {
@@ -28,5 +41,8 @@
   }
   &__text {
     font-size: 25px;
+    @media screen and (max-width: $tablet-width) {
+      font-size: 10px;
+    }
   }
 }

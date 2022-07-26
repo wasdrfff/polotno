@@ -57,22 +57,22 @@ export const cardsService=[
     {
         id:1,
         exampleLink:'/decor',
-        imgUrl:service,
+        imgUrls:[service,service],
         imgName:'materials',
-        description:'материалы, отделка, цвет'
+        description:'Материалы, отделка, цвет'
     },
     {
         id:2,
         exampleLink:'/interiordesign',
-        imgUrl:service1,
+        imgUrls:[service1,service1],
         imgName:'details',
-        description:'детали'
+        description:'Детали'
     },
     {
         id:3,
         exampleLink:'/portfolio',
-        imgUrl:service,
+        imgUrls:[service,service],
         imgName:'action',
-        description:'вписываем в ваш интерьер'
+        description:'Вписываем в ваш интерьер'
     },
 ]

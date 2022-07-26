@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./style.scss";
 
 type TProps = {
@@ -18,18 +17,20 @@ export const CardProject = ({
   return (
     <div className="card-project">
       <div className="card-project__description">
-        <p className="card-project__title">{title}</p>
-        <p className="card-project__time-work">{timeWork}</p>
-        {exampleLink && (
+        <span className="card-project__title">{title}</span>
+        <span className="card-project__time-work">{timeWork}</span>
+        {/* {exampleLink && (
           <Link to={exampleLink} className="card-project__example-link">
             Пример
           </Link>
-        )}
+        )} */}
       </div>
       <div className="card-project__details">
         <ul className="card-project__list">
           {details.map((detail, index) => (
-            <li key={index}>{detail}</li>
+            <li key={index}>
+              {detail}
+            </li>
           ))}
         </ul>
       </div>

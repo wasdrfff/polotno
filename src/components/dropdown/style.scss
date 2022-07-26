@@ -2,8 +2,8 @@
 
 .dropdown {
   position: relative;
+  width: 100px;
   cursor: pointer;
-  padding: 9px 0;
   span:hover {
     color: gray;
   }
@@ -19,7 +19,7 @@
     padding: 4px;
     z-index: 1000;
     a {
-      font-size: 14px;
+      font-size: 10px;
       padding: 3px 0;
     }
     a:hover {

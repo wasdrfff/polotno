@@ -3,9 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 12px;
   text-align: center;
   &__image {
-    height: 42px;
+    max-width: 120px;
+    height: 120px;
+  }
+  &__description {
+    margin-top: 25px;
   }
 }

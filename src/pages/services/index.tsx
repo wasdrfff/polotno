@@ -5,25 +5,24 @@ import { CardStage } from "../../components/card-stage";
 import { CardService } from "../../components/card-service";
 import { cardsStage } from "./data";
 import { cardsService } from "./data";
-import { Link } from "react-router-dom";
 import "./style.scss";
 import slider1 from "../main/assets/images/IMG_3.jpg";
+import slider2 from "./assets/images/Rectangle_10.png";
+import { Button } from "../../components/button";
 
 export const ServicesPage = () => {
   return (
     <div>
       <Header />
       <div className="service-page">
-        <p className="service-page__title">
-          декорирование интерьера текстилем.
-        </p>
-        <CustomSlider>
-          <img src={slider1} alt="slider" />
-          <img src={slider1} alt="slider" />
-          <img src={slider1} alt="slider" />
-        </CustomSlider>
+        <div className="service-page__slider">
+          <CustomSlider>
+            <img src={slider2} alt="slider" />
+            <img src={slider1} alt="slider" />
+          </CustomSlider>
+        </div>
         <p className="service-page__sequence">
-          последовательность и объем работ
+          Последовательность и объем работ
         </p>
         <div className="service-page__stages">
           {cardsStage.map(({ id, imgUrl, imgName, description }) => (
@@ -37,21 +36,21 @@ export const ServicesPage = () => {
         </div>
         <div className="service-page__cards-service">
           {cardsService.map(
-            ({ id, exampleLink, imgUrl, imgName, description }) => (
-              <CardService
-                key={id}
-                exampleLink={exampleLink}
-                imgUrl={imgUrl}
-                imgName={imgName}
-                description={description}
-              ></CardService>
-            )
+            ({ id, exampleLink, imgUrls, imgName, description }) => {
+              return (
+                <CardService
+                  key={id}
+                  exampleLink={exampleLink}
+                  imgUrls={imgUrls}
+                  imgName={imgName}
+                  description={description}
+                ></CardService>
+              );
+            }
           )}
         </div>
-        <div className="service-page__action">
-          <Link to="/" className="service-page__action-text">
-            все проекты
-          </Link>
+        <div className="service-page__button-wrapper">
+          <Button>Все проекты</Button>
         </div>
       </div>
       <Footer />

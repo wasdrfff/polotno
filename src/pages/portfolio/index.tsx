@@ -1,49 +1,73 @@
-import { Link } from "react-router-dom";
+import { Button } from "../../components/button";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
+import { CustomSlider } from "../../components/slider";
 import work from "../main/assets/images/IMG_3.jpg";
 import "./style.scss";
+
 export const PortfolioPage = () => {
   return (
-    <div className="portfolioPage">
+    <>
       <Header />
-      <main className="portfolioPage__main">
-        <p>Декорирование интерьера текстилем</p>
-        <div className="portfolioPage__block">
-          <Link to="/portfolio/room">
-            <img src={work} alt="work" />
-          </Link>
-          <span>гостиные</span>
-        </div>
-        <div className="portfolioPage__block">
-          <Link to="/room">
-            <img src={work} alt="work" />
-          </Link>
-          <span>кухни,столовые</span>
-        </div>
-        <div className="portfolioPage__block">
-          <Link to="/room">
-            <img src={work} alt="work" />
-          </Link>
-          <span>спальни,кабинеты</span>
-        </div>
-        <div className="portfolioPage__block">
-          <Link to="/room">
-            <img src={work} alt="work" />
-          </Link>
-          <span>детские</span>
-        </div>
-        <div className="portfolioPage__block">
-          <Link to="/room">
-            <img src={work} alt="work" />
-          </Link>
-          <span>другие помещения</span>
-        </div>
-        <Link to="/" className="portfolioPage__action">
-          дизайн интерьера
-        </Link>
-      </main>
+      <div className="portfolioPage">
+        <main className="portfolioPage__main">
+          <span className="portfolioPage__title-page">
+            Декорирование интерьера текстилем
+          </span>
+          <div className="portfolioPage__content">
+            <div className="portfolioPage__block">
+              <span className="portfolioPage__description-block">Гостиные</span>
+              <CustomSlider>
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+              </CustomSlider>
+            </div>
+            <div className="portfolioPage__block">
+              <span className="portfolioPage__description-block">
+                Кухни,столовые
+              </span>
+              <CustomSlider>
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+              </CustomSlider>
+            </div>
+            <div className="portfolioPage__block">
+              <span className="portfolioPage__description-block">
+                Спальни,кабинеты
+              </span>
+              <CustomSlider>
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+              </CustomSlider>
+            </div>
+            <div className="portfolioPage__block">
+              <span className="portfolioPage__description-block">Детские</span>
+              <CustomSlider>
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+              </CustomSlider>
+            </div>
+            <div className="portfolioPage__block">
+              <span className="portfolioPage__description-block">
+                Другие помещения
+              </span>
+              <CustomSlider>
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+                <img src={work} alt="work" />
+              </CustomSlider>
+            </div>
+            <div className="portfolioPage__action">
+              <Button>Дизайн интерьера</Button>
+            </div>
+          </div>
+        </main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };

@@ -8,11 +8,11 @@ export const Header = () => {
     <header className="header">
       <div className="header__content">
         <Link to="/" id="logo">
-          <img src={logo} alt="logo" className="header__logo"></img>
+          <img src={logo} alt="logo" className="header__logo" />
         </Link>
         <div className="header__menu">
           <div className="header__item">
-            <span>услуги</span>
+            <span className="item__select">услуги</span>
             <img src={select} alt="select" />
             <div className="item__links">
               <Link to="/interior-design">дизайн интерьеров</Link>

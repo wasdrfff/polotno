@@ -17,6 +17,11 @@
     font-weight: 500;
     font-size: 35px;
     margin-bottom: 145px;
+    @media screen and (max-width: $tablet-width) {
+      font-size: 15px;
+      font-weight: 400px;
+      margin-bottom: 20px;
+    }
   }
   &__content {
     display: flex;
@@ -29,7 +34,9 @@
     flex-direction: column;
     max-width: 1110px;
     width: 100%;
-
+    @media screen and (max-width: $tablet-width) {
+      width: 325px;
+    }
     img {
       max-width: 100%;
       width: 100%;
@@ -40,9 +47,15 @@
     display: flex;
     max-width: 350px;
     width: 100%;
+    @media screen and (max-width: $tablet-width) {
+      display: none;
+    }
   }
   &__description-block {
     padding: 0 0 35px 99px;
     font-size: 25px;
+    @media screen and (max-width: $tablet-width) {
+      padding-left: 0;
+    }
   }
 }

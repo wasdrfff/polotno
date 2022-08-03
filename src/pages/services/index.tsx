@@ -7,7 +7,6 @@ import { cardsStage } from "./data";
 import { cardsService } from "./data";
 import "./style.scss";
 import slider1 from "../main/assets/images/IMG_3.jpg";
-import slider2 from "./assets/images/Rectangle_10.png";
 import { Button } from "../../components/button";
 
 export const ServicesPage = () => {
@@ -17,7 +16,7 @@ export const ServicesPage = () => {
       <div className="service-page">
         <div className="service-page__slider">
           <CustomSlider>
-            <img src={slider2} alt="slider" />
+            <img src={slider1} alt="slider" />
             <img src={slider1} alt="slider" />
           </CustomSlider>
         </div>

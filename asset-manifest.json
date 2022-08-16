@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/polotno/static/css/main.76367c61.chunk.css",
-    "main.js": "/polotno/static/js/main.e011f331.chunk.js",
-    "main.js.map": "/polotno/static/js/main.e011f331.chunk.js.map",
+    "main.css": "/polotno/static/css/main.11343508.chunk.css",
+    "main.js": "/polotno/static/js/main.7dcb875a.chunk.js",
+    "main.js.map": "/polotno/static/js/main.7dcb875a.chunk.js.map",
     "runtime-main.js": "/polotno/static/js/runtime-main.efd14cf6.js",
     "runtime-main.js.map": "/polotno/static/js/runtime-main.efd14cf6.js.map",
     "static/css/2.61314709.chunk.css": "/polotno/static/css/2.61314709.chunk.css",
-    "static/js/2.e55e1fa1.chunk.js": "/polotno/static/js/2.e55e1fa1.chunk.js",
-    "static/js/2.e55e1fa1.chunk.js.map": "/polotno/static/js/2.e55e1fa1.chunk.js.map",
+    "static/js/2.cdc892c7.chunk.js": "/polotno/static/js/2.cdc892c7.chunk.js",
+    "static/js/2.cdc892c7.chunk.js.map": "/polotno/static/js/2.cdc892c7.chunk.js.map",
     "static/js/3.312c50a3.chunk.js": "/polotno/static/js/3.312c50a3.chunk.js",
     "static/js/3.312c50a3.chunk.js.map": "/polotno/static/js/3.312c50a3.chunk.js.map",
     "index.html": "/polotno/index.html",
     "static/css/2.61314709.chunk.css.map": "/polotno/static/css/2.61314709.chunk.css.map",
-    "static/css/main.76367c61.chunk.css.map": "/polotno/static/css/main.76367c61.chunk.css.map",
-    "static/js/2.e55e1fa1.chunk.js.LICENSE.txt": "/polotno/static/js/2.e55e1fa1.chunk.js.LICENSE.txt",
+    "static/css/main.11343508.chunk.css.map": "/polotno/static/css/main.11343508.chunk.css.map",
+    "static/js/2.cdc892c7.chunk.js.LICENSE.txt": "/polotno/static/js/2.cdc892c7.chunk.js.LICENSE.txt",
     "static/media/IMG_26.7d27063d.jpg": "/polotno/static/media/IMG_26.7d27063d.jpg",
     "static/media/IMG_2622.d29b9fae.jpg": "/polotno/static/media/IMG_2622.d29b9fae.jpg",
     "static/media/IMG_3.a0ff859d.jpg": "/polotno/static/media/IMG_3.a0ff859d.jpg",
@@ -25,6 +25,7 @@
     "static/media/cup.6fe47e89.svg": "/polotno/static/media/cup.6fe47e89.svg",
     "static/media/customer.a868fc67.svg": "/polotno/static/media/customer.a868fc67.svg",
     "static/media/drawing_1.1008feb9.jpg": "/polotno/static/media/drawing_1.1008feb9.jpg",
+    "static/media/drawing_2.7df45c63.jpg": "/polotno/static/media/drawing_2.7df45c63.jpg",
     "static/media/drawing_3.8010bb4e.jpg": "/polotno/static/media/drawing_3.8010bb4e.jpg",
     "static/media/drawing_4.4bf4e74a.jpg": "/polotno/static/media/drawing_4.4bf4e74a.jpg",
     "static/media/email.1dafe2b7.svg": "/polotno/static/media/email.1dafe2b7.svg",
@@ -51,8 +52,8 @@
   "entrypoints": [
     "static/js/runtime-main.efd14cf6.js",
     "static/css/2.61314709.chunk.css",
-    "static/js/2.e55e1fa1.chunk.js",
-    "static/css/main.76367c61.chunk.css",
-    "static/js/main.e011f331.chunk.js"
+    "static/js/2.cdc892c7.chunk.js",
+    "static/css/main.11343508.chunk.css",
+    "static/js/main.7dcb875a.chunk.js"
   ]
 }

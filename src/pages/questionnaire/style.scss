@@ -1,23 +1,143 @@
+@import "/src/assets/variables.scss";
+
 .questionnaire-page {
-  &__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__list {
+    max-width: 920px;
+    width: 100%;
+    @media screen and (max-width: $tablet-width) {
+      max-width: 325px;
+      width: 100%;
+    }
+  }
+  &__form-wrapper {
+    border: 1px solid $light-blue;
+    padding: 30px 0 40px 30px;
+    max-width: 920px;
+    width: 100%;
+    margin-bottom: 60px;
+    @media screen and (max-width: $tablet-width) {
+      max-width: 325px;
+      width: 100%;
+      padding: 15px 10px;
+    }
+  }
+  &__form {
     display: flex;
     flex-direction: column;
-    background-color: #a7a7a7;
-    max-width: 400px;
-    padding: 50px;
+    gap: 40px;
+    font-size: 18px;
+    textarea {
+      border: 1px solid $light-blue;
+      @media screen and (max-width: $tablet-width) {
+        width: 130px;
+      }
+    }
+    input {
+      width: 320px;
+      height: 40px;
+      border: 1px solid $light-blue;
+      @media screen and (max-width: $tablet-width) {
+        width: 230px;
+        height: 25px;
+      }
+    }
+    @media screen and (max-width: $tablet-width) {
+      font-size: 10px;
+    }
   }
-  &__content {
+  &__block {
     display: flex;
-    justify-content: center;
-    padding: 50px 0;
+    flex-direction: column;
+    textarea {
+      width: 320px;
+      height: 80px;
+      @media screen and (max-width: $tablet-width) {
+        width: 230px;
+        height: 50px;
+      }
+    }
   }
-  &__row {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
+  &__rooms {
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    gap: 20px;
+    label {
+      width: 100%;
+      cursor: pointer;
+    }
+    @media screen and (max-width: $tablet-width) {
+      grid-template-columns: repeat(2, 120px);
+      gap: 15px;
+    }
+  }
+  &__styles {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    label {
+      font-size: 18px;
+      width: 100%;
+    }
+    @media screen and (max-width: $tablet-width) {
+      label {
+        font-size: 10px;
+        text-align: left;
+      }
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__actions {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 350px;
+      height: 60px;
+    }
+    @media screen and (max-width: $tablet-width) {
+      flex-direction: column;
+    }
+  }
+  &__row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    #other {
+      position: absolute;
+      top: 22px;
+      left: 0px;
+    }
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      background-color: white;
+      border: 1px solid $light-blue;
+      cursor: pointer;
+      &:checked {
+        background-color: $light-blue;
+      }
+      @media screen and(max-width: $tablet-width) {
+        width: 15px;
+        height: 15px;
+        min-width: 15px;
+      }
+    }
+  }
+  &__note {
+    text-align: center;
   }
 }

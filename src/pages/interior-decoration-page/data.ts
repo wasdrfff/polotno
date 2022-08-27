@@ -1,54 +1,41 @@
-import consultation from "./assets/images/consultation.svg";
-import metering from "./assets/images/metering.svg";
-import sketch from "./assets/images/sketch.svg";
-import selection from "./assets/images/selection.svg";
-import escort from "./assets/images/escort.svg";
-import sewing from "./assets/images/sewing.svg";
-import complete from "./assets/images/complete.svg";
 import service from '../main-page/assets/images/IMG_3.jpg'
 import service1 from '../main-page/assets/images/IMG_26.jpg'
+import {IconName} from "../../components/icon/types";
 
-export const cardsStage=[
+export const cardsStage: {id: number, iconName: IconName, description: string}[]=[
     {
         id: 1,
-        imgUrl:consultation,
-        imgName: 'consultation',
+        iconName: 'bubbles',
         description:'Консультация'
     },
     {
         id:2,
-        imgUrl:metering,
-        imgName:'metering',
+        iconName:'roulette',
         description:'Выезд на замеры'
     },
     {
         id:3,
-        imgUrl:sketch,
-        imgName:'sketch',
+        iconName:'plan',
         description:'Разработка эксизов'
     },
     {
         id:4,
-        imgUrl:selection,
-        imgName:'selection',
+        iconName:'books',
         description:'Подбор материалов'
     },
     {
         id:5,
-        imgUrl:escort,
-        imgName:'escort',
+        iconName:'hand',
         description:'Сопровождение заказа'
     },
     {
         id:6,
-        imgUrl:sewing,
-        imgName:'sewing',
+        iconName:'sewingMachine',
         description:'Пошив'
     },
     {
         id:7,
-        imgUrl:complete,
-        imgName:'complete',
+        iconName:'window',
         description:'Установка и монтаж'
     },
 ];

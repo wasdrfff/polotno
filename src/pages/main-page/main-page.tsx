@@ -28,8 +28,8 @@ export const MainPage = () => {
       mediaUrl: image3,
       metaData: {
         type: 'image',
-        height: 200,
-        width: 100,
+        height: 3024,
+        width: 4032,
         title: 'sample-title',
         description: 'sample-description',
         focalPoint: [0, 0],
@@ -53,8 +53,8 @@ export const MainPage = () => {
       mediaUrl: image2622,
       metaData: {
         type: 'image',
-        height: 200,
-        width: 100,
+        height: 480,
+        width: 640,
         title: 'sample-title',
         description: 'sample-description',
         focalPoint: [0, 0],

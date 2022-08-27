@@ -4,7 +4,7 @@ import {Container} from './icon-styled'
 import {variables} from "../../variables";
 
 export type IconProps = {
-  // size?: IconSizes
+  size?: number
   color?: IconColorPalette
   className?: string
   'aria-label'?: string
@@ -13,6 +13,7 @@ export type IconProps = {
 
 export function Icon({
                        name,
+    size,
                        color,
                        className,
                        'aria-label': ariaLabel,
@@ -24,6 +25,7 @@ export function Icon({
   return <Container
     iconColor={color}
     className={className}
+    size={size}
     aria-hidden
     aria-label={ariaLabel ?? `icon-${name}`}
     data-icon-name={`icon-${name}`}>

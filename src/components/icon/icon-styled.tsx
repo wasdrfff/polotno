@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {IconColorPalette} from "./types";
 import {variables} from '../../variables'
 
 export const Container = styled.div<{
-  // size?: IconSizes
   iconColor?: IconColorPalette
+  size?:number
 }>`
   display: inline-flex;
   vertical-align: bottom;
@@ -13,8 +13,12 @@ export const Container = styled.div<{
 
   color: ${(p) => (p.iconColor ? variables.colors.common[p.iconColor] : 'inherit')};
 
+  ${props=> props.size ? css`
+    width: ${props.size}px;
+    height: ${props.size}px;
+    min-width:${props.size}px;
+    min-height:${props.size}px;
+  ` : ''}
+
 `
-  // width: ${(props) => getDimensionSize(props.size)}px;
-  // height: ${(props) => getDimensionSize(props.size)}px;
-  // min-width: ${(props) => getDimensionSize(props.size)}px;
-  // min-height: ${(props) => getDimensionSize(props.size)}px;
+

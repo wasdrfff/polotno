@@ -2,27 +2,28 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 type TProps = {
   title: string;
-  photo: string;
+  plan: string;
+  blueprint: string;
   projectId: string;
 };
-export const CardDesign = ({ title, photo, projectId }: TProps) => {
+export const CardDesign = ({ title, plan, blueprint, projectId }: TProps) => {
   return (
-    <div>
+    <>
       <span className="card-title">{title}</span>
       <div className="card-design">
         <div className="card-design__description">
           <Link to={`/portfolio/interiordesign/plan/${projectId}`}>
             <div className="card-design__plan">
-              <span>План</span>
+              <img src={plan} alt="plan" />
             </div>
           </Link>
           <Link to={`/portfolio/interiordesign/blueprint/${projectId}`}>
             <div className="card-design__blueprint">
-              <img src={photo} alt="123" />
+              <img src={blueprint} alt="blueprint" />
             </div>
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };

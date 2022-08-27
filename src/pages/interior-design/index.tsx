@@ -1,11 +1,23 @@
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import { CardProject } from "../../components/card-project/index";
 import { cardsProject } from "./data";
 import "./style.scss";
+import { Button } from "../../components/button";
+import { CustomSlider } from "../../components/slider";
+import slider1 from "../main/assets/images/IMG_3.jpg";
 
 export const InteriorDesign = () => {
+  const history = useHistory();
+  const sendToTheQuestionnaire = () => {
+    history.push("/questionnaire");
+    console.log(history);
+  };
+  const sendToContacts = () => {
+    history.push("/contact");
+    console.log(history);
+  };
   return (
     <div>
       <Header />
@@ -13,7 +25,12 @@ export const InteriorDesign = () => {
         <p className="interior-design__title">
           разработка дизайн-проектов интерьера жилых и общественных помещений
         </p>
-        <img alt="картинка" />
+        <div className="interior-design__slider">
+          <CustomSlider>
+            <img src={slider1} alt="slider" />
+            <img src={slider1} alt="slider" />
+          </CustomSlider>
+        </div>
         <p className="interior-design__title">
           услуги по проектированию проекта
         </p>
@@ -31,13 +48,9 @@ export const InteriorDesign = () => {
             )
           )}
         </div>
-        <div className="interior-design__links">
-          <Link to="/questionnaire" className="interior-design__fill">
-            Заполнить анкету
-          </Link>
-          <Link to="/contact" className="interior-design__to-order">
-            Заказать обратный звонок
-          </Link>
+        <div className="interior-design__actions">
+          <Button onClick={sendToTheQuestionnaire}>Заполнить анкету</Button>
+          <Button onClick={sendToContacts}>Заказать звонок</Button>
         </div>
       </div>
       <Footer />

@@ -4,11 +4,15 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  height: 200px;
+  height: 170px;
   position: sticky;
   top: 0;
   background-color: white;
   z-index: 1000;
+  padding-right: 30px;
+  @media screen and(max-width: $tablet-width) {
+    height: 80px;
+  }
   &__content {
     display: flex;
     align-items: center;
@@ -23,6 +27,7 @@
       height: 50px;
     }
   }
+
   &__menu {
     display: flex;
     justify-content: space-between;
@@ -53,6 +58,11 @@
     align-items: center;
     color: #323232;
     font-size: 18px;
+    // .item__select {
+    //   &:hover {
+    //     font-weight: 700;
+    //   }
+    // }
     &:hover {
       .item__links {
         display: flex;
@@ -60,7 +70,7 @@
     }
     .item__links {
       position: absolute;
-      top: 110px;
+      top: 94px;
       width: 160px;
       display: none;
       flex-direction: column;

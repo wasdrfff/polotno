@@ -1,13 +1,12 @@
 @import "/src/assets/variables.scss";
 
 .button {
-  font-family: Heebo;
   font-size: 25px;
   width: 100%;
   padding: 20px;
   cursor: pointer;
   color: $black;
-  background-color: $light-blue;
+  background-color: $blue-button;
   border: 0;
   &:hover {
     background-color: $blue;

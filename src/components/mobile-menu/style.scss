@@ -2,45 +2,68 @@
 
 .mobile-menu {
   display: flex;
-  align-items: center;
-
+  align-items: flex-start;
+  padding-top: 25px;
   img {
     display: none;
   }
   &__wrapper {
-    width: 100vw;
-    background-color: rgba(100, 100, 100, 0.5);
+    background-color: rgba(50, 50, 50, 0.3);
     position: fixed;
+    width: 100%;
     left: 0;
-    top: 125px;
+    top: 0;
     z-index: 1000;
+    height: 100vh;
   }
   &__modal-menu {
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    width: 60vw;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 400px;
+    width: 265px;
     background-color: white;
     font-size: 24px;
-    transform: translateX(0%);
-    animation: ani 1s forwards; //???
-    header {
-      display: flex;
-      justify-content: space-between;
-      padding-left: 20px;
-      align-items: center;
-      margin-bottom: 24px;
-      margin-top: 12px;
+  }
+  &__menu-image {
+    padding: 25px 30px 26px 0;
+    img {
+      float: right;
     }
   }
   &__content {
     display: flex;
-    padding-left: 24px;
+    padding-left: 20px;
     flex-direction: column;
-    transform: translateY(-150%);
-    animation: aniY 3s forwards;
-  } //???
-
+    gap: 30px;
+  }
+  &__dropdown-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      color: $blue;
+    }
+  }
+  &__dropdown-links {
+    display: flex;
+    flex-direction: column;
+  }
+  &__dropdown-link {
+    font-size: 14px;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: $dark;
+    margin-top: 15px;
+    &:hover {
+      color: $blue;
+    }
+    &.selected {
+      color: $active-link;
+    }
+  }
   @media screen and (max-width: $tablet-width) {
     img {
       display: block;
@@ -50,21 +73,13 @@
   &__link {
     text-decoration: none;
     color: $dark;
-    margin: 24px 0;
+    font-size: 15px;
+    text-transform: uppercase;
     &.selected {
-      color: red;
+      color: $active-link;
+    }
+    &:hover {
+      color: $blue;
     }
   }
 }
-@keyframes ani {
-  0% {
-    transform: translateX(-150%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-} ///???
-@keyframes aniY {
-  0% {transform: translateY(-150%);}
-  100% {transform: translateY(0);}
-} ///?

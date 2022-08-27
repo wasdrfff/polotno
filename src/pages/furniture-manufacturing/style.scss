@@ -1,24 +1,48 @@
+@import "/src/assets/variables.scss";
+
 .manufacturingPage {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 50px 12px;
+
   &__block {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 24px;
     text-align: center;
-    max-width: 1200px;
+    max-width: 1110px;
     width: 100%;
     span {
       text-transform: uppercase;
       margin: 32px 0;
     }
+  }
+  &__slider {
+    max-width: 1110px;
+    width: 100%;
+  }
+  &__drawings {
+    max-width: 1110px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @media screen and (max-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  &__drawing {
+    padding: 15px;
+    border: 2px solid $light-blue;
     img {
-      object-fit: cover;
-      height: 600px;
+      max-width: 510px;
+      width: 100%;
+      height: 310px;
     }
   }
 }

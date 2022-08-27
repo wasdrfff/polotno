@@ -9,6 +9,7 @@ type TProps = {
   pattern?: string;
   type?: string;
   mask?: string | (string | RegExp)[];
+  required?: boolean;
   onChange: (value: string) => void;
   getErrorMessage?: (value: string) => string;
 };
@@ -20,6 +21,7 @@ export const Input = ({
   value,
   type,
   placeholder,
+  required,
   mask,
   onChange,
   getErrorMessage,
@@ -48,6 +50,7 @@ export const Input = ({
     return (
       <div className="input">
         <InputMask
+          required={required}
           mask={mask}
           name={name}
           value={value}
@@ -65,6 +68,7 @@ export const Input = ({
   return (
     <div className="input">
       <input
+        required={required}
         type={type}
         name={name}
         value={value}

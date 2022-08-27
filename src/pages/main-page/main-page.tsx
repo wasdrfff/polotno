@@ -4,7 +4,6 @@ import image3 from "./assets/images/IMG_3.jpg";
 import image26 from "./assets/images/IMG_26.jpg";
 import image2622 from "./assets/images/IMG_2622.jpg";
 import { GreetingSection} from './greeting-section';
-import "./style.scss";
 import {SliderNew} from "../../components/slider-new";
 import {
   BlueSquare,

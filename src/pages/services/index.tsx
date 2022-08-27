@@ -6,7 +6,7 @@ import { CardService } from "../../components/card-service";
 import { cardsStage } from "./data";
 import { cardsService } from "./data";
 import "./style.scss";
-import slider1 from "../main/assets/images/IMG_3.jpg";
+import slider1 from "../main-page/assets/images/IMG_3.jpg";
 import { Button } from "../../components/button";
 
 export const ServicesPage = () => {

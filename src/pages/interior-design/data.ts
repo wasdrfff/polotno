@@ -1,4 +1,4 @@
-import interiorior from '../main/assets/images/IMG_3.jpg'
+import interiorior from '../main-page/assets/images/IMG_3.jpg'
 
 export const cardsProject=[
     {

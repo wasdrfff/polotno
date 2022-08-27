@@ -5,8 +5,8 @@ import selection from "./assets/images/selection.svg";
 import escort from "./assets/images/escort.svg";
 import sewing from "./assets/images/sewing.svg";
 import complete from "./assets/images/complete.svg";
-import service from '../main/assets/images/IMG_3.jpg'
-import service1 from '../main/assets/images/IMG_26.jpg'
+import service from '../main-page/assets/images/IMG_3.jpg'
+import service1 from '../main-page/assets/images/IMG_26.jpg'
 
 export const cardsStage=[
     {

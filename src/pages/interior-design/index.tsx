@@ -6,7 +6,7 @@ import { cardsProject } from "./data";
 import "./style.scss";
 import { Button } from "../../components/button";
 import { CustomSlider } from "../../components/slider";
-import slider1 from "../main/assets/images/IMG_3.jpg";
+import slider1 from "../main-page/assets/images/IMG_3.jpg";
 
 export const InteriorDesign = () => {
   const history = useHistory();

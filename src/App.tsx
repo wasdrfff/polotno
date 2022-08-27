@@ -4,7 +4,7 @@ import { FurniturePage } from "./pages/custom-furniture";
 import { DecorPage } from "./pages/decor";
 import { ManufacturingPage } from "./pages/furniture-manufacturing";
 import { InteriorDesign } from "./pages/interior-design";
-import { MainPage } from "./pages/main";
+import { MainPage } from "./pages/main-page";
 import { MaterialPage } from "./pages/material-name";
 import { PortfolioPage } from "./pages/portfolio";
 import { QuestionnairePage } from "./pages/questionnaire";

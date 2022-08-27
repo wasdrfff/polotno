@@ -2,7 +2,7 @@ import { Button } from "../../components/button";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import { CustomSlider } from "../../components/slider";
-import work from "../main/assets/images/IMG_3.jpg";
+import work from "../main-page/assets/images/IMG_3.jpg";
 import "./style.scss";
 
 export const PortfolioPage = () => {

@@ -1,5 +1,5 @@
-import image3 from "../../../main/assets/images/IMG_3.jpg";
-import image26 from "../../../main/assets/images/IMG_26.jpg";
+import image3 from "../../../main-page/assets/images/IMG_3.jpg";
+import image26 from "../../../main-page/assets/images/IMG_26.jpg";
 
 export const Plan4 = () => {
   return (

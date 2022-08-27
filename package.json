@@ -13,7 +13,9 @@
     "@types/react": "^17.0.36",
     "@types/react-dom": "^17.0.11",
     "@types/react-router-dom": "^5.3.2",
+    "@types/styled-components": "^5.1.26",
     "node-sass": "^6.0.1",
+    "pro-gallery": "^4.1.41",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-input-mask": "^2.0.4",
@@ -21,6 +23,7 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.5",
     "typescript": "^4.5.2",
     "web-vitals": "^1.1.2"
   },
@@ -70,5 +73,8 @@
     "cz-customizable": {
       "config": "config/git/commitizen.js"
     }
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

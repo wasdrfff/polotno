@@ -1,6 +1,6 @@
 import { CustomSlider } from "../../../../components/slider";
-import image3 from "../../../main/assets/images/IMG_3.jpg";
-import image26 from "../../../main/assets/images/IMG_26.jpg";
+import image3 from "../../../main-page/assets/images/IMG_3.jpg";
+import image26 from "../../../main-page/assets/images/IMG_26.jpg";
 import "./style.scss";
 export const Blueprint3 = () => {
   return (

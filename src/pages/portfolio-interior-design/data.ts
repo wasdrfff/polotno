@@ -1,5 +1,5 @@
-import plan from "../main/assets/images/IMG_3.jpg";
-import blueprint from "../main/assets/images/IMG_26.jpg"
+import plan from "../main-page/assets/images/IMG_3.jpg";
+import blueprint from "../main-page/assets/images/IMG_26.jpg"
 
 export const projects=[
     {

@@ -1,7 +1,7 @@
 import "./style.scss";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
-import image from "../main/assets/images/IMG_3.jpg";
+import image from "../main-page/assets/images/IMG_3.jpg";
 import geolocation from "./assets/images/geolocation.svg";
 import squere from "./assets/images/squere.svg";
 import house from "./assets/images/house.svg";

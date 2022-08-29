@@ -1,7 +1,7 @@
 import { CardDecor } from "../../components/decor-card";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
-import cart from "../main/assets/images/IMG_3.jpg";
+import cart from "../main-page/assets/images/IMG_3.jpg";
 import "./style.scss";
 export const DecorPage = () => {
   return (

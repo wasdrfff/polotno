@@ -16,7 +16,7 @@ export const Header = () => {
             <img src={select} alt="select" />
             <div className="item__links">
               <Link to="/interior-design">дизайн интерьеров</Link>
-              <Link to="/services">декорирование интерьеров</Link>
+              <Link to="/interior-decoration">декорирование интерьеров</Link>
               <Link to="/furniture-manufacturing">
                 изготовление мебели на заказ
               </Link>

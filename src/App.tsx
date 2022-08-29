@@ -4,12 +4,12 @@ import { FurniturePage } from "./pages/custom-furniture";
 import { DecorPage } from "./pages/decor";
 import { ManufacturingPage } from "./pages/furniture-manufacturing";
 import { InteriorDesign } from "./pages/interior-design";
-import { MainPage } from "./pages/main";
+import { MainPage } from "./pages/main-page";
 import { MaterialPage } from "./pages/material-name";
 import { PortfolioPage } from "./pages/portfolio";
 import { QuestionnairePage } from "./pages/questionnaire";
 import { RoomPage } from "./pages/room";
-import { ServicesPage } from "./pages/services";
+import { InteriorDecorationPage } from "./pages/interior-decoration-page";
 import { PortfolioInteriorDesignPage } from "./pages/portfolio-interior-design";
 import { PlanPage } from "./pages/portfolio-interior-design/pages-interior-design/plan";
 import { BlueprintPage } from "./pages/portfolio-interior-design/pages-interior-design/blueprint";
@@ -20,8 +20,8 @@ export const App = () => (
       <Route path="/questionnaire">
         <QuestionnairePage />
       </Route>
-      <Route path="/services">
-        <ServicesPage />
+      <Route path="/interior-decoration">
+        <InteriorDecorationPage />
       </Route>
       <Route path="/brand-name">
         <MaterialPage />

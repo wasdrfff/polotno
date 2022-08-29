@@ -1,0 +1,1 @@
+export { SliderNew} from './slider-new'

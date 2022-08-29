@@ -33,6 +33,7 @@ const SlickArrowRight = ({ currentSlide, slideCount, ...props }: any) => (
     alt="next slide"
   />
 );
+
 const settings = {
   dots: true,
   fade: true,
@@ -42,6 +43,7 @@ const settings = {
   prevArrow: <SlickArrowLeft />,
   currentslide: 0,
 };
+
 export const CustomSlider = ({ children }: TProps) => {
   return (
     <Slider {...settings} className="custom-slider">

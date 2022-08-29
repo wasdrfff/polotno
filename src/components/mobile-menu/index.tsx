@@ -10,7 +10,7 @@ export const MobileMenu = () => {
   const toggleModal = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       setIsOpen(!isOpen);
-      setIsOpenDropdown(false)
+      setIsOpenDropdown(false);
     }
   };
   const toggleDropdown = () => {
@@ -46,9 +46,9 @@ export const MobileMenu = () => {
                     <NavLink
                       activeClassName="selected"
                       className="mobile-menu__dropdown-link"
-                      to="/decor"
+                      to="/interior-design"
                     >
-                      Дизайн интерьера
+                      Дизайн интерьеров
                     </NavLink>
                     <NavLink
                       activeClassName="selected"

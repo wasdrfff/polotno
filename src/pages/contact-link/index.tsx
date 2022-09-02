@@ -9,6 +9,7 @@ import "./style.scss";
 import { Button } from "../../components/button";
 import { useState } from "react";
 import { Input } from "../../components/input";
+import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const ContactPage = () => {
   const sendEmail = (e: any) => {
@@ -62,6 +63,7 @@ export const ContactPage = () => {
   return (
     <>
       <Header />
+      <BreadCrumbs />
       <div className="contact-page">
         <main className="contact-page__content">
           <div className="contact-page__contact-form-wrapper">

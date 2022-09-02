@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import "./style.scss";
 import { roomsCells } from "./data";
 import { stylesCells } from "./data";
+import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const QuestionnairePage = () => {
   const [isOpenInput, setIsOpenInput] = useState(false);
@@ -35,8 +36,9 @@ export const QuestionnairePage = () => {
   return (
     <div>
       <Header />
+      <BreadCrumbs />
       <div className="questionnaire-page">
-        <h2>Анкета с пожеланиями </h2>
+        <h2 className="questionnaire-page__title">Анкета с пожеланиями </h2>
         <div className="questionnaire-page__list">
           <ul>
             <li>Вы можете заполнить или отправить антеку до консультации</li>

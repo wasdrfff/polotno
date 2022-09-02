@@ -1,3 +1,4 @@
+import { BreadCrumbs } from "../../components/bread-crumbs";
 import { Button } from "../../components/button";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
@@ -5,10 +6,11 @@ import { CustomSlider } from "../../components/slider";
 import work from "../main-page/assets/images/IMG_3.jpg";
 import "./style.scss";
 
-export const PortfolioPage = () => {
+export const DecorationPage = () => {
   return (
     <>
       <Header />
+      <BreadCrumbs/>
       <div className="portfolioPage">
         <main className="portfolioPage__main">
           <span className="portfolioPage__title-page">

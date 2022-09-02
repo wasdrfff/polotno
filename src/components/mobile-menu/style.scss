@@ -22,16 +22,20 @@
     position: absolute;
     right: 0px;
     top: 0px;
-    height: 400px;
+    height: 440px;
     width: 265px;
     background-color: white;
-    font-size: 24px;
+    font-size: 15px;
   }
   &__menu-image {
     padding: 25px 30px 26px 0;
     img {
       float: right;
     }
+  }
+  &__select {
+    display: flex;
+    flex-direction: row;
   }
   &__content {
     display: flex;
@@ -41,7 +45,6 @@
   }
   &__dropdown-title {
     font-size: 15px;
-    text-transform: uppercase;
     cursor: pointer;
     &:hover {
       color: $blue;
@@ -74,7 +77,6 @@
     text-decoration: none;
     color: $dark;
     font-size: 15px;
-    text-transform: uppercase;
     &.selected {
       color: $active-link;
     }

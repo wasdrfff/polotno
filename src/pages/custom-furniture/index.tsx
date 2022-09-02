@@ -1,3 +1,4 @@
+import { BreadCrumbs } from "../../components/bread-crumbs";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import image from "../main-page/assets/images/IMG_3.jpg";
@@ -6,6 +7,7 @@ export const FurniturePage = () => {
   return (
     <div className="furniture-page">
       <Header />
+      <BreadCrumbs/>
       <div className="furniture-page__content">
         <p>
           ПРОЕКТИРОВАНИЕ И ИЗГОТОВЛЕНИЕ КОПРУСНОЙ МЕБЕЛИ ПО ИНДИВИДУАЛЬНЫМ

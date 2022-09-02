@@ -5,12 +5,20 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  &__title {
+    font-weight: 400;
+  }
   &__list {
     max-width: 920px;
     width: 100%;
     @media screen and (max-width: $tablet-width) {
       max-width: 325px;
       width: 100%;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
   }
   &__form-wrapper {
@@ -52,6 +60,7 @@
   &__block {
     display: flex;
     flex-direction: column;
+    gap: 30px;
     textarea {
       width: 320px;
       height: 80px;
@@ -111,7 +120,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    text-align: center;
+    text-align: left;
     #other {
       position: absolute;
       top: 22px;

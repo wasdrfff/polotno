@@ -6,10 +6,8 @@ import { Icon } from "../icon";
 
 export const BreadCrumbs = () => {
   const location = useLocation();
-  console.log(location.pathname);
   const pathname = location.pathname;
   let path = "";
-  console.log("pathname", pathname);
   const parts = pathname
     .split("/")
     .filter(Boolean)
@@ -20,8 +18,7 @@ export const BreadCrumbs = () => {
     path += part;
     return path;
   });
-  console.log("parts", parts);
-  console.log(urls);
+
   return (
     <Container>
       <Block>

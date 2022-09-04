@@ -3,6 +3,7 @@ import { MobileMenu } from "../mobile-menu";
 import logo from "./assets/images/logo.svg";
 import "./style.scss";
 import select from "./assets/images/arrow-bottom.svg";
+
 export const Header = () => {
   return (
     <header className="header">
@@ -12,19 +13,22 @@ export const Header = () => {
         </Link>
         <div className="header__menu">
           <div className="header__item">
-            <span className="item__select">услуги</span>
+            <span className="item__select">Услуги</span>
             <img src={select} alt="select" />
             <div className="item__links">
-              <Link to="/interior-design">дизайн интерьеров</Link>
-              <Link to="/interior-decoration">декорирование интерьеров</Link>
-              <Link to="/furniture-manufacturing">
-                изготовление мебели на заказ
+              <Link to="/services/interior-design">Дизайн интерьеров</Link>
+              <Link to="/services/interior-decoration">
+                Декорирование интерьеров
+              </Link>
+              <Link to="/services/furniture-manufacturing">
+                Изготовление мебели на заказ
               </Link>
             </div>
           </div>
-          <Link to="/portfolio/interiordesign">интерьеры</Link>
-          <Link to="/decoration">декорирование</Link>
-          <Link to="/contact">контакты</Link>
+          <Link to="/interiors">Интерьеры</Link>
+          <Link to="/decoration">Декорирование</Link>
+          <Link to="/contact">Контакты</Link>
+          <Link to="/questionnaire">Заполнить анкету</Link>
         </div>
       </div>
       <MobileMenu />

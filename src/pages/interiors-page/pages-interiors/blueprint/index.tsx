@@ -1,6 +1,7 @@
 // import { useParams } from "react-router-dom";
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
+import { BreadCrumbs } from "../../../../components/bread-crumbs";
 import { Footer } from "../../../../components/footer";
 import { Header } from "../../../../components/header";
 import { Blueprint1 } from "./blueprint-1";
@@ -28,6 +29,7 @@ export const BlueprintPage = () => {
   return (
     <div>
       <Header />
+      <BreadCrumbs />
       {blueprint}
       <Footer />
     </div>

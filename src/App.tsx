@@ -10,9 +10,9 @@ import { DecorationPage } from "./pages/decoration-page";
 import { QuestionnairePage } from "./pages/questionnaire";
 import { RoomPage } from "./pages/room";
 import { InteriorDecorationPage } from "./pages/interior-decoration-page";
-import { PortfolioInteriorDesignPage } from "./pages/portfolio-interior-design";
-import { PlanPage } from "./pages/portfolio-interior-design/pages-interior-design/plan";
-import { BlueprintPage } from "./pages/portfolio-interior-design/pages-interior-design/blueprint";
+import { InteriorsPage } from "./pages/interiors-page";
+import { PlanPage } from "./pages/interiors-page/pages-interiors/plan";
+import { BlueprintPage } from "./pages/interiors-page/pages-interiors/blueprint";
 
 export const App = () => (
   <Router>
@@ -20,7 +20,7 @@ export const App = () => (
       <Route path="/questionnaire">
         <QuestionnairePage />
       </Route>
-      <Route path="/interior-decoration">
+      <Route path="/services/interior-decoration">
         <InteriorDecorationPage />
       </Route>
       <Route path="/brand-name">
@@ -29,10 +29,10 @@ export const App = () => (
       <Route path="/decor">
         <DecorPage />
       </Route>
-      <Route path="/interior-design">
+      <Route path="/services/interior-design" exact>
         <InteriorDesign />
       </Route>
-      <Route path="/furniture-manufacturing">
+      <Route path="/services/furniture-manufacturing">
         <ManufacturingPage />
       </Route>
       <Route path="/contact">
@@ -41,8 +41,8 @@ export const App = () => (
       <Route path="/decoration" exact>
         <DecorationPage />
       </Route>
-      <Route path="/portfolio/interiordesign" exact>
-        <PortfolioInteriorDesignPage />
+      <Route path="/interiors" exact>
+        <InteriorsPage />
       </Route>
       <Route path="/portfolio/room">
         <RoomPage />
@@ -50,10 +50,10 @@ export const App = () => (
       <Route path="/custom-furniture">
         <FurniturePage />
       </Route>
-      <Route path="/portfolio/interiordesign/plan/:id">
+      <Route path="/interiors/plan-:id">
         <PlanPage />
       </Route>
-      <Route path="/portfolio/interiordesign/blueprint/:id">
+      <Route path="/interiors/blueprint-:id">
         <BlueprintPage />
       </Route>
       <Route path="/">

@@ -8,15 +8,17 @@ import drawing2 from "./assets/images/drawings/drawing_2.jpg";
 import drawing3 from "./assets/images/drawings/drawing_3.jpg";
 import drawing4 from "./assets/images/drawings/drawing_4.jpg";
 import "./style.scss";
+import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const ManufacturingPage = () => {
   return (
     <div>
       <Header />
+      <BreadCrumbs/>
       <div className="manufacturingPage">
         <div className="manufacturingPage__block">
           <span>
-            проектирование и изготовление корпусной мебели по индивидуальным
+            Проектирование и изготовление корпусной мебели по индивидуальным
             размерам
           </span>
           <div className="manufacturingPage__slider">
@@ -27,7 +29,7 @@ export const ManufacturingPage = () => {
           </div>
         </div>
         <div className="manufacturingPage__block">
-          <span>чертежи</span>
+          <span>Чертежи</span>
           <div className="manufacturingPage__drawings">
             <div className="manufacturingPage__drawing">
               <img src={drawing} alt="drawing" />

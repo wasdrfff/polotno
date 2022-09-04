@@ -7,23 +7,23 @@ import "./style.scss";
 import { Button } from "../../components/button";
 import { CustomSlider } from "../../components/slider";
 import slider1 from "../main-page/assets/images/IMG_3.jpg";
+import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const InteriorDesign = () => {
   const history = useHistory();
   const sendToTheQuestionnaire = () => {
     history.push("/questionnaire");
-    console.log(history);
   };
   const sendToContacts = () => {
     history.push("/contact");
-    console.log(history);
   };
   return (
     <div>
       <Header />
+      <BreadCrumbs />
       <div className="interior-design">
         <p className="interior-design__title">
-          разработка дизайн-проектов интерьера жилых и общественных помещений
+          Разработка дизайн-проектов интерьера жилых и общественных помещений
         </p>
         <div className="interior-design__slider">
           <CustomSlider>
@@ -32,7 +32,7 @@ export const InteriorDesign = () => {
           </CustomSlider>
         </div>
         <p className="interior-design__title">
-          услуги по проектированию проекта
+          Услуги по проектированию проекта
         </p>
         <div className="interior-design__content">
           {cardsProject.map(

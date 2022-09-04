@@ -51,7 +51,7 @@ export const GreetingSectionWrapper = styled.div`
   width: 100%;
 `;
 
-export const Container = styled.div<{ isDesktop: boolean }>`
+export const SliderContainer = styled.div<{ isDesktop: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -65,6 +65,12 @@ export const Container = styled.div<{ isDesktop: boolean }>`
           max-width: 325px;
         `
       : ""}
+`;
+
+export const Container = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 1010px;
 `;
 
 export const TitleWrapper = styled.div`

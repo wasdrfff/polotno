@@ -7,12 +7,13 @@ import { GreetingSection } from "./greeting-section";
 import { SliderNew } from "../../components/slider-new";
 import {
   BlueSquare,
-  Container,
+  SliderContainer,
   GreetingSectionWrapper,
   SliderWrapper,
   Text,
   TitleWrapper,
   Wrapper,
+  Container,
 } from "./main-page-styled";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { BreadCrumbs } from "../../components/bread-crumbs";
@@ -67,12 +68,14 @@ export const MainPage = () => {
   return (
     <Wrapper>
       <Header />
-      <BreadCrumbs />
+      <Container>
+        <BreadCrumbs />
+      </Container>
       <GreetingSectionWrapper>
         <GreetingSection />
       </GreetingSectionWrapper>
 
-      <Container isDesktop={isDesktop}>
+      <SliderContainer isDesktop={isDesktop}>
         <TitleWrapper>
           <Text>Каждый человек по своей природе творец.</Text>
           <Text>Давайте создавать вместе!</Text>
@@ -82,7 +85,7 @@ export const MainPage = () => {
           <BlueSquare position="left" isHidden={!isDesktop} />
           <SliderNew items={sliderNewItems} />
         </SliderWrapper>
-      </Container>
+      </SliderContainer>
       <Footer />
     </Wrapper>
   );

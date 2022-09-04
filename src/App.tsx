@@ -6,7 +6,7 @@ import { ManufacturingPage } from "./pages/furniture-manufacturing";
 import { InteriorDesign } from "./pages/interior-design";
 import { MainPage } from "./pages/main-page";
 import { MaterialPage } from "./pages/material-name";
-import { PortfolioPage } from "./pages/portfolio";
+import { DecorationPage } from "./pages/decoration-page";
 import { QuestionnairePage } from "./pages/questionnaire";
 import { RoomPage } from "./pages/room";
 import { InteriorDecorationPage } from "./pages/interior-decoration-page";
@@ -38,8 +38,8 @@ export const App = () => (
       <Route path="/contact">
         <ContactPage />
       </Route>
-      <Route path="/portfolio" exact>
-        <PortfolioPage />
+      <Route path="/decoration" exact>
+        <DecorationPage />
       </Route>
       <Route path="/portfolio/interiordesign" exact>
         <PortfolioInteriorDesignPage />

@@ -23,7 +23,7 @@ export const Header = () => {
             </div>
           </div>
           <Link to="/portfolio/interiordesign">интерьеры</Link>
-          <Link to="/portfolio">декорирование</Link>
+          <Link to="/decoration">декорирование</Link>
           <Link to="/contact">контакты</Link>
         </div>
       </div>

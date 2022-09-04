@@ -24,7 +24,7 @@ export function SliderNew({items}: Props) {
 
   useEffect(()=>{
     if(scrollingElementRef.current){
-      setWidth(scrollingElementRef.current.offsetWidth)
+      setWidth(scrollingElementRef.current!.offsetWidth )
     }
   },[setWidth])
 

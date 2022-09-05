@@ -1,6 +1,3 @@
-import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
-import { projects } from "./data";
 import { Link } from "react-router-dom";
 import {
   Container,
@@ -11,11 +8,13 @@ import {
   Image,
 } from "./interiors-page-styled";
 import { BreadCrumbs } from "../../components/bread-crumbs";
+import {useInteriorsPage} from "./use-interiors-page";
 
 export const InteriorsPage = () => {
+  const {projects} = useInteriorsPage();
+
   return (
     <>
-      <Header />
       <BreadCrumbs />
       <Wrapper>
         <Container>
@@ -34,7 +33,6 @@ export const InteriorsPage = () => {
           ))}
         </Container>
       </Wrapper>
-      <Footer />
     </>
   );
 };

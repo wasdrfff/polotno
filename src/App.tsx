@@ -13,9 +13,12 @@ import { InteriorDecorationPage } from "./pages/interior-decoration-page";
 import { InteriorsPage } from "./pages/interiors-page";
 import { PlanPage } from "./pages/interiors-page/pages-interiors/plan";
 import { BlueprintPage } from "./pages/interiors-page/pages-interiors/blueprint";
+import {Header} from "./components/header";
+import {Footer} from "./components/footer";
 
 export const App = () => (
   <Router>
+    <Header />
     <Switch>
       <Route path="/questionnaire">
         <QuestionnairePage />
@@ -60,5 +63,6 @@ export const App = () => (
         <MainPage />
       </Route>
     </Switch>
+    <Footer />
   </Router>
 );

@@ -1,6 +1,4 @@
 import "./style.scss";
-import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
 import image from "../main-page/assets/images/IMG_3.jpg";
 import geolocation from "./assets/images/geolocation.svg";
 import squere from "./assets/images/squere.svg";
@@ -11,7 +9,6 @@ import { BreadCrumbs } from "../../components/bread-crumbs";
 export const RoomPage = () => {
   return (
     <div>
-      <Header />
       <BreadCrumbs />
       <div className="room-page">
         <p>Название проекта</p>
@@ -66,7 +63,6 @@ export const RoomPage = () => {
         </div>
         <button>Заказать проект</button>
       </div>
-      <Footer />
     </div>
   );
 };

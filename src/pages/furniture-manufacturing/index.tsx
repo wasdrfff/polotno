@@ -1,5 +1,3 @@
-import { Header } from "../../components/header";
-import { Footer } from "../../components/footer";
 import { CustomSlider } from "../../components/slider";
 import work from "./assets/images/works/work_1.jpg";
 import work2 from "./assets/images/works/work_2.jpg";
@@ -13,7 +11,6 @@ import { BreadCrumbs } from "../../components/bread-crumbs";
 export const ManufacturingPage = () => {
   return (
     <div>
-      <Header />
       <BreadCrumbs/>
       <div className="manufacturingPage">
         <div className="manufacturingPage__block">
@@ -46,7 +43,6 @@ export const ManufacturingPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

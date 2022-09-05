@@ -1,7 +1,5 @@
 import { useCallback, useRef, useState } from "react";
 import { Button } from "../../components/button";
-import { Footer } from "../../components/footer/index";
-import { Header } from "../../components/header/index";
 import emailjs from "@emailjs/browser";
 import "./style.scss";
 import { roomsCells } from "./data";
@@ -35,7 +33,6 @@ export const QuestionnairePage = () => {
   }, []);
   return (
     <div>
-      <Header />
       <BreadCrumbs />
       <div className="questionnaire-page">
         <h2 className="questionnaire-page__title">Анкета с пожеланиями </h2>
@@ -119,7 +116,6 @@ export const QuestionnairePage = () => {
           <Button form="questionnaire">Отправить анкету</Button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -11,6 +11,7 @@ export const variables = {
       systemGreen: '#008000',
       systemRed: '#ff0000',
       systemYellow: '#ffb801',
+      gray:'#989898'
     },
 
     button:{
@@ -19,6 +20,7 @@ export const variables = {
     },
     link: {
       active: '#00529d',
+      gray:'#989898'
     }
   },
 

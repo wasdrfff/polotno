@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { useMemo } from "react";
 import { Plan3 } from "./plan-3";
 import { Plan4 } from "./plan-4";
+import { BreadCrumbs } from "../../../../components/bread-crumbs";
 
 export const PlanPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -27,6 +28,7 @@ export const PlanPage = () => {
   return (
     <div>
       <Header />
+      <BreadCrumbs />
       {plan}
       <Footer />
     </div>

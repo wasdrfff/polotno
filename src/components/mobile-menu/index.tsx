@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./style.scss";
 import menu from "./assets/menu.svg";
+import select from "./assets/arrow-select.svg";
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,32 +29,35 @@ export const MobileMenu = () => {
             </div>
             <div className="mobile-menu__content">
               <div className="mobile-menu__dropdown">
-                <span
-                  onClick={toggleDropdown}
-                  className="mobile-menu__dropdown-title"
-                >
-                  услуги
-                </span>
+                <div className="mobile-menu__select">
+                  <span
+                    onClick={toggleDropdown}
+                    className="mobile-menu__dropdown-title"
+                  >
+                    Услуги
+                  </span>
+                  <img src={select} alt="select" />
+                </div>
                 {isOpenDropdown && (
                   <div className="mobile-menu__dropdown-links">
                     <NavLink
                       activeClassName="selected"
                       className="mobile-menu__dropdown-link"
-                      to="/services"
+                      to="services/interior-decoration"
                     >
                       Декорирование интерьера
                     </NavLink>
                     <NavLink
                       activeClassName="selected"
                       className="mobile-menu__dropdown-link"
-                      to="/interior-design"
+                      to="/services/interior-design"
                     >
                       Дизайн интерьеров
                     </NavLink>
                     <NavLink
                       activeClassName="selected"
                       className="mobile-menu__dropdown-link"
-                      to="/furniture-manufacturing"
+                      to="/services/furniture-manufacturing"
                     >
                       Изготовление мебели на заказ
                     </NavLink>
@@ -63,23 +67,30 @@ export const MobileMenu = () => {
               <NavLink
                 activeClassName="selected"
                 className="mobile-menu__link"
-                to="/interiordesign"
+                to="/interiors"
               >
-                интерьеры
+                Интерьеры
               </NavLink>
               <NavLink
                 activeClassName="selected"
                 className="mobile-menu__link"
-                to="/portfolio"
+                to="/decoration"
               >
-                декорирование
+                Декорирование
               </NavLink>
               <NavLink
                 activeClassName="selected"
                 className="mobile-menu__link"
                 to="/contact"
               >
-                контакты
+                Контакты
+              </NavLink>
+              <NavLink
+                activeClassName="selected"
+                className="mobile-menu__link"
+                to="/questionnaire"
+              >
+                Заполнить анкету
               </NavLink>
             </div>
           </div>

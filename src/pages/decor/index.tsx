@@ -1,3 +1,4 @@
+import { BreadCrumbs } from "../../components/bread-crumbs";
 import { CardDecor } from "../../components/decor-card";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
@@ -7,6 +8,7 @@ export const DecorPage = () => {
   return (
     <div>
       <Header />
+      <BreadCrumbs/>
       <div className="decor-page">
         <p>Ткани,декор.</p>
         <div className="decor-page__items">

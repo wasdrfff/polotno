@@ -1,13 +1,10 @@
 import { BreadCrumbs } from "../../components/bread-crumbs";
 import { CardDecor } from "../../components/decor-card";
-import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
 import cart from "../main-page/assets/images/IMG_3.jpg";
 import "./style.scss";
 export const DecorPage = () => {
   return (
     <div>
-      <Header />
       <BreadCrumbs/>
       <div className="decor-page">
         <p>Ткани,декор.</p>
@@ -22,7 +19,6 @@ export const DecorPage = () => {
           <CardDecor img={cart} description="Название бренда" />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

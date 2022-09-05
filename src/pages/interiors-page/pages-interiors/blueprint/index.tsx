@@ -1,9 +1,6 @@
-// import { useParams } from "react-router-dom";
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { BreadCrumbs } from "../../../../components/bread-crumbs";
-import { Footer } from "../../../../components/footer";
-import { Header } from "../../../../components/header";
 import { Blueprint1 } from "./blueprint-1";
 import { Blueprint2 } from "./blueprint-2";
 import { Blueprint3 } from "./blueprint-3";
@@ -28,10 +25,8 @@ export const BlueprintPage = () => {
 
   return (
     <div>
-      <Header />
       <BreadCrumbs />
       {blueprint}
-      <Footer />
     </div>
   );
 };

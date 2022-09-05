@@ -1,12 +1,10 @@
-import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
 import "./style.scss";
 import image from "../main-page/assets/images/IMG_3.jpg";
 import { BreadCrumbs } from "../../components/bread-crumbs";
+
 export const MaterialPage = () => {
   return (
     <div>
-      <Header />
       <BreadCrumbs />
       <div className="material-page">
         <p>Название бренда</p>
@@ -85,7 +83,6 @@ export const MaterialPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

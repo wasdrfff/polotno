@@ -1,5 +1,3 @@
-import { Footer } from "../../../../components/footer";
-import { Header } from "../../../../components/header";
 import { Plan1 } from "./plan-1";
 import { Plan2 } from "./plan-2";
 import "./style.scss";
@@ -27,10 +25,8 @@ export const PlanPage = () => {
 
   return (
     <div>
-      <Header />
       <BreadCrumbs />
       {plan}
-      <Footer />
     </div>
   );
 };

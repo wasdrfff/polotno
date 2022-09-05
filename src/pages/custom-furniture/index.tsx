@@ -1,12 +1,9 @@
 import { BreadCrumbs } from "../../components/bread-crumbs";
-import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
 import image from "../main-page/assets/images/IMG_3.jpg";
 import "./style.scss";
 export const FurniturePage = () => {
   return (
     <div className="furniture-page">
-      <Header />
       <BreadCrumbs/>
       <div className="furniture-page__content">
         <p>
@@ -22,7 +19,6 @@ export const FurniturePage = () => {
           <button>Примеры чертежей</button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

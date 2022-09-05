@@ -1,5 +1,3 @@
-import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
 import image3 from "./assets/images/IMG_3.jpg";
 import image26 from "./assets/images/IMG_26.jpg";
 import image2622 from "./assets/images/IMG_2622.jpg";
@@ -67,7 +65,6 @@ export const MainPage = () => {
 
   return (
     <Wrapper>
-      <Header />
       <Container>
         <BreadCrumbs />
       </Container>
@@ -86,7 +83,6 @@ export const MainPage = () => {
           <SliderNew items={sliderNewItems} />
         </SliderWrapper>
       </SliderContainer>
-      <Footer />
     </Wrapper>
   );
 };

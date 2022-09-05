@@ -1,6 +1,4 @@
 import { useHistory } from "react-router-dom";
-import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
 import { CardProject } from "../../components/card-project/index";
 import { cardsProject } from "./data";
 import "./style.scss";
@@ -19,7 +17,6 @@ export const InteriorDesign = () => {
   };
   return (
     <div>
-      <Header />
       <BreadCrumbs />
       <div className="interior-design">
         <p className="interior-design__title">
@@ -53,7 +50,6 @@ export const InteriorDesign = () => {
           <Button onClick={sendToContacts}>Заказать звонок</Button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

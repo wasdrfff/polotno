@@ -1,5 +1,3 @@
-import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
 import { CustomSlider } from "../../components/slider";
 import { CardService } from "../../components/card-service";
 import { cardsStage } from "./data";
@@ -19,7 +17,6 @@ export const InteriorDecorationPage = () => {
 
   return (
     <div>
-      <Header />
       <BreadCrumbs />
       <div className="service-page">
         <div className="service-page__slider">
@@ -58,7 +55,6 @@ export const InteriorDecorationPage = () => {
           <Button>Все проекты</Button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

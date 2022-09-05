@@ -1,5 +1,3 @@
-import { Footer } from "../../components/footer/index";
-import { Header } from "../../components/header/index";
 import emailjs from "@emailjs/browser";
 import imgMail from "./assets/images/email.svg";
 import imgPhone from "./assets/images/phone.svg";
@@ -72,8 +70,6 @@ export const ContactPage = () => {
   };
 
   return (
-    <>
-      <Header />
       <Wrapper>
         <Container>
           <BreadCrumbs />
@@ -145,7 +141,5 @@ export const ContactPage = () => {
           </CardsWrapper>
         </MainContainer>
       </Wrapper>
-      <Footer />
-    </>
   );
 };

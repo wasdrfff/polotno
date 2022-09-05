@@ -8,7 +8,6 @@ import { Button } from "../../components/button";
 import { WorkStep, WorkStepTitle } from "./interior-decoration-page-styled";
 import { Icon } from "../../components/icon";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
-import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const InteriorDecorationPage = () => {
   const screenType = useScreenType();
@@ -17,7 +16,6 @@ export const InteriorDecorationPage = () => {
 
   return (
     <div>
-      <BreadCrumbs />
       <div className="service-page">
         <div className="service-page__slider">
           <CustomSlider>

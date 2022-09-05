@@ -1,11 +1,9 @@
-import { BreadCrumbs } from "../../components/bread-crumbs";
 import { CardDecor } from "../../components/decor-card";
 import cart from "../main-page/assets/images/IMG_3.jpg";
 import "./style.scss";
 export const DecorPage = () => {
   return (
     <div>
-      <BreadCrumbs/>
       <div className="decor-page">
         <p>Ткани,декор.</p>
         <div className="decor-page__items">

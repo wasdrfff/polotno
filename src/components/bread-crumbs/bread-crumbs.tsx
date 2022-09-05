@@ -8,23 +8,29 @@ export const BreadCrumbs = () => {
   const location = useLocation();
   const pathname = location.pathname;
   let path = "";
-  const parts = pathname
+
+  var parts = pathname
     .split("/")
     .filter(Boolean)
     .map((path) => {
       return "/" + path;
     });
+
   let urls = parts.map((part) => {
     path += part;
+
     return path;
   });
-
+  console.log(urls);
   return (
     <Container>
-      <Block>
-        <StyledLink to="/">Главная</StyledLink>
-        <Icon name="rightArrowSmall" color="gray" />
-      </Block>
+      {!!urls.length && (
+        <Block>
+          <StyledLink to="/">Главная</StyledLink>
+          <Icon name="rightArrowSmall" color="gray" />
+        </Block>
+      )}
+
       {urls.map((url) => {
         return (
           <Block>

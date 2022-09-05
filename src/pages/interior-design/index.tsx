@@ -5,7 +5,6 @@ import "./style.scss";
 import { Button } from "../../components/button";
 import { CustomSlider } from "../../components/slider";
 import slider1 from "../main-page/assets/images/IMG_3.jpg";
-import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const InteriorDesign = () => {
   const history = useHistory();
@@ -17,7 +16,6 @@ export const InteriorDesign = () => {
   };
   return (
     <div>
-      <BreadCrumbs />
       <div className="interior-design">
         <p className="interior-design__title">
           Разработка дизайн-проектов интерьера жилых и общественных помещений

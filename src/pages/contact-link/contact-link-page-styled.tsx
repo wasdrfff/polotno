@@ -1,5 +1,5 @@
-import styled  from "styled-components";
-import { variables } from "../../variables";
+import styled from "styled-components";
+import { theme } from "../../variables";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ export const MainContainer = styled.main`
   display: flex;
   justify-content: space-between;
 
-  @media screen and(max-width: ${variables.sizes.tablet}) {
+  @media screen and(max-width: ${theme.sizes.tablet}) {
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -32,12 +32,12 @@ export const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid ${variables.colors.common.lightBlue};
+  border: 3px solid ${theme.colors.mainColor};
   max-width: 445px;
   width: 100%;
   padding: 20px 62px 40px;
 
-  @media screen and(max-width: ${variables.sizes.tablet}) {
+  @media screen and(max-width: ${theme.sizes.tablet}) {
     width: 325px;
     height: 400px;
 
@@ -53,7 +53,7 @@ export const Form = styled.form`
   width: 100%;
   gap: 15px;
   textarea {
-    border: 2px solid ${variables.colors.common.lightBlue};
+    border: 2px solid ${theme.colors.mainColor};
     margin-bottom: 15px;
     max-width: 320px;
     width: 100%;
@@ -65,7 +65,7 @@ export const Form = styled.form`
       padding-left: 25px;
     }
 
-    @media screen and(max-width: ${variables.sizes.tablet}) {
+    @media screen and(max-width: ${theme.sizes.tablet}) {
       font-size: 15px;
       height: 60px;
     }
@@ -74,12 +74,12 @@ export const Form = styled.form`
 export const CardsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  border: 3px solid ${variables.colors.common.lightBlue};
+  border: 3px solid ${theme.colors.mainColor};
   max-width: 445px;
   width: 100%;
   padding: 50px 62px 40px;
 
-  @media screen and(max-width: ${variables.sizes.tablet}) {
+  @media screen and(max-width: ${theme.sizes.tablet}) {
     width: 325px;
     height: 400px;
     padding: 18px 35px 40px;
@@ -101,9 +101,9 @@ export const Card = styled.div`
   flex-direction: column;
   width: 100%;
   font-size: 18px;
-  border: 2px solid ${variables.colors.common.lightBlue};
+  border: 2px solid ${theme.colors.mainColor};
   height: 215px;
-  @media screen and(max-width:${variables.sizes.tablet}) {
+  @media screen and(max-width:${theme.sizes.tablet}) {
     font-size: 15px;
     height: 140px;
   }

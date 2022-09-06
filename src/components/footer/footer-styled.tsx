@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { variables } from "../../variables";
+import { theme } from "../../variables";
 
 export const FooterComponent = styled.footer`
   display: flex;
@@ -12,7 +12,7 @@ export const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid ${variables.colors.common.lightBlue};
+  border: 1px solid ${theme.colors.mainColor};
   padding: 20px 82px 25px;
   gap: 15px;
   img {

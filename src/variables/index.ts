@@ -1,1 +1,1 @@
-export {variables} from './variables';
+export {theme} from './theme';

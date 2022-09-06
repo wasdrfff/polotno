@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { variables } from "../../variables";
+import { theme } from "../../variables";
 import square from "./assets/images/Square.svg";
 
 export const Wrapper = styled.div`
@@ -32,7 +32,7 @@ export const BlueSquare = styled.img.attrs(() => ({
 
   display: ${(p) => (p.isHidden ? "none" : "block")};
 
-  @media screen and (max-width: ${variables.sizes.tablet}) {
+  @media screen and (max-width: ${theme.sizes.tablet}) {
     width: 50px;
   }
 `;
@@ -41,7 +41,7 @@ export const Text = styled.span`
   font-size: 25px;
   font-weight: 400;
 
-  @media screen and (max-width: ${variables.sizes.tablet}) {
+  @media screen and (max-width: ${theme.sizes.tablet}) {
     font-size: 15px;
   }
 `;
@@ -80,9 +80,9 @@ export const TitleWrapper = styled.div`
   padding-right: 95px;
   padding-top: 30px;
 
-  border-top: 6px solid ${variables.colors.common.lightBlue};
+  border-top: 6px solid ${theme.colors.mainColor};
 
-  @media screen and (max-width: ${variables.sizes.tablet}) {
+  @media screen and (max-width: ${theme.sizes.tablet}) {
     border-top: none;
     padding-right: 0;
   }
@@ -93,7 +93,7 @@ export const SliderWrapper = styled.div`
   width: 100%;
   height: 650px;
 
-  @media screen and (max-width: ${variables.sizes.tablet}) {
+  @media screen and (max-width: ${theme.sizes.tablet}) {
     height: 235px;
   }
 `;

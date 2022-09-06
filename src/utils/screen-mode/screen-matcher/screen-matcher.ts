@@ -1,7 +1,7 @@
-import {variables} from '../../../variables';
+import {theme} from '../../../variables';
 import { ScreenType } from '../types'
 
-export const size = variables.sizes
+export const size = theme.sizes
 
 export const screenSize = {
   maxMobile: `max-width: ${size.tablet}`,

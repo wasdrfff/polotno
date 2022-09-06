@@ -5,7 +5,12 @@ import { cardsService } from "./data";
 import "./style.scss";
 import slider1 from "../main-page/assets/images/IMG_3.jpg";
 import { Button } from "../../components/button";
-import { WorkStep, WorkStepTitle } from "./interior-decoration-page-styled";
+import {
+  Container,
+  TitleBlock,
+  WorkStep,
+  WorkStepTitle,
+} from "./interior-decoration-page-styled";
 import { Icon } from "../../components/icon";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 
@@ -23,17 +28,15 @@ export const InteriorDecorationPage = () => {
             <img src={slider1} alt="slider" />
           </CustomSlider>
         </div>
-        <p className="service-page__sequence">
-          Последовательность и объем работ
-        </p>
-        <div className="service-page__stages">
+        <TitleBlock>Последовательность и объем работ</TitleBlock>
+        <Container>
           {cardsStage.map(({ id, iconName, description }) => (
             <WorkStep key={id}>
               <Icon name={iconName} size={isDesktop ? 120 : 50} />
               <WorkStepTitle>{description}</WorkStepTitle>
             </WorkStep>
           ))}
-        </div>
+        </Container>
         <div className="service-page__cards-service">
           {cardsService.map(
             ({ id, exampleLink, imgUrls, imgName, description }) => {

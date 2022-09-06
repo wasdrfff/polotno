@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {variables} from "../../variables";
+import { variables } from "../../variables";
 
 export const WorkStep = styled.div`
   display: flex;
@@ -10,20 +10,43 @@ export const WorkStep = styled.div`
 
   @media screen and (max-width: ${variables.sizes.tablet}) {
     gap: 20px;
-    width: 80px;
+    width: 65px;
   }
-`
+`;
 
 export const WorkStepTitle = styled.div`
   display: flex;
   align-items: center;
-  
-  height: 80px;
   text-align: center;
 
   @media screen and (max-width: ${variables.sizes.tablet}) {
-    font-size: 15px;
-    height: 60px;
+    font-size: 10px;
+    height: 30px;
   }
-  
-`
+`;
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  gap: 30px;
+  max-width: 1110px;
+
+  @media screen and (max-width: ${variables.sizes.tablet}) {
+    width: 325px;
+    overflow-x: auto;
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+`;
+
+export const TitleBlock = styled.p`
+  margin-top: 65px;
+  font-size: 25px;
+  font-weight: 500;
+  @media screen and (max-width: ${variables.sizes.tablet}) {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+`;

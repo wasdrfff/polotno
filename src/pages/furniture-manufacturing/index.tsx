@@ -6,12 +6,10 @@ import drawing2 from "./assets/images/drawings/drawing_2.jpg";
 import drawing3 from "./assets/images/drawings/drawing_3.jpg";
 import drawing4 from "./assets/images/drawings/drawing_4.jpg";
 import "./style.scss";
-import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const ManufacturingPage = () => {
   return (
     <div>
-      <BreadCrumbs/>
       <div className="manufacturingPage">
         <div className="manufacturingPage__block">
           <span>

@@ -4,12 +4,10 @@ import geolocation from "./assets/images/geolocation.svg";
 import squere from "./assets/images/squere.svg";
 import house from "./assets/images/house.svg";
 import customer from "./assets/images/customer.svg";
-import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const RoomPage = () => {
   return (
     <div>
-      <BreadCrumbs />
       <div className="room-page">
         <p>Название проекта</p>
         <img src={image} alt="1" />

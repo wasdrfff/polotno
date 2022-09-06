@@ -7,15 +7,13 @@ import {
   ImagesWrapper,
   Image,
 } from "./interiors-page-styled";
-import { BreadCrumbs } from "../../components/bread-crumbs";
-import {useInteriorsPage} from "./use-interiors-page";
+import { useInteriorsPage } from "./use-interiors-page";
 
 export const InteriorsPage = () => {
-  const {projects} = useInteriorsPage();
+  const { projects } = useInteriorsPage();
 
   return (
     <>
-      <BreadCrumbs />
       <Wrapper>
         <Container>
           {projects.map(({ title, plan, blueprint, id }) => (

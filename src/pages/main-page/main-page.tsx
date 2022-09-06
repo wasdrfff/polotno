@@ -11,10 +11,8 @@ import {
   Text,
   TitleWrapper,
   Wrapper,
-  Container,
 } from "./main-page-styled";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
-import { BreadCrumbs } from "../../components/bread-crumbs";
 
 export const MainPage = () => {
   const screenType = useScreenType();
@@ -65,9 +63,7 @@ export const MainPage = () => {
 
   return (
     <Wrapper>
-      <Container>
-        <BreadCrumbs />
-      </Container>
+ 
       <GreetingSectionWrapper>
         <GreetingSection />
       </GreetingSectionWrapper>

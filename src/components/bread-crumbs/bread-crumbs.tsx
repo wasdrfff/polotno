@@ -1,41 +1,52 @@
-// @ts-nocheck
+//@ts-nocheck
 import { useLocation } from "react-router-dom";
 import { staticUrls } from "./data";
 import { Block, Container, StyledLink } from "./bread-crumbs-styled";
 import { Icon } from "../icon";
+import { ScreenType, useScreenType } from "../../utils/screen-mode";
 
 export const BreadCrumbs = () => {
   const location = useLocation();
   const pathname = location.pathname;
-  let path = "";
 
-  var parts = pathname
+  const parts = pathname
     .split("/")
     .filter(Boolean)
     .map((path) => {
       return "/" + path;
     });
 
-  let urls = parts.map((part) => {
-    path += part;
+  let path = "";
 
+  const urls = parts.map((part) => {
+    path += part;
     return path;
   });
-  console.log(urls);
+
+  const screenType = useScreenType();
+
+  const isDesktop = screenType === ScreenType.Desktop;
+
+  if (pathname === "/") {
+    return null;
+  }
+  
   return (
     <Container>
-      {!!urls.length && (
-        <Block>
-          <StyledLink to="/">Главная</StyledLink>
-          <Icon name="rightArrowSmall" color="gray" />
-        </Block>
-      )}
+      <Block>
+        <StyledLink to="/">Главная</StyledLink>
+        <Icon name="rightArrowSmall" color="gray" size={isDesktop ? 30 : 15} />
+      </Block>
 
       {urls.map((url) => {
         return (
           <Block>
             <StyledLink to={url}>{staticUrls[url]}</StyledLink>
-            <Icon name="rightArrowSmall" color="gray" />
+            <Icon
+              name="rightArrowSmall"
+              color="gray"
+              size={isDesktop ? 30 : 15}
+            />
           </Block>
         );
       })}

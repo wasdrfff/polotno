@@ -16,11 +16,14 @@ import { BlueprintPage } from "./pages/interiors-page/pages-interiors/blueprint"
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { BreadCrumbs } from "./components/bread-crumbs";
+import { Container } from "./app-styled";
 
 export const App = () => (
   <Router>
     <Header />
-    <BreadCrumbs />
+    <Container>
+      <BreadCrumbs />
+    </Container>
     <Switch>
       <Route path="/questionnaire">
         <QuestionnairePage />

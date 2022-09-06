@@ -18,7 +18,6 @@ export const InteriorDecorationPage = () => {
   const screenType = useScreenType();
 
   const isDesktop = screenType === ScreenType.Desktop;
-
   return (
     <div>
       <div className="service-page">

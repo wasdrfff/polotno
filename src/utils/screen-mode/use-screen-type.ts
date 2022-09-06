@@ -11,6 +11,5 @@ export function useScreenType(): ScreenType {
       screenMatcher.unsubscribe(setType)
     }
   }, [])
-
   return type
 }

@@ -4,10 +4,10 @@ import { ScreenType } from '../types'
 export const size = variables.sizes
 
 export const screenSize = {
-  maxMobile: `max-width: ${size.mobile}`,
-  minTablet: `min-width: ${size.mobile}`,
-  maxTablet: `max-width: ${size.tablet}`,
-  minDesktop: `min-width: ${size.tablet}`,
+  maxMobile: `max-width: ${size.tablet}`,
+  minTablet: `min-width: ${size.tablet}`,
+  maxTablet: `max-width: ${size.desktop}`,
+  minDesktop: `min-width: ${size.desktop}`,
 }
 
 type Subscriber = (mediaType: ScreenType) => void
@@ -19,9 +19,9 @@ class ScreenMatcher {
   private subscriptions: Subscriber[] = []
 
   constructor() {
-    this.mobileMedia = window.matchMedia(`screen and (max-width: ${size.tablet})`)
+    this.mobileMedia = window.matchMedia(`screen and (${screenSize.maxMobile})`)
     this.tabletMedia = window.matchMedia(
-      `screen and (${screenSize.minTablet}) and (max-width: ${size.tablet})`,
+      `screen and (${screenSize.minTablet}) and (${screenSize.maxTablet})`,
     )
     this.desktopMedia = window.matchMedia(`screen and (${screenSize.minDesktop})`)
     this.bindHandler(this.mobileMedia, ScreenType.Mobile)
@@ -31,6 +31,7 @@ class ScreenMatcher {
 
   private bindHandler(mediaQuery: MediaQueryList, mediaType: ScreenType) {
     const handler = (e: MediaQueryListEvent) => {
+      
       if (!e.matches) {
         return
       }

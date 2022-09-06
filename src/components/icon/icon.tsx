@@ -1,7 +1,7 @@
 import { IconColorPalette, IconName } from "./types";
 import { icons } from "./icons";
 import { Container } from "./icon-styled";
-import { variables } from "../../variables";
+import { theme } from "../../variables";
 
 export type IconProps = {
   size?: number;
@@ -19,9 +19,7 @@ export function Icon({
   "aria-label": ariaLabel,
 }: IconProps) {
   const IconComponent = icons[name];
-  const usedColor = color
-    ? (variables.colors.common[color] as string)
-    : undefined;
+  const usedColor = color ? (theme.colors[color] as string) : undefined;
 
   return (
     <Container

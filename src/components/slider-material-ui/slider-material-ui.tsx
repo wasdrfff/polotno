@@ -34,8 +34,6 @@ export const SliderMaterialUi = ({ items, height }: Props) => {
   const [isOpenImage, setIsOpenImage] = useState(false);
   const [itemIndex, setItemIndex] = useState<number>();
 
-  console.log(itemIndex);
-
   const closeModalSlider = () => {
     setIsOpenImage(false);
     setItemIndex(undefined);

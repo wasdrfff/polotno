@@ -93,7 +93,4 @@ export const SliderWrapper = styled.div`
   width: 100%;
   padding-left: 15px;
   padding-bottom: 15px;
-  @media screen and (max-width: ${theme.sizes.tablet}) {
-    height: 235px;
-  }
 `;

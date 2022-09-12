@@ -3,12 +3,13 @@ import Carousel from "react-material-ui-carousel";
 import { Icon } from "../icon";
 import { theme } from "../../variables";
 import {
-  IconContainer,
+  ModalHeader,
   Image,
   ImageWrapper,
   ModalImage,
   ModalSlider,
   ModalWrapper,
+  IconWrapper,
 } from "./slider-material-ui-styled";
 
 export type TItem = {
@@ -77,12 +78,14 @@ export const SliderMaterialUi = ({ items, height }: Props) => {
       </Carousel>
       {isOpenImage && (
         <ModalWrapper>
-          <IconContainer>
-            <Icon name="cross" onClick={closeModalSlider} size={40} />
-          </IconContainer>
+          <ModalHeader>
+            <IconWrapper>
+              <Icon name="cross" onClick={closeModalSlider} size={40} />
+            </IconWrapper>
+          </ModalHeader>
           <Carousel
             autoPlay={false}
-            height="calc(100vh - 60px)"
+            height="calc(100vh - 80px)"
             navButtonsAlwaysVisible={true}
             index={itemIndex}
             indicators={false}

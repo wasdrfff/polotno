@@ -30,7 +30,11 @@ export const ModalImage = styled.img`
   object-fit: scale-down;
 `;
 
-export const IconContainer = styled.div`
+export const ModalHeader = styled.div`
   display: flex;
   justify-content: flex-end;
+`;
+export const IconWrapper = styled.div`
+  cursor: pointer;
+  padding: 10px;
 `;

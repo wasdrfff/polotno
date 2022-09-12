@@ -14,6 +14,7 @@ export const ImageWrapper = styled.div`
 export const ModalWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   position: fixed;
+  height: 100vh;
   width: 100%;
   left: 0;
   top: 0;
@@ -21,7 +22,6 @@ export const ModalWrapper = styled.div`
 `;
 export const ModalSlider = styled.div`
   display: flex;
-  align-items: center;
   height: 100%;
   justify-content: center;
 `;

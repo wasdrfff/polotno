@@ -91,8 +91,8 @@ export const TitleWrapper = styled.div`
 export const SliderWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 650px;
-
+  padding-left: 15px;
+  padding-bottom: 15px;
   @media screen and (max-width: ${theme.sizes.tablet}) {
     height: 235px;
   }

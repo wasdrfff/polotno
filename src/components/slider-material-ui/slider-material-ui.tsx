@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Icon } from "../icon";
+import { theme } from "../../variables";
 import {
   IconContainer,
   Image,
@@ -45,7 +46,27 @@ export const SliderMaterialUi = ({ items, height }: Props) => {
   };
   return (
     <>
-      <Carousel autoPlay={false} height={height}>
+      <Carousel
+        autoPlay={false}
+        height={height}
+        indicatorContainerProps={{
+          style: {
+            position: "absolute",
+            bottom: "4px",
+            zIndex: "1",
+          },
+        }}
+        indicatorIconButtonProps={{
+          style: {
+            color: theme.colors.white,
+          },
+        }}
+        activeIndicatorIconButtonProps={{
+          style: {
+            color: theme.colors.mainColor,
+          },
+        }}
+      >
         {items.map((item, index) => {
           return (
             <ImageWrapper onClick={() => openModalSlider(index)}>
@@ -61,9 +82,10 @@ export const SliderMaterialUi = ({ items, height }: Props) => {
           </IconContainer>
           <Carousel
             autoPlay={false}
-            height="100vh"
+            height="calc(100vh - 60px)"
             navButtonsAlwaysVisible={true}
             index={itemIndex}
+            indicators={false}
           >
             {items.map((item) => {
               return (

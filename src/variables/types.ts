@@ -16,4 +16,4 @@ export type Theme={
       tablet:string,
       desktop:string,
     },
-  }
+  } 

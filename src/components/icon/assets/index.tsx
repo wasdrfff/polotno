@@ -9,3 +9,4 @@ export { ReactComponent as Roulette } from "./roulette.svg";
 export { ReactComponent as SewingMachine } from "./sewing-machine.svg";
 export { ReactComponent as Window } from "./window.svg";
 export { ReactComponent as RightArrowSmall } from "./right-arrow-small.svg";
+export { ReactComponent as Cross } from "./cross.svg";

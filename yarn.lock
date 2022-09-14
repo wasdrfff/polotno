@@ -2120,7 +2120,7 @@
     "@types/history" "^4.7.11"
     "@types/react" "*"
 
-"@types/react-slick@^0.23.8":
+"@types/react-slick@^0.23.10":
   "integrity" "sha512-ZiqdencANDZy6sWOWJ54LDvebuXFEhDlHtXU9FFipQR2BcYU2QJxZhvJPW6YK7cocibUiNn+YvDTbt1HtCIBVA=="
   "resolved" "https://registry.npmjs.org/@types/react-slick/-/react-slick-0.23.10.tgz"
   "version" "0.23.10"

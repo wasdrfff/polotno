@@ -16,15 +16,15 @@ export const InteriorsPage = () => {
     <>
       <Wrapper>
         <Container>
-          {projects.map(({ title, plan, blueprint, id }) => (
+          {projects.map(({ title, planUrl, blueprintUrl, id }) => (
             <Project>
               <Title>{title}</Title>
               <ImagesWrapper>
                 <Link to={`/interiors/plan-${id}`}>
-                  <Image src={plan} alt="plan" />
+                  <Image src={planUrl} alt="plan" />
                 </Link>
                 <Link to={`/interiors/blueprint-${id}`}>
-                  <Image src={blueprint} alt="blueprint" />
+                  <Image src={blueprintUrl} alt="blueprint" />
                 </Link>
               </ImagesWrapper>
             </Project>

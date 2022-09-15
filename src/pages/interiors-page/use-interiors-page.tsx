@@ -1,24 +1,20 @@
 import { useEffect, useState } from "react";
+import { api } from "../../utils/api";
+
+type TProject = {
+  blueprintUrl: string;
+  planUrl: string;
+  title: string;
+  id: number;
+};
 
 export const useInteriorsPage = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<TProject[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/interiors-projects")
-      .then((res) => res.json())
-      .then((res) => {
-        let projectsNew = res.data.map((item: any) => {
-          console.log(item);
-          return {
-            id: item.id,
-            title: item.attributes.title,
-            plan: item.attributes.planUrl,
-            blueprint: item.attributes.blueprintUrl,
-          };
-        });
-        setProjects(projectsNew);
-      })
-      .catch(() => console.log("Server status: off"));
+    api<TProject[]>(
+      "https://polotno-strapi.herokuapp.com/api/interiors-projects"
+    ).then((resp) => setProjects(resp));
   }, []);
 
   return {

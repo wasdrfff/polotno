@@ -9,6 +9,7 @@ export type IconProps = {
   className?: string;
   "aria-label"?: string;
   name: IconName;
+  onClick?: () => void;
 };
 
 export function Icon({
@@ -17,6 +18,7 @@ export function Icon({
   color,
   className,
   "aria-label": ariaLabel,
+  onClick,
 }: IconProps) {
   const IconComponent = icons[name];
   const usedColor = color ? (theme.colors[color] as string) : undefined;
@@ -29,6 +31,7 @@ export function Icon({
       aria-hidden
       aria-label={ariaLabel ?? `icon-${name}`}
       data-icon-name={`icon-${name}`}
+      onClick={onClick}
     >
       <IconComponent color={usedColor} />
     </Container>

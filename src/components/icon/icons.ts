@@ -4,7 +4,7 @@ export const icons = {
   rightArrow : assets.RightArrow,
   leftArrow : assets.LeftArrow,
   rightArrowSmall : assets.RightArrowSmall,
-
+  cross:assets.Cross,
 
   books: assets.Books,
   bubbles : assets.Bubbles,

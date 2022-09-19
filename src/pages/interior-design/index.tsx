@@ -3,17 +3,49 @@ import { CardProject } from "../../components/card-project/index";
 import { cardsProject } from "./data";
 import "./style.scss";
 import { Button } from "../../components/button";
-import { CustomSlider } from "../../components/slider";
 import slider1 from "../main-page/assets/images/IMG_3.jpg";
+import {ScreenType, useScreenType} from "../../utils/screen-mode";
+import {useMemo} from "react";
+import {SliderMaterialUi} from "../../components/slider-material-ui";
 
 export const InteriorDesign = () => {
   const history = useHistory();
+
   const sendToTheQuestionnaire = () => {
     history.push("/questionnaire");
   };
   const sendToContacts = () => {
     history.push("/contact");
   };
+
+  const screenType = useScreenType();
+
+  const isDesktop = screenType === ScreenType.Desktop;
+
+  const items = useMemo(
+    () => [
+      {
+        // Image item:
+        id: 1,
+        image: {
+          url: slider1,
+          description: "sample-description",
+          name: "string",
+        },
+      },
+      {
+        // Image item:
+        id: 2,
+        image: {
+          url: slider1,
+          description: "sample-description",
+          name: "string",
+        },
+      },
+    ],
+    []
+  );
+
   return (
     <div>
       <div className="interior-design">
@@ -21,10 +53,7 @@ export const InteriorDesign = () => {
           Разработка дизайн-проектов интерьера жилых и общественных помещений
         </p>
         <div className="interior-design__slider">
-          <CustomSlider>
-            <img src={slider1} alt="slider" />
-            <img src={slider1} alt="slider" />
-          </CustomSlider>
+          <SliderMaterialUi items={items} height={isDesktop ? 650 : 235} />
         </div>
         <p className="interior-design__title">
           Услуги по проектированию проекта

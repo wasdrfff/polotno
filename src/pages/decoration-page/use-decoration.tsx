@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TItem } from "../../components/slider-material-ui/slider-material-ui";
+import { TItem } from "../../components/slider-material-ui";
 import { api } from "../../utils/api";
 
 export const useDecoration = () => {

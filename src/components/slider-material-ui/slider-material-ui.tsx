@@ -11,15 +11,8 @@ import {
   ModalWrapper,
   IconWrapper,
 } from "./slider-material-ui-styled";
+import {TItem} from "./types";
 
-export type TItem = {
-  id: number;
-  image: {
-    url: string;
-    name: string;
-    description: string;
-  };
-};
 
 type Props = {
   items: TItem[];

@@ -1,4 +1,3 @@
-import { CustomSlider } from "../../components/slider";
 import { CardService } from "../../components/card-service";
 import { cardsStage } from "./data";
 import { cardsService } from "./data";
@@ -13,19 +12,44 @@ import {
 } from "./interior-decoration-page-styled";
 import { Icon } from "../../components/icon";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
+import {useMemo} from "react";
+import {SliderMaterialUi} from "../../components/slider-material-ui";
 
 export const InteriorDecorationPage = () => {
   const screenType = useScreenType();
 
   const isDesktop = screenType === ScreenType.Desktop;
+
+  const items = useMemo(
+    () => [
+      {
+        // Image item:
+        id: 1,
+        image: {
+          url: slider1,
+          description: "sample-description",
+          name: "string",
+        },
+      },
+      {
+        // Image item:
+        id: 2,
+        image: {
+          url: slider1,
+          description: "sample-description",
+          name: "string",
+        },
+      },
+    ],
+    []
+  );
+
   return (
     <div>
       <div className="service-page">
         <div className="service-page__slider">
-          <CustomSlider>
-            <img src={slider1} alt="slider" />
-            <img src={slider1} alt="slider" />
-          </CustomSlider>
+          <SliderMaterialUi items={items} height={isDesktop ? 650 : 235} />
+
         </div>
         <TitleBlock>Последовательность и объем работ</TitleBlock>
         <Container>

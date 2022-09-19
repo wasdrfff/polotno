@@ -13,7 +13,7 @@ export const useInteriorsPage = () => {
 
   useEffect(() => {
     api<TProject[]>(
-      "https://polotno-strapi.herokuapp.com/api/interiors-projects"
+      "/api/interiors-projects"
     ).then((resp) => setProjects(resp));
   }, []);
 

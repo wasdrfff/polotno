@@ -12,7 +12,7 @@ import {
 } from "./main-page-styled";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
-import { TItem } from "../../components/slider-material-ui/slider-material-ui";
+import { TItem } from "../../components/slider-material-ui";
 import { useEffect, useMemo, useState } from "react";
 
 export const MainPage = () => {

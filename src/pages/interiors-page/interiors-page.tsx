@@ -10,6 +10,7 @@ import {
 import { useInteriorsPage } from "./use-interiors-page";
 
 export const InteriorsPage = () => {
+  
   const { projects } = useInteriorsPage();
 
   return (

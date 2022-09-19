@@ -13,15 +13,11 @@ import {
 } from "./slider-material-ui-styled";
 
 export type TItem = {
-  itemId: string;
-  mediaUrl: string;
-  metaData: {
-    type: string;
-    height: number;
-    width: number;
-    title: string;
+  id: number;
+  image: {
+    url: string;
+    name: string;
     description: string;
-    focalPoint: number[];
   };
 };
 
@@ -68,8 +64,8 @@ export const SliderMaterialUi = ({ items, height }: Props) => {
       >
         {items.map((item, index) => {
           return (
-            <ImageWrapper onClick={() => openModalSlider(index)}>
-              <Image key={item.itemId} src={item.mediaUrl} />
+            <ImageWrapper key={item.id} onClick={() => openModalSlider(index)}>
+              <Image src={item.image.url} />
             </ImageWrapper>
           );
         })}
@@ -90,8 +86,8 @@ export const SliderMaterialUi = ({ items, height }: Props) => {
           >
             {items.map((item) => {
               return (
-                <ModalSlider>
-                  <ModalImage key={item.itemId} src={item.mediaUrl} />
+                <ModalSlider key={item.id}>
+                  <ModalImage src={item.image.url} />
                 </ModalSlider>
               );
             })}

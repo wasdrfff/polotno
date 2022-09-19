@@ -30,7 +30,7 @@ export const BreadCrumbs = () => {
   if (pathname === "/") {
     return null;
   }
-  
+
   return (
     <Container>
       <Block>
@@ -40,7 +40,7 @@ export const BreadCrumbs = () => {
 
       {urls.map((url) => {
         return (
-          <Block>
+          <Block key={url}>
             <StyledLink to={url}>{staticUrls[url]}</StyledLink>
             <Icon
               name="rightArrowSmall"

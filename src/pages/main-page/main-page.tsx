@@ -1,6 +1,4 @@
 import long from "./assets/images/long.jpg";
-import height from "./assets/images/height.png";
-import image2622 from "./assets/images/IMG_2622.jpg";
 import { GreetingSection } from "./greeting-section";
 
 import {
@@ -23,46 +21,24 @@ export const MainPage = () => {
   const isDesktop = screenType === ScreenType.Desktop;
 
   const [items, setItems] = useState<TItem[]>([]);
-
   const sliderNewItems = useMemo(
     () => [
       {
         // Image item:
-        itemId: "sample-1",
-        mediaUrl: long,
-        metaData: {
-          type: "image",
-          height: 3024,
-          width: 4032,
-          title: "sample-title",
+        id: 1,
+        image: {
+          url: long,
           description: "sample-description",
-          focalPoint: [0, 0],
+          name: "string",
         },
       },
       {
         // Image item:
-        itemId: "sample-2",
-        mediaUrl: height,
-        metaData: {
-          type: "image",
-          height: 200,
-          width: 100,
-          title: "sample-title",
+        id: 2,
+        image: {
+          url: long,
           description: "sample-description",
-          focalPoint: [0, 0],
-        },
-      },
-      {
-        // Image item:
-        itemId: "sample-3",
-        mediaUrl: image2622,
-        metaData: {
-          type: "image",
-          height: 480,
-          width: 640,
-          title: "sample-title",
-          description: "sample-description",
-          focalPoint: [0, 0],
+          name: "string",
         },
       },
     ],

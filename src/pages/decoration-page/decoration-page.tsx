@@ -1,11 +1,22 @@
-import {Button} from "../../components/button";
-import {CustomSlider} from "../../components/slider";
-import work from "../main-page/assets/images/IMG_3.jpg";
+import { Button } from "../../components/button";
 import "./style.scss";
-import {PageWrapper, Wrapper} from "./decoration-page-styled";
+import { PageWrapper, Wrapper } from "./decoration-page-styled";
+import { useDecoration } from "./use-decoration";
+import { SliderMaterialUi } from "../../components/slider-material-ui";
+import { ScreenType, useScreenType } from "../../utils/screen-mode";
 
 export const DecorationPage = () => {
+  const {
+    kitchenItems,
+    badRoomItems,
+    livingRoomItems,
+    childrensRoomsItems,
+    otherRoomsItems,
+  } = useDecoration();
 
+  const screenType = useScreenType();
+
+  const isDesktop = screenType === ScreenType.Desktop;
 
   return (
     <PageWrapper>
@@ -16,55 +27,46 @@ export const DecorationPage = () => {
 
         <div className="portfolioPage__block">
           <span className="portfolioPage__description-block">Гостиные</span>
-          <CustomSlider>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-          </CustomSlider>
-
+          <SliderMaterialUi
+            items={livingRoomItems}
+            height={isDesktop ? 650 : 235}
+          />
         </div>
         <div className="portfolioPage__block">
           <span className="portfolioPage__description-block">
             Кухни, столовые
           </span>
-          <CustomSlider>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-          </CustomSlider>
-
+          <SliderMaterialUi
+            items={kitchenItems}
+            height={isDesktop ? 650 : 235}
+          />
         </div>
         <div className="portfolioPage__block">
           <span className="portfolioPage__description-block">
             Спальни, кабинеты
           </span>
-          <CustomSlider>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-          </CustomSlider>
+          <SliderMaterialUi
+            items={badRoomItems}
+            height={isDesktop ? 650 : 235}
+          />
         </div>
         <div className="portfolioPage__block">
           <span className="portfolioPage__description-block">Детские</span>
-          <CustomSlider>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-          </CustomSlider>
+          <SliderMaterialUi
+            items={childrensRoomsItems}
+            height={isDesktop ? 650 : 235}
+          />
         </div>
         <div className="portfolioPage__block">
           <span className="portfolioPage__description-block">
             Другие помещения
           </span>
-          <CustomSlider>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-            <img src={work} alt="work"/>
-          </CustomSlider>
+          <SliderMaterialUi
+            items={otherRoomsItems}
+            height={isDesktop ? 650 : 235}
+          />
         </div>
-
         <Button>Дизайн интерьера</Button>
-
       </Wrapper>
     </PageWrapper>
   );

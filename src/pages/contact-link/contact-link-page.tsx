@@ -29,14 +29,10 @@ export const ContactPage = () => {
         e.target,
         "_G1NABxE2QnPGrTHI"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .catch((error) => {
+        console.error(error.text);
+      });
+
     e.target.reset();
   };
   const [phone, setPhone] = useState("");

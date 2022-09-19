@@ -1,40 +1,37 @@
-//@ts-ignore
-//@ts-nocheck
 import { useEffect, useState } from "react";
+import { TItem } from "../../components/slider-material-ui/slider-material-ui";
+import { api } from "../../utils/api";
 
 export const useDecoration = () => {
-  const [kitchenItems, setKitchenItems] = useState<Item[]>([]);
-  useEffect(() => {
-    fetch("http://localhost:1337/api/DECORATION-SLIDER-KITCHEN-IMAGEs")
-      .then((res) => res.json())
-      .then((res) => {
-        let kitchenItemsData: Item[] = res.data.map((item: any) => {
-          console.log(item);
-          const newItem: Item = {
-            itemId: item.id,
-            mediaUrl: item.attributes.url,
-            metaData: {
-              type: "image",
-              height: 3024,
-              width: 4032,
-              title: item.attributes.name,
-              description: item.attributes.descrition,
-              focalPoint: [0, 0],
-              isExternal: true,
-            },
-          };
-          return newItem;
-        });
+  const [kitchenItems, setKitchenItems] = useState<TItem[]>([]);
+  const [badRoomItems, setBadRoomItems] = useState<TItem[]>([]);
+  const [livingRoomItems, setLivingRoomItems] = useState<TItem[]>([]);
+  const [childrensRoomsItems, setChildrensRoomsItems] = useState<TItem[]>([]);
+  const [otherRoomsItems, setOtherRoomsItems] = useState<TItem[]>([]);
 
-        setKitchenItems(kitchenItemsData);
-      });
+  useEffect(() => {
+    api<TItem[]>("/api/decoration-slider-kitchen-images").then((resp) => {
+      setKitchenItems(resp);
+    });
+    api<TItem[]>("/api/decoration-slider-badroom-images").then((resp) => {
+      setBadRoomItems(resp);
+    });
+    api<TItem[]>("/api/decoration-slider-living-room-images").then((resp) =>
+      setLivingRoomItems(resp)
+    );
+    api<TItem[]>("/api/decoration-slider-childrensrooms-images").then((resp) =>
+      setChildrensRoomsItems(resp)
+    );
+    api<TItem[]>("/api/decoration-slider-otherrooms-images").then((resp) =>
+      setOtherRoomsItems(resp)
+    );
   }, []);
 
-  const kitchenSlider = {
-    items: kitchenItems,
-  };
-
   return {
-    kitchenSlider,
+    kitchenItems,
+    badRoomItems,
+    livingRoomItems,
+    childrensRoomsItems,
+    otherRoomsItems,
   };
 };

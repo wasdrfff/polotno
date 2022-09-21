@@ -41,27 +41,3 @@ export const cardsStage: {
     description: "Установка и монтаж",
   },
 ];
-
-// export const cardsService=[
-//     {
-//         id:1,
-//         exampleLink:'/decor',
-//         imgUrls:[service,service],
-//         imgName:'materials',
-//         description:'Материалы, отделка, цвет'
-//     },
-//     {
-//         id:2,
-//         exampleLink:'/interiordesign',
-//         imgUrls:[service1,service1],
-//         imgName:'details',
-//         description:'Детали'
-//     },
-//     {
-//         id:3,
-//         exampleLink:'/portfolio',
-//         imgUrls:[service,service],
-//         imgName:'action',
-//         description:'Вписываем в ваш интерьер'
-//     },
-// ]

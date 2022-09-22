@@ -4,7 +4,7 @@ import "./style.scss";
 export type TProps = {
   title: string;
   timeWork: string;
-  details: string;
+  details: string[];
   imgUrl: string;
   exampleLink?: string;
 };
@@ -28,7 +28,7 @@ export const CardProject = ({
       </div>
       <div className="card-project__details">
         <ul className="card-project__list">
-          {details.split(",").map((detail) => (
+          {details.map((detail) => (
             <li key={detail}>{detail}</li>
           ))}
         </ul>

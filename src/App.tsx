@@ -3,7 +3,7 @@ import { ContactPage } from "./pages/contact-link";
 import { FurniturePage } from "./pages/custom-furniture";
 import { DecorPage } from "./pages/decor";
 import { ManufacturingPage } from "./pages/furniture-manufacturing";
-import { InteriorDesign } from "./pages/interior-design";
+import { InteriorDesignPage } from "./pages/interior-design-page";
 import { MainPage } from "./pages/main-page";
 import { MaterialPage } from "./pages/material-name";
 import { DecorationPage } from "./pages/decoration-page";
@@ -41,7 +41,7 @@ export const App = () => (
           <DecorPage />
         </Route>
         <Route path="/services/interior-design" exact>
-          <InteriorDesign />
+          <InteriorDesignPage />
         </Route>
         <Route path="/services/furniture-manufacturing">
           <ManufacturingPage />

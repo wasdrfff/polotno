@@ -6,7 +6,7 @@ import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { useInteriorDesign } from "./use-interior-design";
 
-export const InteriorDesign = () => {
+export const InteriorDesignPage = () => {
   const history = useHistory();
 
   const sendToTheQuestionnaire = () => {
@@ -43,7 +43,7 @@ export const InteriorDesign = () => {
               key={projectCard.title}
               title={projectCard.title}
               timeWork={projectCard.timeWork}
-              details={projectCard.details}
+              details={projectCard.details.split("\n")}
               imgUrl={projectCard.imgUrl}
               exampleLink={projectCard.exampleLink}
             />

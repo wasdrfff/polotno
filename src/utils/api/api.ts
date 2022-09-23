@@ -4,11 +4,11 @@ export async function api<T>(url: string): Promise<T> {
   let host = "";
   const params = "?populate=*";
 
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.REACT_APP_NODE_ENV === "development") {
     host = process.env.REACT_APP_HOST_DEV as string;
   }
 
-  if (process.env.NODE_ENV === "production") {
+  if (process.env.REACT_APP_NODE_ENV === "production") {
     host = process.env.REACT_APP_HOST_PROD as string;
   }
 
@@ -17,6 +17,5 @@ export async function api<T>(url: string): Promise<T> {
     throw new Error(response.statusText);
   }
   const result = await response.json();
-
   return result.data.map((e: TData<T>) => ({ ...e.attributes, id: e.id }));
 }

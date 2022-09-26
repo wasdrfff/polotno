@@ -5,7 +5,7 @@ import { DecorPage } from "./pages/decor";
 import { ManufacturingPage } from "./pages/furniture-manufacturing-page";
 import { InteriorDesignPage } from "./pages/interior-design-page";
 import { MainPage } from "./pages/main-page";
-import { MaterialPage } from "./pages/material-name-page";
+import { MaterialNamePage } from "./pages/material-name-page";
 import { DecorationPage } from "./pages/decoration-page";
 import { QuestionnairePage } from "./pages/questionnaire";
 import { RoomPage } from "./pages/room";
@@ -35,7 +35,7 @@ export const App = () => (
           <InteriorDecorationPage />
         </Route>
         <Route path="/brand-name">
-          <MaterialPage />
+          <MaterialNamePage />
         </Route>
         <Route path="/decor">
           <DecorPage />

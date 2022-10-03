@@ -12,6 +12,7 @@ export const Block = styled.div`
   margin-bottom: 12px;
   @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
     border: 0;
+    gap: 5px;
   }
 `;
 

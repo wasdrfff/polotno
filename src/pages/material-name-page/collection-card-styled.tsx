@@ -5,19 +5,14 @@ export const CollectionCardContent = styled.div`
   align-items: center;
   border-bottom: 1px solid ${(props) => props.theme.colors.textColor};
   &:nth-child(2n) {
-    display: flex;
     flex-direction: row-reverse;
-    @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 5px;
-    }
   }
   @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
-    display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
-  } ;
+    &:nth-child(2n) {
+      flex-direction: column;
+    }
+  }
 `;
 export const Image = styled.img`
   max-width: 100%;

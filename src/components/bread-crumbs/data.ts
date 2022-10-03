@@ -12,7 +12,7 @@ export const staticUrls={
     '/questionnaire': 'Анкета',
     '/services/interior-decoration': 'Дизайн интерьеров',
     '/services':'Услуги',
-    '/brand-name':'Бренды',
+    '/material-name':'Бренды',
     '/decor':'Декор',
     '/contact':'Контакты',
     '/services/interior-design': 'Дизайн интерьеров',

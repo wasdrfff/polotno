@@ -34,7 +34,7 @@ export const App = () => (
         <Route path="/services/interior-decoration">
           <InteriorDecorationPage />
         </Route>
-        <Route path="/brand-name">
+        <Route path="/material-name">
           <MaterialNamePage />
         </Route>
         <Route path="/decor">

@@ -11,6 +11,7 @@ export const MaterialNamePage = () => {
         {collectionCards.map((collectionCard) => {
           return (
             <CollectionCard
+              key={collectionCard.id}
               imgUrl={collectionCard.card.imageUrl}
               characteristic={collectionCard.card.characteristic}
               collectionName={collectionCard.card.collectionName}

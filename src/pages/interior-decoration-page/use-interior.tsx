@@ -5,14 +5,14 @@ import { api } from "../../utils/api";
 
 export const useInterior = () => {
   const [interiorItems, setInteriorItems] = useState<TItem[]>([]);
-  const [cardsService, setCardService] = useState<TCard[]>([]);
+  const [cardsService, setCardsService] = useState<TCard[]>([]);
 
   useEffect(() => {
     api<TItem[]>("/api/interior-decoration-sliders").then((resp) => {
-      setInteriorItems(resp);
+      setInteriorItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
     });
     api<TCard[]>("/api/interior-card-services").then((resp) => {
-      setCardService(resp);
+      setCardsService(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
     });
   }, []);
   return {

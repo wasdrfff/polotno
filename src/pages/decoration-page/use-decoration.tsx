@@ -11,19 +11,21 @@ export const useDecoration = () => {
 
   useEffect(() => {
     api<TItem[]>("/api/decoration-slider-kitchen-images").then((resp) => {
-      setKitchenItems(resp);
+      setKitchenItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
     });
     api<TItem[]>("/api/decoration-slider-badroom-images").then((resp) => {
-      setBadRoomItems(resp);
+      setBadRoomItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
     });
     api<TItem[]>("/api/decoration-slider-living-room-images").then((resp) =>
-      setLivingRoomItems(resp)
+      setLivingRoomItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })))
     );
     api<TItem[]>("/api/decoration-slider-childrensrooms-images").then((resp) =>
-      setChildrensRoomsItems(resp)
+      setChildrensRoomsItems(
+        resp.map((e: any) => ({ ...e.attributes, id: e.id }))
+      )
     );
     api<TItem[]>("/api/decoration-slider-otherrooms-images").then((resp) =>
-      setOtherRoomsItems(resp)
+      setOtherRoomsItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })))
     );
   }, []);
 

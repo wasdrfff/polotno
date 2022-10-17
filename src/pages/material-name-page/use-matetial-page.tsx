@@ -7,7 +7,7 @@ export const useMaterialPage = () => {
 
   useEffect(() => {
     api<TCollectionCard[]>("/api/material-pages").then((resp) => {
-      setCollectionCards(resp);
+      setCollectionCards(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
     });
   }, []);
 

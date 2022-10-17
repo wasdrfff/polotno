@@ -35,18 +35,23 @@ export const BreadCrumbs = () => {
     <Container>
       <Block>
         <StyledLink to="/">Главная</StyledLink>
-        <Icon name="rightArrowSmall" color="gray" size={isDesktop ? 30 : 15} />
+        <Icon
+          name="rightArrowSmall"
+          color="textColor2"
+          size={isDesktop ? 30 : 15}
+        />
       </Block>
-
       {urls.map((url) => {
         return (
           <Block key={url}>
             <StyledLink to={url}>{staticUrls[url]}</StyledLink>
-            <Icon
-              name="rightArrowSmall"
-              color="gray"
-              size={isDesktop ? 30 : 15}
-            />
+            {url !== urls[urls.length - 1] && (
+              <Icon
+                name="rightArrowSmall"
+                color="textColor2"
+                size={isDesktop ? 30 : 15}
+              />
+            )}
           </Block>
         );
       })}

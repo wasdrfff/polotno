@@ -1,7 +1,6 @@
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { ContactPage } from "./pages/contact-link";
 import { FurniturePage } from "./pages/custom-furniture";
-import { DecorPage } from "./pages/decor";
 import { ManufacturingPage } from "./pages/furniture-manufacturing-page";
 import { InteriorDesignPage } from "./pages/interior-design-page";
 import { MainPage } from "./pages/main-page";
@@ -19,6 +18,7 @@ import { BreadCrumbs } from "./components/bread-crumbs";
 import { Container } from "./app-styled";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./variables";
+import { InteriorDecorationSubPage } from "./pages/interior-decoration-sub-page";
 
 export const App = () => (
   <ThemeProvider theme={theme}>
@@ -31,15 +31,16 @@ export const App = () => (
         <Route path="/questionnaire">
           <QuestionnairePage />
         </Route>
+        <Route path="/services/interior-decoration/:subPage">
+          <InteriorDecorationSubPage />
+        </Route>
         <Route path="/services/interior-decoration">
           <InteriorDecorationPage />
         </Route>
         <Route path="/material-name">
           <MaterialNamePage />
         </Route>
-        <Route path="/decor">
-          <DecorPage />
-        </Route>
+       
         <Route path="/services/interior-design" exact>
           <InteriorDesignPage />
         </Route>

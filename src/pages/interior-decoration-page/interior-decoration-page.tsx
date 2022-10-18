@@ -17,7 +17,6 @@ export const InteriorDecorationPage = () => {
   const screenType = useScreenType();
   const { interiorItems, cardsService } = useInterior();
   const isDesktop = screenType === ScreenType.Desktop;
-
   return (
     <div>
       <div className="service-page">
@@ -44,7 +43,7 @@ export const InteriorDecorationPage = () => {
                 exampleLink={card.exampleLink}
                 imgUrls={[card.urlImage, card.urlImageExample]}
                 description={card.description}
-              ></CardService>
+              />
             );
           })}
         </div>

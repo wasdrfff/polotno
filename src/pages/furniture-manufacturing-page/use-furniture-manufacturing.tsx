@@ -10,10 +10,12 @@ export const useFurnitureManufacturing = () => {
 
   useEffect(() => {
     api<TItem[]>("/api/furniture-sliders").then((resp) => {
-      setFurnitureManufacturing(resp);
+      setFurnitureManufacturing(
+        resp.map((e: any) => ({ ...e.attributes, id: e.id }))
+      );
     });
     api<TItem[]>("/api/furniture-drawings").then((resp) => {
-      setDrawingItems(resp);
+      setDrawingItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
     });
   }, []);
   return {

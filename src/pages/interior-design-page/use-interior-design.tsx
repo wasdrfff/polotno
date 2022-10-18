@@ -9,10 +9,10 @@ export const useInteriorDesign = () => {
 
   useEffect(() => {
     api<TItem[]>("/api/interior-desing-sliders").then((resp) => {
-      setInteriorItems(resp);
+      setInteriorItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
     });
     api<TProjectCard[]>("/api/interior-design-card-projects").then((resp) =>
-      setProjectCards(resp)
+      setProjectCards(resp.map((e: any) => ({ ...e.attributes, id: e.id })))
     );
   }, []);
 

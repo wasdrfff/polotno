@@ -14,7 +14,9 @@ type TProps = {
 export const CardService = ({ exampleLink, imgUrls, description }: TProps) => {
   return (
     <Wrapper>
-      <ExampleLink to={exampleLink}>{description}</ExampleLink>
+      <ExampleLink to={"/services/interior-decoration" + exampleLink}>
+        {description}
+      </ExampleLink>
       <ExampleImages>
         {imgUrls.map((imgUrl, id) => {
           return (

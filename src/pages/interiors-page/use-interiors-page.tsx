@@ -12,9 +12,9 @@ export const useInteriorsPage = () => {
   const [projects, setProjects] = useState<TProject[]>([]);
 
   useEffect(() => {
-    api<TProject[]>(
-      "/api/interiors-projects"
-    ).then((resp) => setProjects(resp));
+    api<TProject[]>("/api/interiors-projects").then((resp) =>
+      setProjects(resp.map((e: any) => ({ ...e.attributes, id: e.id })))
+    );
   }, []);
 
   return {

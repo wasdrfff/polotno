@@ -40,7 +40,7 @@ export const App = () => (
         <Route path="/material-name">
           <MaterialNamePage />
         </Route>
-       
+
         <Route path="/services/interior-design" exact>
           <InteriorDesignPage />
         </Route>

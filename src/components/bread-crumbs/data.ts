@@ -11,6 +11,8 @@ export const staticUrls = {
   "/questionnaire": "Анкета",
   "/services/interior-decoration": "Дизайн интерьеров",
   "/services/interior-decoration/material": "Материалы",
+  "/services/interior-decoration/detail": "Детали",
+  "/services/interior-decoration/update-interior": "Вписываем в ваш интерьер",
   "/services": "Услуги",
   "/material-name": "Бренды",
   "/decor": "Декор",

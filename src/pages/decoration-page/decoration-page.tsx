@@ -4,6 +4,7 @@ import { PageWrapper, Wrapper } from "./decoration-page-styled";
 import { useDecoration } from "./use-decoration";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
+import { useHistory } from "react-router-dom";
 
 export const DecorationPage = () => {
   const {
@@ -17,6 +18,11 @@ export const DecorationPage = () => {
   const screenType = useScreenType();
 
   const isDesktop = screenType === ScreenType.Desktop;
+
+  const history = useHistory();
+  function navigateToInteriors() {
+    history.push("/interiors");
+  }
 
   return (
     <PageWrapper>
@@ -66,8 +72,10 @@ export const DecorationPage = () => {
             height={isDesktop ? 650 : 235}
           />
         </div>
-        <Button>Дизайн интерьера</Button>
       </Wrapper>
+      <div>
+        <Button onClick={navigateToInteriors}>Дизайн интерьера</Button>
+      </div>
     </PageWrapper>
   );
 };

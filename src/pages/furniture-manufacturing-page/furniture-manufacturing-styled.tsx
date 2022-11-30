@@ -6,7 +6,7 @@ export const ManufacturingWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 50px 0;
+  padding: 50px 12px;
   gap: 24px;
 `;
 
@@ -37,6 +37,7 @@ export const DrawingsWrapper = styled.div`
 export const Drawing = styled.div`
   padding: 15px;
   border: 2px solid ${theme.colors.mainColor};
+  width: 100%;
 `;
 
 export const ImageDrawing = styled.img`

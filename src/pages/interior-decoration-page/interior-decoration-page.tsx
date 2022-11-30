@@ -12,11 +12,18 @@ import { Icon } from "../../components/icon";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { useInterior } from "./use-interior";
+import { useHistory } from "react-router-dom";
 
 export const InteriorDecorationPage = () => {
   const screenType = useScreenType();
   const { interiorItems, cardsService } = useInterior();
   const isDesktop = screenType === ScreenType.Desktop;
+  const history = useHistory();
+
+  function navigateToDecoration() {
+    history.push("/decoration");
+  }
+
   return (
     <div>
       <div className="service-page">
@@ -48,7 +55,7 @@ export const InteriorDecorationPage = () => {
           })}
         </div>
         <div className="service-page__button-wrapper">
-          <Button>Все проекты</Button>
+          <Button onClick={navigateToDecoration}>Все проекты</Button>
         </div>
       </div>
     </div>

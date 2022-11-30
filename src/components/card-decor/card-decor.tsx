@@ -9,7 +9,7 @@ type TProps = {
 export const CardDecor = ({ img, description }: TProps) => {
   return (
     <div className="card-decor">
-      <Link to="/material-name">
+      <Link to="/">
         <div className="card-decor__item">
           <img src={img} alt="material" />
           <span>{description}</span>

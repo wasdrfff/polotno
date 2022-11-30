@@ -1,4 +1,4 @@
-import { CardDecor } from "../../components/decor-card";
+import { CardDecor } from "../../components/card-decor";
 import {
   Container,
   Title,

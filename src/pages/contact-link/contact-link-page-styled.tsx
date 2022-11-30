@@ -14,8 +14,7 @@ export const MainContainer = styled.main`
   width: 100%;
   display: flex;
   justify-content: space-between;
-
-  @media screen and(max-width: ${theme.sizes.tablet}) {
+  @media screen and (max-width: ${theme.sizes.tablet}) {
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -37,7 +36,7 @@ export const FormWrapper = styled.div`
   width: 100%;
   padding: 20px 62px 40px;
 
-  @media screen and(max-width: ${theme.sizes.tablet}) {
+  @media screen and (max-width: ${theme.sizes.tablet}) {
     width: 325px;
     height: 400px;
 
@@ -65,7 +64,7 @@ export const Form = styled.form`
       padding-left: 25px;
     }
 
-    @media screen and(max-width: ${theme.sizes.tablet}) {
+    @media screen and (max-width: ${theme.sizes.tablet}) {
       font-size: 15px;
       height: 60px;
     }
@@ -79,7 +78,7 @@ export const CardsWrapper = styled.div`
   width: 100%;
   padding: 50px 62px 40px;
 
-  @media screen and(max-width: ${theme.sizes.tablet}) {
+  @media screen and (max-width: ${theme.sizes.tablet}) {
     width: 325px;
     height: 400px;
     padding: 18px 35px 40px;
@@ -103,7 +102,7 @@ export const Card = styled.div`
   font-size: 18px;
   border: 2px solid ${theme.colors.mainColor};
   height: 215px;
-  @media screen and(max-width:${theme.sizes.tablet}) {
+  @media screen and (max-width: ${theme.sizes.tablet}) {
     font-size: 15px;
     height: 140px;
   }
@@ -113,7 +112,7 @@ export const SocialCard = styled.div`
   display: flex;
   margin-top: 20px;
   gap: 10px;
-  @media screen and(max-width:$tablet-width) {
+  @media screen and (max-width: $tablet-width) {
     margin: 0;
     img {
       width: 20px;

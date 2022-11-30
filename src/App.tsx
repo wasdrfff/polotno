@@ -4,10 +4,8 @@ import { FurniturePage } from "./pages/custom-furniture";
 import { ManufacturingPage } from "./pages/furniture-manufacturing-page";
 import { InteriorDesignPage } from "./pages/interior-design-page";
 import { MainPage } from "./pages/main-page";
-import { MaterialNamePage } from "./pages/material-name-page";
 import { DecorationPage } from "./pages/decoration-page";
-import { QuestionnairePage } from "./pages/questionnaire";
-import { RoomPage } from "./pages/room";
+import { QuestionnairePage } from "./pages/questionnaire-page";
 import { InteriorDecorationPage } from "./pages/interior-decoration-page";
 import { InteriorsPage } from "./pages/interiors-page";
 import { PlanPage } from "./pages/interiors-page/pages-interiors/plan";
@@ -37,10 +35,6 @@ export const App = () => (
         <Route path="/services/interior-decoration">
           <InteriorDecorationPage />
         </Route>
-        <Route path="/material-name">
-          <MaterialNamePage />
-        </Route>
-
         <Route path="/services/interior-design" exact>
           <InteriorDesignPage />
         </Route>
@@ -56,9 +50,7 @@ export const App = () => (
         <Route path="/interiors" exact>
           <InteriorsPage />
         </Route>
-        <Route path="/portfolio/room">
-          <RoomPage />
-        </Route>
+
         <Route path="/custom-furniture">
           <FurniturePage />
         </Route>

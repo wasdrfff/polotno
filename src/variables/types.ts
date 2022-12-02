@@ -1,6 +1,6 @@
 export type Theme = {
   colors: {
-    focusСolor: string;
+    focusColor: string;
     activeColor: string;
     textColor: string;
     textColor2: string;
@@ -9,6 +9,7 @@ export type Theme = {
     systemGreen: string;
     mainColor: string;
     white: string;
+    buttonColor: string;
   };
 
   sizes: {

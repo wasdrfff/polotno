@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 import { textVariantStyle } from "./text-variant-style";
-import { TextVariant } from "./types";
+import { TextColor, TextVariant } from "./types";
 
 type TextProps = {
   variant: TextVariant;
-  textColor: string;
+  textColor: TextColor;
 };
 
 export const Text = styled.span<TextProps>`

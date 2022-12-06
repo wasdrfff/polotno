@@ -5,13 +5,14 @@ export const theme: Theme = {
     mainColor: "#72ADE2",
     focusColor: "#3187D5",
     activeColor: "#00529D",
-    textColor: "#323232",
+    buttonColor: "#B8D6F0",
+    backgroundColor: "#3187D5",
+    textColor: "#121212",
     textColor2: "#989898",
     systemRed: "#FF0000",
     systemYellow: "#FFB801",
     systemGreen: "#008000",
     white: "#FFFFFF",
-    buttonColor: "#B8D6F0",
   },
 
   sizes: {

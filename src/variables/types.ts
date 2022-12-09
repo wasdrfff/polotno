@@ -10,6 +10,7 @@ export type Theme = {
     mainColor: string;
     white: string;
     buttonColor: string;
+    backgroundColor: string;
   };
 
   sizes: {

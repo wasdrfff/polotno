@@ -6,14 +6,18 @@ import {
   SliderContainer,
   GreetingSectionWrapper,
   SliderWrapper,
-  Text,
-  TitleWrapper,
   Wrapper,
+  Separator,
+  Chapter,
+  ContentChapter,
+  TitleWrapper,
+  Title,
 } from "./main-page-styled";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { TItem } from "../../components/slider-material-ui";
 import { useEffect, useMemo, useState } from "react";
+import { Text } from "../../components/text";
 
 export const MainPage = () => {
   const screenType = useScreenType();
@@ -56,13 +60,39 @@ export const MainPage = () => {
       <GreetingSectionWrapper>
         <GreetingSection />
       </GreetingSectionWrapper>
+      <Chapter>
+        <ContentChapter>
+          <Separator />
+          <TitleWrapper>
+            <Title>
+              <Text
+                textColor="textColor"
+                variant={isDesktop ? "h3Web" : "mMob"}
+              >
+                Каждый человек по своей природе творец.
+              </Text>
+              <Text
+                textColor="textColor"
+                variant={isDesktop ? "h3Web" : "mMob"}
+              >
+                Давайте создавать вместе!
+              </Text>
+            </Title>
+          </TitleWrapper>
+        </ContentChapter>
+      </Chapter>
 
       <SliderContainer isDesktop={isDesktop}>
-        <TitleWrapper>
-          <Text>Каждый человек по своей природе творец.</Text>
-          <Text>Давайте создавать вместе!</Text>
-        </TitleWrapper>
-
+        {!isDesktop && (
+          <Title>
+            <Text textColor="textColor" variant={isDesktop ? "h3Web" : "mMob"}>
+              Каждый человек по своей природе творец.
+            </Text>
+            <Text textColor="textColor" variant={isDesktop ? "h3Web" : "mMob"}>
+              Давайте создавать вместе!
+            </Text>
+          </Title>
+        )}
         <SliderWrapper>
           <BlueSquare position="left" isHidden={!isDesktop} />
           <SliderMaterialUi items={items} height={isDesktop ? 650 : 235} />

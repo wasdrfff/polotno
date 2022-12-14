@@ -26,17 +26,17 @@ export const CardProjectDesktop = ({
       </ImageContainer>
       <DescriptionContainer isSpaceBetween={details.length > 4}>
         <TitleContainer>
-          <Text textColor="mainColor" variant="titleText">
+          <Text textColor="textColor" variant="titleText">
             {title}
           </Text>
-          <Text textColor="mainColor" variant="defaultText">
+          <Text textColor="textColor" variant="defaultText">
             {subTitle}
           </Text>
         </TitleContainer>
-        <Details>
+        <Details isSpaceBetween={details.length > 4}>
           {details.map((detail) => (
             <Detail key={detail}>
-              <Text textColor="mainColor" variant="defaultText">
+              <Text textColor="textColor" variant="defaultText">
                 {detail}
               </Text>
             </Detail>

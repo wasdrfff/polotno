@@ -20,10 +20,10 @@ export const CardProjectMobile = ({
   return (
     <Wrapper>
       <TitleContainer>
-        <Text textColor="mainColor" variant="mobileTitleTextStyle">
+        <Text textColor="textColor" variant="mobileTitleTextStyle">
           {title}
         </Text>
-        <Text textColor="mainColor" variant="mobileTitleTextStyle">
+        <Text textColor="textColor" variant="mobileTitleTextStyle">
           {subTitle}
         </Text>
       </TitleContainer>
@@ -34,7 +34,7 @@ export const CardProjectMobile = ({
       <Details>
         {details.map((detail) => (
           <Detail key={detail}>
-            <Text textColor="mainColor" variant="mobileTextStyle">
+            <Text textColor="textColor" variant="mobileTextStyle">
               {detail}
             </Text>
           </Detail>

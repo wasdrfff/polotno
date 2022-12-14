@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   gap: 30px;
-  height: 500px;
+  height: 600px;
   padding: 50px;
   :nth-child(2n-1) {
     background-color: ${(props) =>
@@ -52,11 +52,18 @@ export const DescriptionContainer = styled.div<{ isSpaceBetween?: boolean }>`
           gap: 50px;
         `}
 `;
-export const Details = styled.ul`
+export const Details = styled.ul<{ isSpaceBetween?: boolean }>`
   display: flex;
   flex-direction: column;
-  gap: 25px;
   margin: 0;
   padding-left: 20px;
+  ${(props) =>
+    props.isSpaceBetween
+      ? css`
+          gap: 20px;
+        `
+      : css`
+          gap: 25px;
+        `}
 `;
 export const Detail = styled.li``;

@@ -1,16 +1,17 @@
 import { useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Icon } from "../icon";
-import { theme } from "../../variables";
 import {
-  ModalHeader,
   Image,
   ImageWrapper,
-  ModalImage,
-  ModalSlider,
-  ModalWrapper,
+  Slide,
+  ImageCenterWrapper,
   IconWrapper,
-} from "./slider-material-ui-styled";
+  ModalWrapper,
+  ModalHeader,
+  ModalSlider,
+  ModalImage,
+} from "./slider-material-ui-styled-new";
 import { TItem } from "./types";
 
 type TProps = {
@@ -18,7 +19,8 @@ type TProps = {
   height?: string | number;
 };
 
-export const SliderMaterialUi = ({ items, height }: TProps) => {
+export const SliderMaterialUiNew = ({ items, height }: TProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [itemIndex, setItemIndex] = useState<number>();
 
   const closeModalSlider = () => {
@@ -28,36 +30,42 @@ export const SliderMaterialUi = ({ items, height }: TProps) => {
   const openModalSlider = (index: number) => {
     setItemIndex(index);
   };
+
+  const slides: Array<JSX.Element> = items.map((item, index) => {
+    const prevItemIndex = index - 1 >= 0 ? index - 1 : items.length - 1;
+    const nextItemIndex = index + 1 <= items.length - 1 ? index + 1 : 0;
+
+    return (
+      <Slide key={item.id}>
+        <ImageWrapper onClick={() => setCurrentIndex(prevItemIndex)}>
+          <Image
+            src={items[prevItemIndex].image.url}
+            alt={items[prevItemIndex].image.name}
+          />
+        </ImageWrapper>
+        <ImageCenterWrapper onClick={() => openModalSlider(index)}>
+          <Image src={item.image.url} alt={item.image.name} />
+        </ImageCenterWrapper>
+        <ImageWrapper onClick={() => setCurrentIndex(nextItemIndex)}>
+          <Image
+            src={items[nextItemIndex].image.url}
+            alt={items[nextItemIndex].image.name}
+          />
+        </ImageWrapper>
+      </Slide>
+    );
+  });
+
   return (
     <>
       <Carousel
         autoPlay={false}
         height={height}
-        indicatorContainerProps={{
-          style: {
-            position: "absolute",
-            bottom: "4px",
-            zIndex: "1",
-          },
-        }}
-        indicatorIconButtonProps={{
-          style: {
-            color: theme.colors.white,
-          },
-        }}
-        activeIndicatorIconButtonProps={{
-          style: {
-            color: theme.colors.mainColor,
-          },
-        }}
+        indicators={false}
+        navButtonsAlwaysInvisible
+        index={currentIndex}
       >
-        {items.map((item, index) => {
-          return (
-            <ImageWrapper key={item.id} onClick={() => openModalSlider(index)}>
-              <Image src={item.image.url} />
-            </ImageWrapper>
-          );
-        })}
+        {slides}
       </Carousel>
       {itemIndex !== undefined && (
         <ModalWrapper>

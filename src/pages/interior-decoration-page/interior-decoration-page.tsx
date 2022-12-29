@@ -1,18 +1,27 @@
 import { CardService } from "../../components/card-service";
 import { cardsStage } from "./data";
-import "./style.scss";
 import { Button } from "../../components/button";
 import {
+  BlueSquare,
+  ButtonWrapper,
+  CardsStageWrapper,
+  CardsWrapper,
   Container,
-  TitleBlock,
+  Separator,
+  SeparatorWrapper,
+  SliderWrapper,
+  TitleWrapper,
   WorkStep,
   WorkStepTitle,
+  Wrapper,
 } from "./interior-decoration-page-styled";
 import { Icon } from "../../components/icon";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { useInterior } from "./use-interior";
 import { useHistory } from "react-router-dom";
+import { Text } from "../../components/text";
+import React from "react";
 
 export const InteriorDecorationPage = () => {
   const screenType = useScreenType();
@@ -24,40 +33,68 @@ export const InteriorDecorationPage = () => {
     history.push("/decoration");
   }
 
+  const positionRef = React.useRef(0);
+
+  const onCardsScroll = (e: any) => {
+    const x = e.currentTarget.scrollLeft;
+    if (x !== positionRef.current) {
+      positionRef.current = x;
+    }
+  };
+
   return (
-    <div>
-      <div className="service-page">
-        <div className="service-page__slider">
-          <SliderMaterialUi
-            items={interiorItems}
-            height={isDesktop ? 650 : 235}
-          />
-        </div>
-        <TitleBlock>Последовательность и объем работ</TitleBlock>
-        <Container>
+    <Wrapper>
+      <SeparatorWrapper>
+        <Separator />
+      </SeparatorWrapper>
+      <SliderWrapper>
+        <SliderMaterialUi
+          items={interiorItems}
+          height={isDesktop ? 585 : 235}
+        />
+        <BlueSquare position="right" isHidden={!isDesktop} />
+      </SliderWrapper>
+      <Container>
+        <TitleWrapper>
+          <Text variant={isDesktop ? "h1Web" : "h2Mob"} textColor="textColor">
+            Последовательность и объем работ
+          </Text>
+        </TitleWrapper>
+        <CardsStageWrapper>
           {cardsStage.map(({ id, iconName, description }) => (
             <WorkStep key={id}>
-              <Icon name={iconName} size={isDesktop ? 120 : 50} />
-              <WorkStepTitle>{description}</WorkStepTitle>
+              <Icon name={iconName} size={isDesktop ? 60 : 30} />
+              <WorkStepTitle>
+                <Text
+                  variant={isDesktop ? "mWeb" : "mMob"}
+                  textColor="textColor"
+                >
+                  {description}
+                </Text>
+              </WorkStepTitle>
             </WorkStep>
           ))}
-        </Container>
-        <div className="service-page__cards-service">
-          {cardsService.map(({ card, id }) => {
-            return (
-              <CardService
-                key={id}
-                exampleLink={card.exampleLink}
-                imgUrls={[card.urlImage, card.urlImageExample]}
-                description={card.description}
-              />
-            );
-          })}
-        </div>
-        <div className="service-page__button-wrapper">
-          <Button onClick={navigateToDecoration}>Все проекты</Button>
-        </div>
-      </div>
-    </div>
+        </CardsStageWrapper>
+      </Container>
+      <CardsWrapper onScroll={onCardsScroll}>
+        {cardsService.map((card) => {
+          return (
+            <CardService
+              key={card.id}
+              exampleLink={card.exampleLink}
+              slides={card.slide}
+              description={card.description}
+            />
+          );
+        })}
+      </CardsWrapper>
+      <ButtonWrapper>
+        <Button onClick={navigateToDecoration}>
+          <Text variant={isDesktop ? "mWeb" : "mMob"} textColor="textColor">
+            Все проекты
+          </Text>
+        </Button>
+      </ButtonWrapper>
+    </Wrapper>
   );
 };

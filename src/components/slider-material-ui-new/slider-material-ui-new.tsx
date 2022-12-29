@@ -1,16 +1,17 @@
 import { useCallback, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Icon } from "../icon";
-import { theme } from "../../variables";
 import {
-  ModalHeader,
   Image,
   ImageWrapper,
-  ModalImage,
-  ModalSlider,
-  ModalWrapper,
+  Slide,
+  ImageCenterWrapper,
   IconWrapper,
-} from "./slider-material-ui-styled";
+  ModalWrapper,
+  ModalHeader,
+  ModalSlider,
+  ModalImage,
+} from "./slider-material-ui-styled-new";
 import { TItem } from "./types";
 
 type TProps = {
@@ -18,7 +19,7 @@ type TProps = {
   height?: string | number;
 };
 
-export const SliderMaterialUi = ({ items, height }: TProps) => {
+export const SliderMaterialUiNew = ({ items, height }: TProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -35,30 +36,32 @@ export const SliderMaterialUi = ({ items, height }: TProps) => {
       <Carousel
         autoPlay={false}
         height={height}
+        indicators={false}
+        navButtonsAlwaysInvisible
         index={currentIndex}
-        indicatorContainerProps={{
-          style: {
-            position: "absolute",
-            bottom: "4px",
-            zIndex: "1",
-          },
-        }}
-        indicatorIconButtonProps={{
-          style: {
-            color: theme.colors.white,
-          },
-        }}
-        activeIndicatorIconButtonProps={{
-          style: {
-            color: theme.colors.mainColor,
-          },
-        }}
       >
-        {items.map((item) => {
+        {items.map((item, index) => {
+          const prevItemIndex = index - 1 >= 0 ? index - 1 : items.length - 1;
+          const nextItemIndex = index + 1 <= items.length - 1 ? index + 1 : 0;
+
           return (
-            <ImageWrapper key={item.id} onClick={openModalSlider}>
-              <Image src={item.image.url} />
-            </ImageWrapper>
+            <Slide key={item.id}>
+              <ImageWrapper onClick={() => setCurrentIndex(prevItemIndex)}>
+                <Image
+                  src={items[prevItemIndex].url}
+                  alt={items[prevItemIndex].name}
+                />
+              </ImageWrapper>
+              <ImageCenterWrapper onClick={openModalSlider}>
+                <Image src={item.url} alt={item.name} />
+              </ImageCenterWrapper>
+              <ImageWrapper onClick={() => setCurrentIndex(nextItemIndex)}>
+                <Image
+                  src={items[nextItemIndex].url}
+                  alt={items[nextItemIndex].name}
+                />
+              </ImageWrapper>
+            </Slide>
           );
         })}
       </Carousel>
@@ -80,7 +83,7 @@ export const SliderMaterialUi = ({ items, height }: TProps) => {
             {items.map((item) => {
               return (
                 <ModalSlider key={item.id}>
-                  <ModalImage src={item.image.url} />
+                  <ModalImage src={item.url} />
                 </ModalSlider>
               );
             })}

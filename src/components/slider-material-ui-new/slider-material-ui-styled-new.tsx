@@ -1,3 +1,4 @@
+import { hexToRgba } from "../../utils/hex-to-rgba";
 import styled from "styled-components";
 
 export const Image = styled.img`
@@ -35,6 +36,7 @@ export const ImageCenterWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   width: 540px;
+  min-width: 540px;
   height: 400px;
   cursor: pointer;
   @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
@@ -44,7 +46,7 @@ export const ImageWrapper = styled.div`
   }
 `;
 export const ModalWrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => hexToRgba(props.theme.colors.textColor, 0.7)};
   position: fixed;
   height: 100vh;
   width: 100%;

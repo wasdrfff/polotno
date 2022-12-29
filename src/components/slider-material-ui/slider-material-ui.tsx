@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Icon } from "../icon";
 import { theme } from "../../variables";
@@ -19,20 +19,23 @@ type TProps = {
 };
 
 export const SliderMaterialUi = ({ items, height }: TProps) => {
-  const [itemIndex, setItemIndex] = useState<number>();
+  const [currentIndex, setCurrentIndex] = useState<number>();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const closeModalSlider = () => {
-    setItemIndex(undefined);
-  };
+  const closeModalSlider = useCallback(() => {
+    setIsOpen(false);
+  }, []);
 
-  const openModalSlider = (index: number) => {
-    setItemIndex(index);
-  };
+  const openModalSlider = useCallback(() => {
+    setIsOpen(true);
+  }, []);
+
   return (
     <>
       <Carousel
         autoPlay={false}
         height={height}
+        index={currentIndex}
         indicatorContainerProps={{
           style: {
             position: "absolute",
@@ -51,15 +54,15 @@ export const SliderMaterialUi = ({ items, height }: TProps) => {
           },
         }}
       >
-        {items.map((item, index) => {
+        {items.map((item) => {
           return (
-            <ImageWrapper key={item.id} onClick={() => openModalSlider(index)}>
+            <ImageWrapper key={item.id} onClick={openModalSlider}>
               <Image src={item.image.url} />
             </ImageWrapper>
           );
         })}
       </Carousel>
-      {itemIndex !== undefined && (
+      {isOpen && (
         <ModalWrapper>
           <ModalHeader>
             <IconWrapper>
@@ -70,8 +73,9 @@ export const SliderMaterialUi = ({ items, height }: TProps) => {
             autoPlay={false}
             height="calc(100vh - 80px)"
             navButtonsAlwaysVisible={true}
-            index={itemIndex}
+            index={currentIndex}
             indicators={false}
+            onChange={setCurrentIndex}
           >
             {items.map((item) => {
               return (

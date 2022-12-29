@@ -1,9 +1,13 @@
 export type TCard = {
   id: number;
-  card: {
-    urlImage: string;
-    urlImageExample: string;
-    description: string;
-    exampleLink: string;
-  };
+  description: string;
+  exampleLink: string;
+  slide: TSlide[]; //slides
+};
+
+export type TSlide = {
+  id: number;
+  url: string;
+  name: string;
+  description: string;
 };

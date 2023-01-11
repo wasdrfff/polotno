@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { api } from "../../utils/api";
 
 type TProject = {
-  blueprintUrl: string;
-  planUrl: string;
-  title: string;
   id: number;
+  title: string;
+  area: string;
+  imageUrl: string;
+  link: string;
 };
 
 export const useInteriorsPage = () => {
@@ -13,10 +14,9 @@ export const useInteriorsPage = () => {
 
   useEffect(() => {
     api<TProject[]>("/api/interiors-projects").then((resp) =>
-      setProjects(resp.map((e: any) => ({ ...e.attributes, id: e.id })))
+      setProjects(resp.map((e: any) => ({ ...e.attributes.card, id: e.id })))
     );
   }, []);
-
   return {
     projects,
   };

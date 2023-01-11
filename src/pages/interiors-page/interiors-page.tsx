@@ -70,7 +70,6 @@ export const InteriorsPage = () => {
                 }
                 return (
                   <InteriorCard
-                    screen={isDesktop}
                     key={id}
                     title={title}
                     area={area}

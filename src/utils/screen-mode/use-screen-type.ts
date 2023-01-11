@@ -6,9 +6,15 @@ export function useScreenType(): ScreenType {
   const [type, setType] = useState(screenMatcher.getScreenType());
 
   useEffect(() => {
-    screenMatcher.subscribe(setType);
+    let isMounted = true;
+    screenMatcher.subscribe((type) => {
+      if (isMounted) {
+        setType(type);
+      }
+    });
     return () => {
       screenMatcher.unsubscribe(setType);
+      isMounted = false;
     };
   }, []);
   return type;

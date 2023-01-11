@@ -9,6 +9,7 @@ import {
 } from "./interior-card-styled";
 import { Text } from "../text";
 import { Icon } from "../icon";
+import { ScreenType, useScreenType } from "../../utils/screen-mode";
 
 type TProps = {
   title: string;
@@ -16,7 +17,6 @@ type TProps = {
   imageUrl: string;
   link: string;
   squarePosition?: "leftTop" | "rightTop" | "leftBottom" | "rightBottom";
-  screen: boolean;
 };
 
 export const InteriorCard = ({
@@ -25,29 +25,31 @@ export const InteriorCard = ({
   link,
   imageUrl,
   squarePosition,
-  screen,
 }: TProps) => {
+  const screenType = useScreenType();
+
+  const isDesktop = screenType === ScreenType.Desktop;
   return (
     <LinkWrapper to={link}>
       <CardWrapper>
         <ImageWrapper>
           <Image src={imageUrl} alt="pict" />
-          {screen && squarePosition && (
+          {isDesktop && squarePosition && (
             <Square squarePosition={squarePosition} />
           )}
         </ImageWrapper>
         <Footer>
           <InfoBlock>
-            <Text textColor="textColor" variant={screen ? "mWeb" : "sMob"}>
+            <Text textColor="textColor" variant={isDesktop ? "mWeb" : "sMob"}>
               {title}
             </Text>
-            <Text textColor="mainColor" variant={screen ? "mWeb" : "sMob"}>
+            <Text textColor="mainColor" variant={isDesktop ? "mWeb" : "sMob"}>
               {area}
             </Text>
           </InfoBlock>
           <Icon
             name="rightArrowSmall"
-            size={screen ? 25 : 10}
+            size={isDesktop ? 25 : 10}
             color="textColor"
           />
         </Footer>

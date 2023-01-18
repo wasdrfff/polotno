@@ -12,6 +12,7 @@ import { Icon } from "../icon";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 
 type TProps = {
+  id: number;
   title: string;
   area: string;
   imageUrl: string;
@@ -20,6 +21,7 @@ type TProps = {
 };
 
 export const InteriorCard = ({
+  id,
   title,
   area,
   link,
@@ -30,7 +32,7 @@ export const InteriorCard = ({
 
   const isDesktop = screenType === ScreenType.Desktop;
   return (
-    <LinkWrapper to={link}>
+    <LinkWrapper to={"/interiors/" + id}>
       <CardWrapper>
         <ImageWrapper>
           <Image src={imageUrl} alt="pict" />

@@ -17,12 +17,7 @@ export const SeparatorWrapper = styled.div`
   }
 `;
 
-export const Separator = styled.div`
-  max-width: 800px;
-  width: 100%;
-  background-color: ${(props) => props.theme.colors.mainColor};
-  padding: 1px 0;
-`;
+
 
 export const SliderWrapper = styled.div`
   position: relative;

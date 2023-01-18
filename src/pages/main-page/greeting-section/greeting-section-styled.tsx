@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 import squere from "../assets/images/Square.svg";
 
-export const Separator = styled.div`
-  width: 255px;
-  height: 0;
-  border-bottom: 2px solid ${(props) => props.theme.colors.mainColor};
+export const SeparatorWrapper = styled.div`
+  max-width: 255px;
+  width: 100%;
   @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
-    width: 85px;
+    max-width: 85px;
+    min-width: 85px;
   }
 `;
 

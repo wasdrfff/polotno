@@ -10,7 +10,6 @@ import {
   BlueSquare,
   Content,
   ProjectCards,
-  Separator,
   SeparatorWrapper,
   SliderContainer,
   TextWrapper,
@@ -19,6 +18,7 @@ import {
   Wrapper,
 } from "./interior-design-page-styled";
 import { Text } from "../../components/text";
+import { Separator } from "../../components/separator/";
 
 export const InteriorDesignPage = () => {
   const history = useHistory();

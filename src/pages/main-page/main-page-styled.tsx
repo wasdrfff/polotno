@@ -84,11 +84,10 @@ export const SliderWrapper = styled.div`
     padding: 0 25px;
   }
 `;
-export const Separator = styled.div`
+
+export const SeparatorWrapper = styled.div`
   width: 100%;
-  height: 0;
-  border-bottom: 2px solid ${(props) => props.theme.colors.mainColor};
-  @media screen and (max-width: ${(props) => props.theme.sizes.desktop}) {
+  @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
     display: none;
   }
 `;

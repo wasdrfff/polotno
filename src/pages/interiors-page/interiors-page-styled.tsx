@@ -18,12 +18,7 @@ export const SeparatorWrapper = styled.div`
     display: none;
   }
 `;
-export const Separator = styled.div`
-  max-width: 800px;
-  width: 100%;
-  padding: 1px 0;
-  background-color: ${(props) => props.theme.colors.mainColor};
-`;
+
 
 export const Container = styled.div`
   display: flex;

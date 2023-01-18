@@ -4,10 +4,10 @@ import {
   Column,
   Container,
   SeparatorWrapper,
-  Separator,
   Wrapper,
 } from "./interiors-page-styled";
 import { useInteriorsPage } from "./use-interiors-page";
+import { Separator } from "../../components/separator";
 
 type TProject = {
   id: number;
@@ -71,6 +71,7 @@ export const InteriorsPage = () => {
                 return (
                   <InteriorCard
                     key={id}
+                    id={id}
                     title={title}
                     area={area}
                     link={link}

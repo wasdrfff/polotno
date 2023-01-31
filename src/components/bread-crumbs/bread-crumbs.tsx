@@ -42,9 +42,11 @@ export const BreadCrumbs = () => {
         />
       </Block>
       {urls.map((url) => {
+        const staticUrlKey = url.replace(/[0-9]+/, "id");
+
         return (
           <Block key={url}>
-            <StyledLink to={url}>{staticUrls[url]}</StyledLink>
+            <StyledLink to={url}>{staticUrls[staticUrlKey]}</StyledLink>
             {url !== urls[urls.length - 1] && (
               <Icon
                 name="rightArrowSmall"

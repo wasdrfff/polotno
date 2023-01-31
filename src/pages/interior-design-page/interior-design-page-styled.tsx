@@ -15,12 +15,6 @@ export const Wrapper = styled.div`
 
 export const SeparatorWrapper = styled.div`
   width: 100%;
-`;
-export const Separator = styled.div`
-  max-width: 800px;
-  width: 100%;
-  height: 0;
-  border-bottom: 2px solid ${(props) => props.theme.colors.mainColor};
   @media screen and (max-width: ${(props) => props.theme.sizes.desktop}) {
     display: none;
   }

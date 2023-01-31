@@ -3,13 +3,14 @@ import {
   Content,
   Description,
   ImageWrapper,
-  Separator,
   Wrapper,
   BlueSquare,
+  SeparatorWrapper,
 } from "./greeting-section-styled";
 import rectangle_1 from "./Rectangle_1.png";
 import { ScreenType, useScreenType } from "../../../utils/screen-mode";
 import { Text } from "../../../components/text";
+import { Separator } from "../../../components/separator";
 
 export function GreetingSection() {
   const screenType = useScreenType();
@@ -24,11 +25,15 @@ export function GreetingSection() {
           <Text variant={isDesktop ? "mWeb" : "mMob"} textColor="textColor">
             Создаем&nbsp;дизайн проекты&nbsp;интерьера
           </Text>
-          <Separator />
+          <SeparatorWrapper>
+            <Separator />
+          </SeparatorWrapper>
           <Text variant={isDesktop ? "mWeb" : "mMob"} textColor="textColor">
             Реализуем
           </Text>
-          <Separator />
+          <SeparatorWrapper>
+            <Separator />
+          </SeparatorWrapper>
           <Text variant={isDesktop ? "mWeb" : "mMob"} textColor="textColor">
             Декорируем&nbsp;интерьер текстилем
           </Text>

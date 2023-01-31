@@ -1,5 +1,6 @@
 export const staticUrls = {
   "/interiors": "Интерьеры",
+  "/interiors/id": "Объект",
   "/interiors/plan-1": "Квартира в Екатеринбурге",
   "/interiors/blueprint-1": "Чертеж: квартира в Екатеринубрге",
   "/interiors/plan-2": "Офис в Екатеринбурге,145 кв.м",

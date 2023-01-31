@@ -7,7 +7,6 @@ import {
   CardsStageWrapper,
   CardsWrapper,
   Container,
-  Separator,
   SeparatorWrapper,
   SliderWrapper,
   TitleWrapper,
@@ -22,6 +21,7 @@ import { useInterior } from "./use-interior";
 import { useHistory } from "react-router-dom";
 import { Text } from "../../components/text";
 import React from "react";
+import { Separator } from "../../components/separator";
 
 export const InteriorDecorationPage = () => {
   const screenType = useScreenType();

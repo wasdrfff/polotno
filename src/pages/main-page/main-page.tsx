@@ -7,17 +7,18 @@ import {
   GreetingSectionWrapper,
   SliderWrapper,
   Wrapper,
-  Separator,
   Chapter,
   ContentChapter,
   TitleWrapper,
   Title,
+  SeparatorWrapper,
 } from "./main-page-styled";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { TItem } from "../../components/slider-material-ui";
 import { useEffect, useMemo, useState } from "react";
 import { Text } from "../../components/text";
+import { Separator } from "../../components/separator";
 
 export const MainPage = () => {
   const screenType = useScreenType();
@@ -62,7 +63,9 @@ export const MainPage = () => {
       </GreetingSectionWrapper>
       <Chapter>
         <ContentChapter>
-          <Separator />
+          <SeparatorWrapper>
+            <Separator />
+          </SeparatorWrapper>
           <TitleWrapper>
             <Title>
               <Text

@@ -17,6 +17,7 @@ import { Container } from "./app-styled";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./variables";
 import { InteriorDecorationSubPage } from "./pages/interior-decoration-sub-page";
+import { InteriorsSubPage } from "./pages/interiors-page-sub-page";
 
 export const App = () => (
   <ThemeProvider theme={theme}>
@@ -47,6 +48,10 @@ export const App = () => (
         <Route path="/decoration" exact>
           <DecorationPage />
         </Route>
+        <Route path="/interiors/:id">
+          <InteriorsSubPage />
+        </Route>
+
         <Route path="/interiors" exact>
           <InteriorsPage />
         </Route>

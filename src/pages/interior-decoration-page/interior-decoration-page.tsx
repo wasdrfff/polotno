@@ -1,4 +1,4 @@
-import { CardService } from "../../components/card-service";
+import { ServiceCard } from "../../components/service-card";
 import { cardsStage } from "./data";
 import { Button } from "../../components/button";
 import {
@@ -79,7 +79,7 @@ export const InteriorDecorationPage = () => {
       <CardsWrapper onScroll={onCardsScroll}>
         {cardsService.map((card) => {
           return (
-            <CardService
+            <ServiceCard
               key={card.id}
               exampleLink={card.exampleLink}
               slides={card.slide}

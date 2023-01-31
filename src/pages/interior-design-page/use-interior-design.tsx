@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
-import { TProjectCard } from "../../components/card-project/types";
 import { TItem } from "../../components/slider-material-ui";
 import { api } from "../../utils/api";
+
+type TProjectCard = {
+  id: number;
+  projectCard: {
+    title: string;
+    timeWork: string;
+    details: string;
+    imgUrl: string;
+    exampleLink?: string;
+  };
+};
 
 export const useInteriorDesign = () => {
   const [interiorItems, setInteriorItems] = useState<TItem[]>([]);

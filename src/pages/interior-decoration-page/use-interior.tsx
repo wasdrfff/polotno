@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TCard } from "../../components/card-service/types";
+import { TCard } from "../../components/service-card/types";
 import { TItem } from "../../components/slider-material-ui";
 import { api } from "../../utils/api";
 

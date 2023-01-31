@@ -1,5 +1,5 @@
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
-import { InteriorCard } from "../../components/card-interior";
+import { InteriorCard } from "../../components/interior-card";
 import {
   Column,
   Container,

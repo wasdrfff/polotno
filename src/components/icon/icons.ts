@@ -17,4 +17,6 @@ export const icons = {
   phone: assets.Phone,
   message: assets.Message,
   cup: assets.Cup,
+  instagram: assets.Instagram,
+  pinterest: assets.Pinterest,
 };

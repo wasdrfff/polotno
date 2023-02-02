@@ -1,39 +1,40 @@
 import styled from "styled-components";
-import { theme } from "../../variables";
 
-export const FooterComponent = styled.footer`
+export const FooterWrapper = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: 24px;
+  padding-bottom: 45px;
 `;
 export const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid ${theme.colors.mainColor};
-  padding: 20px 82px 25px;
+  border: 1px solid ${(props) => props.theme.colors.mainColor};
+  padding: 30px 65px;
   gap: 15px;
-  img {
-    width: 25px;
-    height: 25px;
-  }
-  @media screen and (max-width: $tablet-width) {
-    width: 155px;
-    height: 115px;
-    gap: 5px;
-    img {
-      width: 15px;
-      height: 15px;
-    }
+
+  @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
+    width: 240px;
+    height: 190px;
+    padding: 30px 40px;
+    gap: 10px;
   }
 `;
 export const Social = styled.div`
   display: flex;
   gap: 15px;
-  @media screen and (max-width: $tablet-width) {
+  @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
     gap: 10px;
-    margin: 0;
+  }
+`;
+
+export const CustomLink = styled.a`
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
+    gap: 10px;
   }
 `;

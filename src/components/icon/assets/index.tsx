@@ -14,3 +14,5 @@ export { ReactComponent as Cup } from "./cup.svg";
 export { ReactComponent as Mail } from "./mail.svg";
 export { ReactComponent as Message } from "./message.svg";
 export { ReactComponent as Phone } from "./phone.svg";
+export { ReactComponent as Instagram } from "./instagram.svg";
+export { ReactComponent as Pinterest } from "./pinterest.svg";

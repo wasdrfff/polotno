@@ -1,5 +1,7 @@
 export { ReactComponent as RightArrow } from "./right-arrow.svg";
 export { ReactComponent as LeftArrow } from "./left-arrow.svg";
+export { ReactComponent as BottomArrow } from "./bottom-arrow-small.svg";
+export { ReactComponent as Logo } from "./logo.svg";
 
 export { ReactComponent as Books } from "./books.svg";
 export { ReactComponent as Bubbles } from "./bubbles.svg";

@@ -172,7 +172,7 @@ export const Actions = styled.div`
   max-width: 780px;
   width: 100%;
   @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
-    max-width: 325px;
+    max-width: 365px;
     gap: 15px;
     padding: 0 25px;
   }

@@ -1,81 +1,75 @@
 import { Button } from "../../components/button";
-import "./style.scss";
-import { PageWrapper, Wrapper } from "./decoration-page-styled";
+
 import { useDecoration } from "./use-decoration";
-import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { useHistory } from "react-router-dom";
 
-export const DecorationPage = () => {
-  const {
-    kitchenItems,
-    badRoomItems,
-    livingRoomItems,
-    childrensRoomsItems,
-    otherRoomsItems,
-  } = useDecoration();
+import { DecorationCard } from "../../components/decoration-card";
+import {
+  CardWrapper,
+  Container,
+  Wrapper,
+  CardsColumn,
+  SeparatorWrapper,
+  Content,
+  ButtonWrapper,
+  TextWrapper,
+} from "./decoration-page-styled";
+import { Separator } from "../../components/separator";
+import { Text } from "../../components/text";
 
+export const DecorationPage = () => {
+  const { cardItems } = useDecoration();
   const screenType = useScreenType();
 
   const isDesktop = screenType === ScreenType.Desktop;
+
+  const [firstElement, ...otherElements] = cardItems;
 
   const history = useHistory();
   function navigateToInteriors() {
     history.push("/interiors");
   }
 
-  return (
-    <PageWrapper>
-      <Wrapper>
-        <span className="portfolioPage__title-page">
-          Декорирование интерьера текстилем
-        </span>
+  if (!cardItems.length) return <span>loading</span>;
 
-        <div className="portfolioPage__block">
-          <span className="portfolioPage__description-block">Гостиные</span>
-          <SliderMaterialUi
-            items={livingRoomItems}
-            height={isDesktop ? 650 : 235}
-          />
-        </div>
-        <div className="portfolioPage__block">
-          <span className="portfolioPage__description-block">
-            Кухни, столовые
-          </span>
-          <SliderMaterialUi
-            items={kitchenItems}
-            height={isDesktop ? 650 : 235}
-          />
-        </div>
-        <div className="portfolioPage__block">
-          <span className="portfolioPage__description-block">
-            Спальни, кабинеты
-          </span>
-          <SliderMaterialUi
-            items={badRoomItems}
-            height={isDesktop ? 650 : 235}
-          />
-        </div>
-        <div className="portfolioPage__block">
-          <span className="portfolioPage__description-block">Детские</span>
-          <SliderMaterialUi
-            items={childrensRoomsItems}
-            height={isDesktop ? 650 : 235}
-          />
-        </div>
-        <div className="portfolioPage__block">
-          <span className="portfolioPage__description-block">
-            Другие помещения
-          </span>
-          <SliderMaterialUi
-            items={otherRoomsItems}
-            height={isDesktop ? 650 : 235}
-          />
-        </div>
+  return (
+    <>
+      <Wrapper>
+        <SeparatorWrapper>
+          <Separator />
+        </SeparatorWrapper>
+        <Content>
+          <TextWrapper>
+            <Text variant={isDesktop ? "h1Web" : "h2Mob"} textColor="textColor">
+              Декорирование интерьера текстилем
+            </Text>
+          </TextWrapper>
+          <CardWrapper>
+            <DecorationCard
+              imageUrl={firstElement.imageUrl}
+              title={firstElement.title}
+              isLarge
+            />
+          </CardWrapper>
+          <Container>
+            {otherElements.map(({ id, imageUrl, title }) => {
+              return (
+                <CardsColumn>
+                  <DecorationCard key={id} imageUrl={imageUrl} title={title} />
+                </CardsColumn>
+              );
+            })}
+          </Container>
+          <ButtonWrapper>
+            <Button onClick={navigateToInteriors}>
+              <Text variant={isDesktop ? "mWeb" : "mMob"} textColor="textColor">
+                Дизайн интерьера
+              </Text>
+            </Button>
+          </ButtonWrapper>
+        </Content>
       </Wrapper>
-      <div>
-        <Button onClick={navigateToInteriors}>Дизайн интерьера</Button>
-      </div>
-    </PageWrapper>
+    </>
   );
 };

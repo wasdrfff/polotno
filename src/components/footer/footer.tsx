@@ -1,36 +1,48 @@
-import "./style.scss";
-import inst from "./assets/inst.svg";
-import pinterest from "./assets/pinterest.svg";
-import telegram from "./assets/telegram.svg";
-import phone from "./assets/phone.svg";
-import email from "./assets/email.svg";
-import { FooterComponent, FooterContent, Social } from "./footer-styled";
+import {
+  CustomLink,
+  FooterWrapper,
+  FooterContent,
+  Social,
+} from "./footer-styled";
+import { Icon } from "../icon";
+import { Text } from "../text";
+import { ScreenType, useScreenType } from "../../utils/screen-mode";
 
 export const Footer = () => {
+  const screenType = useScreenType();
+
+  const isDesktop = screenType === ScreenType.Desktop;
+
   return (
-    <FooterComponent>
+    <FooterWrapper>
       <FooterContent>
         <Social>
-          <a href="pinterest.com">
-            <img src={pinterest} alt="pinterest" />
-          </a>
-          <a href="instagram.com">
-            <img src={inst} alt="instagram" />
-          </a>
-          <a href="web.telegram.org">
-            <img src={telegram} alt="telegram" />
-          </a>
+          <CustomLink href="pinterest.com">
+            <Icon name="pinterest" size={isDesktop ? 30 : 25} />
+          </CustomLink>
+          <CustomLink href="instagram.com">
+            <Icon name="instagram" size={isDesktop ? 30 : 25} />
+          </CustomLink>
+          <CustomLink href="web.telegram.org">
+            <Icon name="message" size={isDesktop ? 30 : 25} />
+          </CustomLink>
         </Social>
-        <a href="tel:+79126187687" className="link">
-          <img src={phone} alt="tel" />
-          <span className="footer__text">+79126187687</span>
-        </a>
-        <a href="mailto:malykhm@mail.ru" className="link">
-          <img src={email} alt="mail" />
-          <span className="text">malykhm@mail.ru</span>
-        </a>
-        <span>©полотно 2021</span>
+        <CustomLink href="tel:+79126187687">
+          <Icon name="phone" size={isDesktop ? 30 : 25} />
+          <Text variant={isDesktop ? "mWeb" : "mMob"} textColor="textColor">
+            +79126187687
+          </Text>
+        </CustomLink>
+        <CustomLink href="mailto:malykhm@mail.ru">
+          <Icon name="mail" size={isDesktop ? 30 : 25} />
+          <Text variant={isDesktop ? "mWeb" : "mMob"} textColor="textColor">
+            malykhm@mail.ru
+          </Text>
+        </CustomLink>
+        <Text variant={isDesktop ? "mWeb" : "mMob"} textColor="textColor">
+          ©полотно 2021
+        </Text>
       </FooterContent>
-    </FooterComponent>
+    </FooterWrapper>
   );
 };

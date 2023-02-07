@@ -1,4 +1,4 @@
-import { CardDecor } from "../../components/card-decor";
+import { DecorCard } from "../../components/decor-card";
 import {
   Container,
   Title,
@@ -15,7 +15,7 @@ export const InteriorDecorationSubPage = () => {
       <Container>
         {subPageApiResult.examples.data.map((item) => {
           return (
-            <CardDecor
+            <DecorCard
               key={item.id}
               img={item.attributes.card.urlImage}
               description={item.attributes.card.description}

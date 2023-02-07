@@ -1,16 +1,24 @@
-import * as assets from './assets'
+import * as assets from "./assets";
 
 export const icons = {
-  rightArrow : assets.RightArrow,
-  leftArrow : assets.LeftArrow,
-  rightArrowSmall : assets.RightArrowSmall,
-  cross:assets.Cross,
+  rightArrow: assets.RightArrow,
+  leftArrow: assets.LeftArrow,
+  rightArrowSmall: assets.RightArrowSmall,
+  cross: assets.Cross,
+  logo: assets.Logo,
+  bottomArrowSmall: assets.BottomArrow,
 
   books: assets.Books,
-  bubbles : assets.Bubbles,
+  bubbles: assets.Bubbles,
   hand: assets.Hand,
   plan: assets.Plan,
   roulette: assets.Roulette,
   sewingMachine: assets.SewingMachine,
   window: assets.Window,
-}
+  mail: assets.Mail,
+  phone: assets.Phone,
+  message: assets.Message,
+  cup: assets.Cup,
+  instagram: assets.Instagram,
+  pinterest: assets.Pinterest,
+};

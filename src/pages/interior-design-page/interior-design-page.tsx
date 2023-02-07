@@ -4,7 +4,7 @@ import { Button } from "../../components/button";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { useInteriorDesign } from "./use-interior-design";
-import { CardProjectNew } from "../../components/card-project-new";
+import { ProjectCard } from "../../components/project-card";
 import {
   Actions,
   BlueSquare,
@@ -62,7 +62,7 @@ export const InteriorDesignPage = () => {
         </TitleWrapper>
         <ProjectCards>
           {projectCards.map(({ projectCard }) => (
-            <CardProjectNew
+            <ProjectCard
               key={projectCard.title}
               title={projectCard.title}
               details={projectCard.details.split("\n")}

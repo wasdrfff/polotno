@@ -29,13 +29,12 @@ export const InteriorsSubPage = () => {
   const isDesktop = screenType === ScreenType.Desktop;
 
   if (!subPageApiResult) return <Loading />;
-
-  const items = subPageApiResult.page.image.map((el) => ({
-    id: el.id,
+  const items = subPageApiResult.slides.map((slide) => ({
+    id: slide.id,
     image: {
-      url: el.url,
-      name: el.name,
-      description: el.description,
+      url: slide.url,
+      name: slide.name,
+      description: slide.name,
     },
   }));
 
@@ -52,7 +51,7 @@ export const InteriorsSubPage = () => {
           </Text>
         </BackWrapper>
         <Text variant={isDesktop ? "h2Web" : "h3Mob"} textColor="textColor">
-          {subPageApiResult.page.title}
+          {subPageApiResult.card.title + " " + subPageApiResult.card.area}
         </Text>
       </TitleWrapper>
       <SliderWrapper>
@@ -66,8 +65,15 @@ export const InteriorsSubPage = () => {
             Планировочное решение
           </Text>
           <Content>
-            <Image src={subPageApiResult.page.planImageUrl} />
-            <Image src={subPageApiResult.page.planImageUrl} />
+            {/* <Image src={subPageApiResult.page.planImageUrl} />
+            <Image src={subPageApiResult.page.planImageUrl} /> */}
+            {subPageApiResult.blueprints.map((blueprint) => (
+              <Image
+                key={blueprint.id}
+                src={blueprint.url}
+                alt={blueprint.name}
+              />
+            ))}
           </Content>
         </Block>
         <Line />
@@ -76,8 +82,11 @@ export const InteriorsSubPage = () => {
             План до начала работ
           </Text>
           <Content>
-            <Image src={subPageApiResult.page.blueprintImageUrl} />
-            <Image src={subPageApiResult.page.blueprintImageUrl} />
+            {/* <Image src={subPageApiResult.page.blueprintImageUrl} />
+            <Image src={subPageApiResult.page.blueprintImageUrl} /> */}
+            {subPageApiResult.plans.map((plan) => (
+              <Image key={plan.id} src={plan.url} alt={plan.name} />
+            ))}
           </Content>
         </Block>
         <Line />

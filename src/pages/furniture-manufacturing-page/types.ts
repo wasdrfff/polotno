@@ -1,21 +1,16 @@
 export type TPage = {
   id: number;
-  card: {
-    id: number;
-    title: string;
-    area: string;
-  };
   slides: TSlide[];
-  plans: TImage[];
-  blueprints: TImage[];
+  drawings: TDrawing[];
 };
+
 type TSlide = {
   id: number;
   url: string;
   name: string;
 };
 
-type TImage = {
+type TDrawing = {
   id: number;
   url: string;
   name: string;

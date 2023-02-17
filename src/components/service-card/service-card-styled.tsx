@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -10,8 +9,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const ExampleLink = styled(Link)`
-  text-decoration: none;
+export const TextWrapper = styled.div`
   text-align: center;
 `;
 

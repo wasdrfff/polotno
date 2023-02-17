@@ -1,23 +1,34 @@
 import { useEffect, useState } from "react";
 import { api } from "../../utils/api";
-
-type TProject = {
-  id: number;
-  title: string;
-  area: string;
-  imageUrl: string;
-  link: string;
-};
+import { TInterior } from "./types";
 
 export const useInteriorsPage = () => {
-  const [projects, setProjects] = useState<TProject[]>([]);
+  const [interiorsData, setInteriorsData] = useState<TInterior[]>();
 
   useEffect(() => {
-    api<TProject[]>("/api/interiors-projects").then((resp) =>
-      setProjects(resp.map((e: any) => ({ ...e.attributes.card, id: e.id })))
-    );
+    const params = {
+      populate: {
+        card: {
+          populate: ["image"],
+        },
+        slides: {
+          populate: ["image"],
+        },
+        blueprints: {
+          populate: ["image"],
+        },
+        plans: {
+          populate: ["image"],
+        },
+      },
+    };
+    api<TInterior[]>("/api/interiors", params).then((resp) => {
+      setInteriorsData(
+        resp.map((el: any) => ({ ...el.attributes, id: el.id }))
+      );
+    });
   }, []);
   return {
-    projects,
+    interiorsData,
   };
 };

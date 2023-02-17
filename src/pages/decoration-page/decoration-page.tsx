@@ -19,19 +19,19 @@ import { Separator } from "../../components/separator";
 import { Text } from "../../components/text";
 
 export const DecorationPage = () => {
-  const { cardItems } = useDecoration();
+  const { decorationData } = useDecoration();
   const screenType = useScreenType();
 
   const isDesktop = screenType === ScreenType.Desktop;
-
-  const [firstElement, ...otherElements] = cardItems;
 
   const history = useHistory();
   function navigateToInteriors() {
     history.push("/interiors");
   }
 
-  if (!cardItems.length) return <span>loading</span>;
+  if (!decorationData) return <span>loading</span>;
+
+  const [firstElement, ...otherElements] = decorationData.cards;
 
   return (
     <>
@@ -47,16 +47,16 @@ export const DecorationPage = () => {
           </TextWrapper>
           <CardWrapper>
             <DecorationCard
-              imageUrl={firstElement.imageUrl}
+              imageUrl={firstElement.image.url}
               title={firstElement.title}
               isLarge
             />
           </CardWrapper>
           <Container>
-            {otherElements.map(({ id, imageUrl, title }) => {
+            {otherElements.map(({ image, title }) => {
               return (
-                <CardsColumn>
-                  <DecorationCard key={id} imageUrl={imageUrl} title={title} />
+                <CardsColumn key={image.id}>
+                  <DecorationCard imageUrl={image.url} title={title} />
                 </CardsColumn>
               );
             })}

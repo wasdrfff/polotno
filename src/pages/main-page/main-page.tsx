@@ -1,4 +1,3 @@
-import long from "./assets/images/long.jpg";
 import { GreetingSection } from "./greeting-section";
 
 import {
@@ -15,51 +14,26 @@ import {
 } from "./main-page-styled";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
-import { TItem } from "../../components/slider-material-ui";
-import { useEffect, useMemo, useState } from "react";
 import { Text } from "../../components/text";
 import { Separator } from "../../components/separator";
+import { useMainPage } from "./use-main-page";
 
 export const MainPage = () => {
   const screenType = useScreenType();
 
   const isDesktop = screenType === ScreenType.Desktop;
 
-  const [items, setItems] = useState<TItem[]>([]);
-  const sliderNewItems = useMemo(
-    () => [
-      {
-        // Image item:
-        id: 1,
-        image: {
-          url: long,
-          description: "sample-description",
-          name: "string",
-        },
-      },
-      {
-        // Image item:
-        id: 2,
-        image: {
-          url: long,
-          description: "sample-description",
-          name: "string",
-        },
-      },
-    ],
-    []
-  );
+  const { mainPageData } = useMainPage();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setItems(sliderNewItems);
-    }, 2000);
-  }, [setItems, sliderNewItems]);
+  if (!mainPageData) return <span>loading</span>;
 
   return (
     <Wrapper>
       <GreetingSectionWrapper>
-        <GreetingSection />
+        <GreetingSection
+          imageUrl={mainPageData.image.url}
+          imageName={mainPageData.image.name}
+        />
       </GreetingSectionWrapper>
       <Chapter>
         <ContentChapter>
@@ -98,7 +72,16 @@ export const MainPage = () => {
         )}
         <SliderWrapper>
           <BlueSquare position="left" isHidden={!isDesktop} />
-          <SliderMaterialUi items={items} height={isDesktop ? 650 : 235} />
+          <SliderMaterialUi
+            items={mainPageData.slides.map((slide) => ({
+              id: slide.id,
+              image: {
+                url: slide.url,
+                name: slide.name,
+              },
+            }))}
+            height={isDesktop ? 650 : 235}
+          />
         </SliderWrapper>
       </SliderContainer>
     </Wrapper>

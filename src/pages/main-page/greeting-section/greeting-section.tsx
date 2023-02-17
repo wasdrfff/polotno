@@ -7,12 +7,16 @@ import {
   BlueSquare,
   SeparatorWrapper,
 } from "./greeting-section-styled";
-import rectangle_1 from "./Rectangle_1.png";
 import { ScreenType, useScreenType } from "../../../utils/screen-mode";
 import { Text } from "../../../components/text";
 import { Separator } from "../../../components/separator";
 
-export function GreetingSection() {
+type TProps = {
+  imageName: string;
+  imageUrl: string;
+};
+
+export function GreetingSection({ imageUrl, imageName }: TProps) {
   const screenType = useScreenType();
 
   const isDesktop = screenType === ScreenType.Desktop;
@@ -41,7 +45,7 @@ export function GreetingSection() {
         <ImageWrapper isDesktop={isDesktop}>
           <BlueSquare position="left" isHidden={isDesktop} />
           <BlueSquare position="right" />
-          <img src={rectangle_1} alt="work" width="100%" height="100%" />
+          <img src={imageUrl} alt={imageName} width="100%" height="100%" />
         </ImageWrapper>
       </Content>
     </Wrapper>

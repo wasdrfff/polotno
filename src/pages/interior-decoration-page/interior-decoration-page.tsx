@@ -25,8 +25,9 @@ import { Separator } from "../../components/separator";
 
 export const InteriorDecorationPage = () => {
   const screenType = useScreenType();
-  const { interiorItems, cardsService } = useInterior();
+
   const isDesktop = screenType === ScreenType.Desktop;
+
   const history = useHistory();
 
   function navigateToDecoration() {
@@ -42,6 +43,10 @@ export const InteriorDecorationPage = () => {
     }
   };
 
+  const { interiorsDecorationPage } = useInterior();
+
+  if (!interiorsDecorationPage) return <span>loading</span>;
+
   return (
     <Wrapper>
       <SeparatorWrapper>
@@ -49,7 +54,13 @@ export const InteriorDecorationPage = () => {
       </SeparatorWrapper>
       <SliderWrapper>
         <SliderMaterialUi
-          items={interiorItems}
+          items={interiorsDecorationPage.slides.map((slide) => ({
+            id: slide.id,
+            image: {
+              url: slide.url,
+              name: slide.name,
+            },
+          }))}
           height={isDesktop ? 585 : 235}
         />
         <BlueSquare position="right" isHidden={!isDesktop} />
@@ -77,15 +88,8 @@ export const InteriorDecorationPage = () => {
         </CardsStageWrapper>
       </Container>
       <CardsWrapper onScroll={onCardsScroll}>
-        {cardsService.map((card) => {
-          return (
-            <ServiceCard
-              key={card.id}
-              exampleLink={card.exampleLink}
-              slides={card.slide}
-              description={card.description}
-            />
-          );
+        {interiorsDecorationPage.cards.map(({ id, slides, title }) => {
+          return <ServiceCard key={id} slides={slides} title={title} />;
         })}
       </CardsWrapper>
       <ButtonWrapper>

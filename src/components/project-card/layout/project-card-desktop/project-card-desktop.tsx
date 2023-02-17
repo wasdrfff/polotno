@@ -34,8 +34,8 @@ export const ProjectCardDesktop = ({
           </Text>
         </TitleContainer>
         <Details isSpaceBetween={details.length > 4}>
-          {details.map((detail) => (
-            <Detail key={detail}>
+          {details.map(({ id, detail }) => (
+            <Detail key={id}>
               <Text textColor="textColor" variant="defaultText">
                 {detail}
               </Text>

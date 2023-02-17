@@ -1,6 +1,5 @@
 import { Button } from "../../components/button";
-import { roomsCells } from "./data";
-import { stylesCells } from "./data";
+import { roomsCells, stylesCells } from "./data";
 import {
   Actions,
   Block,
@@ -28,7 +27,9 @@ import { useQuestionnairePage } from "./use-questionnaire-page";
 
 export const QuestionnairePage = () => {
   const screenType = useScreenType();
+
   const isDesktop = screenType === ScreenType.Desktop;
+
   const { resetForm, sendEmail, toggleInput, isOpenInput, formRef } =
     useQuestionnairePage();
 
@@ -75,21 +76,16 @@ export const QuestionnairePage = () => {
             2. В планировке предусмотрены комнаты:
           </Text>
           <RoomCells>
-            {roomsCells.map((roomCell) => {
+            {roomsCells.map(({ id, name, value }) => {
               return (
-                <RoomCell>
-                  <Cell
-                    type="checkbox"
-                    id={roomCell.name}
-                    name={roomCell.name}
-                    value={roomCell.value}
-                  />
-                  <NameCell htmlFor={roomCell.name}>
+                <RoomCell key={id}>
+                  <Cell type="checkbox" id={name} name={name} value={value} />
+                  <NameCell htmlFor={name}>
                     <Text
                       variant={isDesktop ? "mWeb" : "mMob"}
                       textColor="textColor"
                     >
-                      {roomCell.value}
+                      {value}
                     </Text>
                   </NameCell>
                 </RoomCell>
@@ -121,21 +117,16 @@ export const QuestionnairePage = () => {
             4. Стилевые предпочтения:
           </Text>
           <StyleCells>
-            {stylesCells.map((styleCell) => {
+            {stylesCells.map(({ id, name, value }) => {
               return (
-                <StyleCell>
-                  <Cell
-                    type="checkbox"
-                    name={styleCell.name}
-                    value={styleCell.value}
-                    id={styleCell.name}
-                  />
-                  <NameCell htmlFor={styleCell.name}>
+                <StyleCell key={id}>
+                  <Cell type="checkbox" name={name} value={value} id={name} />
+                  <NameCell htmlFor={name}>
                     <Text
                       variant={isDesktop ? "mWeb" : "mMob"}
                       textColor="textColor"
                     >
-                      {styleCell.value}
+                      {value}
                     </Text>
                   </NameCell>
                 </StyleCell>

@@ -16,7 +16,6 @@ type TProps = {
   title: string;
   area: string;
   imageUrl: string;
-  link: string;
   squarePosition?: "leftTop" | "rightTop" | "leftBottom" | "rightBottom";
 };
 
@@ -24,7 +23,6 @@ export const InteriorCard = ({
   id,
   title,
   area,
-  link,
   imageUrl,
   squarePosition,
 }: TProps) => {

@@ -15,8 +15,10 @@ export const ManufacturingPage = () => {
 
   const isDesktop = screenType === ScreenType.Desktop;
 
-  const { furnitureManufacturingItems, drawingItems } =
-    useFurnitureManufacturing();
+  const { furniturePageData } = useFurnitureManufacturing();
+
+  if (!furniturePageData) return <span>loading</span>;
+
   return (
     <div>
       <ManufacturingWrapper>
@@ -26,17 +28,23 @@ export const ManufacturingPage = () => {
             размерам
           </Title>
           <SliderMaterialUi
-            items={furnitureManufacturingItems}
+            items={furniturePageData.slides.map((slide) => ({
+              id: slide.id,
+              image: {
+                url: slide.url,
+                name: slide.name,
+              },
+            }))}
             height={isDesktop ? 650 : 235}
           />
         </Block>
         <Block>
           <Title>Чертежи</Title>
           <DrawingsWrapper>
-            {drawingItems.map((drawingItem) => {
+            {furniturePageData.drawings.map((drawing) => {
               return (
-                <Drawing key={drawingItem.id}>
-                  <ImageDrawing src={drawingItem.image.url} alt="drawing" />
+                <Drawing key={drawing.id}>
+                  <ImageDrawing src={drawing.url} alt={drawing.name} />
                 </Drawing>
               );
             })}

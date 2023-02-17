@@ -1,6 +1,5 @@
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { ContactPage } from "./pages/contact-page";
-import { FurniturePage } from "./pages/custom-furniture";
 import { ManufacturingPage } from "./pages/furniture-manufacturing-page";
 import { InteriorDesignPage } from "./pages/interior-design-page";
 import { MainPage } from "./pages/main-page";
@@ -56,9 +55,6 @@ export const App = () => (
           <InteriorsPage />
         </Route>
 
-        <Route path="/custom-furniture">
-          <FurniturePage />
-        </Route>
         <Route path="/interiors/plan-:id">
           <PlanPage />
         </Route>

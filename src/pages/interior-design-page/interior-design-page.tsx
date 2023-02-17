@@ -1,5 +1,4 @@
 import { useHistory } from "react-router-dom";
-// import { CardProject } from "../../components/card-project/index";
 import { Button } from "../../components/button";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
 import { SliderMaterialUi } from "../../components/slider-material-ui";
@@ -35,8 +34,8 @@ export const InteriorDesignPage = () => {
   const isDesktop = screenType === ScreenType.Desktop;
   const isMobile = screenType === ScreenType.Mobile;
 
-  const { interiorItems, projectCards } = useInteriorDesign();
-
+  const { interiorDesignData } = useInteriorDesign();
+  if (!interiorDesignData) return <span>loading</span>;
   return (
     <Wrapper>
       <SeparatorWrapper>
@@ -49,7 +48,16 @@ export const InteriorDesignPage = () => {
       </TextWrapper>
 
       <SliderContainer>
-        <SliderMaterialUi items={interiorItems} height={isMobile ? 235 : 585} />
+        <SliderMaterialUi
+          items={interiorDesignData.slides.map((slide) => ({
+            id: slide.id,
+            image: {
+              name: slide.name,
+              url: slide.url,
+            },
+          }))}
+          height={isMobile ? 235 : 585}
+        />
         <BlueSquare position="right" isHidden={!isDesktop} />
       </SliderContainer>
       <Content>
@@ -61,16 +69,18 @@ export const InteriorDesignPage = () => {
           </Title>
         </TitleWrapper>
         <ProjectCards>
-          {projectCards.map(({ projectCard }) => (
-            <ProjectCard
-              key={projectCard.title}
-              title={projectCard.title}
-              details={projectCard.details.split("\n")}
-              imageUrl={projectCard.imgUrl}
-              fileLink={projectCard.exampleLink}
-              subTitle={projectCard.timeWork}
-            />
-          ))}
+          {interiorDesignData.projectCards.map(
+            ({ id, title, details, image, pdfUrl, workingTime }) => (
+              <ProjectCard
+                key={id}
+                title={title}
+                details={details}
+                imageUrl={image.url}
+                fileLink={pdfUrl}
+                subTitle={workingTime}
+              />
+            )
+          )}
         </ProjectCards>
       </Content>
       <Actions>

@@ -1,5 +1,13 @@
-export type TItem = {
-  id: string;
-  imageUrl: string;
+export type TPage = {
+  cards: TCard[];
+};
+
+type TCard = {
+  id: number;
   title: string;
+  image: {
+    id: number;
+    name: string;
+    url: string;
+  };
 };

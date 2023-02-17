@@ -1,25 +1,16 @@
 import { useEffect, useState } from "react";
-import { TItem } from "../../components/slider-material-ui";
 import { api } from "../../utils/api";
+import { TPage } from "./types";
 
 export const useFurnitureManufacturing = () => {
-  const [furnitureManufacturingItems, setFurnitureManufacturing] = useState<
-    TItem[]
-  >([]);
-  const [drawingItems, setDrawingItems] = useState<TItem[]>([]);
+  const [furniturePageData, setFurniturePageData] = useState<TPage>();
 
   useEffect(() => {
-    api<TItem[]>("/api/furniture-sliders").then((resp) => {
-      setFurnitureManufacturing(
-        resp.map((e: any) => ({ ...e.attributes, id: e.id }))
-      );
-    });
-    api<TItem[]>("/api/furniture-drawings").then((resp) => {
-      setDrawingItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
+    api<TPage>("/api/furniture-page").then((resp) => {
+      setFurniturePageData(resp.attributes);
     });
   }, []);
   return {
-    furnitureManufacturingItems,
-    drawingItems,
+    furniturePageData,
   };
 };

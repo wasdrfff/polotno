@@ -32,8 +32,8 @@ export const ProjectCardMobile = ({
         {fileLink && <FileLink href={fileLink}>Пример</FileLink>}
       </ImageWrapper>
       <Details>
-        {details.map((detail) => (
-          <Detail key={detail}>
+        {details.map(({ id, detail }) => (
+          <Detail key={id}>
             <Text textColor="textColor" variant="mobileTextStyle">
               {detail}
             </Text>

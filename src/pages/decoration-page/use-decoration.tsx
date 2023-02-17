@@ -1,17 +1,24 @@
 import { useEffect, useState } from "react";
 import { api } from "../../utils/api";
-import { TItem } from "./types";
+import { TPage } from "./types";
 
 export const useDecoration = () => {
-  const [cardItems, setCardItems] = useState<TItem[]>([]);
+  const [decorationData, setDecorationData] = useState<TPage>();
 
   useEffect(() => {
-    api<TItem[]>("/api/decoration-pages").then((resp) => {
-      setCardItems(resp.map((e: any) => ({ ...e.attributes, id: e.id })));
+    const params = {
+      populate: {
+        cards: {
+          populate: ["image"],
+        },
+      },
+    };
+
+    api<TPage>("/api/decoration-page", params).then((resp) => {
+      setDecorationData(resp.attributes);
     });
   }, []);
-
   return {
-    cardItems,
+    decorationData,
   };
 };

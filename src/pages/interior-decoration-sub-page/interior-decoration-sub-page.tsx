@@ -1,3 +1,4 @@
+import { Loader } from "../../components/loader";
 import { DecorCard } from "../../components/decor-card";
 import {
   Container,
@@ -8,7 +9,7 @@ import { useSubPage } from "./use-sub-page";
 
 export const InteriorDecorationSubPage = () => {
   const { subPageApiResult } = useSubPage();
-  if (!subPageApiResult) return <></>;
+  if (!subPageApiResult) return <Loader />;
   return (
     <Wrapper>
       <Title>{subPageApiResult.title}</Title>

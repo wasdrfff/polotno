@@ -18,6 +18,7 @@ import {
 } from "./interior-design-page-styled";
 import { Text } from "../../components/text";
 import { Separator } from "../../components/separator/";
+import { Loader } from "../../components/loader";
 
 export const InteriorDesignPage = () => {
   const history = useHistory();
@@ -35,7 +36,7 @@ export const InteriorDesignPage = () => {
   const isMobile = screenType === ScreenType.Mobile;
 
   const { interiorDesignData } = useInteriorDesign();
-  if (!interiorDesignData) return <span>loading</span>;
+  if (!interiorDesignData) return <Loader />;
   return (
     <Wrapper>
       <SeparatorWrapper>

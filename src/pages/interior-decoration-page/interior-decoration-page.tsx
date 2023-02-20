@@ -22,6 +22,7 @@ import { useHistory } from "react-router-dom";
 import { Text } from "../../components/text";
 import React from "react";
 import { Separator } from "../../components/separator";
+import { Loader } from "../../components/loader";
 
 export const InteriorDecorationPage = () => {
   const screenType = useScreenType();
@@ -45,7 +46,7 @@ export const InteriorDecorationPage = () => {
 
   const { interiorsDecorationPage } = useInterior();
 
-  if (!interiorsDecorationPage) return <span>loading</span>;
+  if (!interiorsDecorationPage) return <Loader />;
 
   return (
     <Wrapper>

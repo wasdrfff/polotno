@@ -9,6 +9,7 @@ import {
 import { useInteriorsPage } from "./use-interiors-page";
 import { Separator } from "../../components/separator";
 import { TCardExtended } from "./types";
+import { Loader } from "../../components/loader";
 
 export const InteriorsPage = () => {
   const screenType = useScreenType();
@@ -19,7 +20,7 @@ export const InteriorsPage = () => {
 
   const { interiorsData } = useInteriorsPage();
 
-  if (!interiorsData) return <span>Loading</span>;
+  if (!interiorsData) return <Loader />;
 
   const columns = interiorsData.reduce<TCardExtended[][]>(
     (columns, interior, index) => {

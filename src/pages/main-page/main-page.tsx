@@ -17,6 +17,7 @@ import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { Text } from "../../components/text";
 import { Separator } from "../../components/separator";
 import { useMainPage } from "./use-main-page";
+import { Loader } from "../../components/loader";
 
 export const MainPage = () => {
   const screenType = useScreenType();
@@ -25,7 +26,7 @@ export const MainPage = () => {
 
   const { mainPageData } = useMainPage();
 
-  if (!mainPageData) return <span>loading</span>;
+  if (!mainPageData) return <Loader />;
 
   return (
     <Wrapper>

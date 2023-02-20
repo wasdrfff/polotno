@@ -17,6 +17,7 @@ import {
 } from "./decoration-page-styled";
 import { Separator } from "../../components/separator";
 import { Text } from "../../components/text";
+import { Loader } from "../../components/loader";
 
 export const DecorationPage = () => {
   const { decorationData } = useDecoration();
@@ -29,7 +30,7 @@ export const DecorationPage = () => {
     history.push("/interiors");
   }
 
-  if (!decorationData) return <span>loading</span>;
+  if (!decorationData) return <Loader />;
 
   const [firstElement, ...otherElements] = decorationData.cards;
 

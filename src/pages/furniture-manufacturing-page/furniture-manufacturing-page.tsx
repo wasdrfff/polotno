@@ -9,6 +9,7 @@ import {
   ManufacturingWrapper,
   Title,
 } from "./furniture-manufacturing-styled";
+import { Loader } from "../../components/loader";
 
 export const ManufacturingPage = () => {
   const screenType = useScreenType();
@@ -17,7 +18,7 @@ export const ManufacturingPage = () => {
 
   const { furniturePageData } = useFurnitureManufacturing();
 
-  if (!furniturePageData) return <span>loading</span>;
+  if (!furniturePageData) return <Loader />;
 
   return (
     <div>

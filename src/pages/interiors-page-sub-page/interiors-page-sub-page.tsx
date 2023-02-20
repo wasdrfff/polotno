@@ -9,7 +9,6 @@ import {
   BackWrapper,
   TitleWrapper,
   SeparatorWrapper,
-  Loading,
   BlockWrapper,
   Line,
 } from "./interiors-page-sub-page-styled";
@@ -19,6 +18,7 @@ import { Icon } from "../../components/icon";
 import { Separator } from "../../components/separator";
 import { BlueSquare } from "../../components/square";
 import { ScreenType, useScreenType } from "../../utils/screen-mode";
+import { Loader } from "../../components/loader";
 
 export const InteriorsSubPage = () => {
   const { subPageApiResult } = useSubPage();
@@ -28,7 +28,7 @@ export const InteriorsSubPage = () => {
 
   const isDesktop = screenType === ScreenType.Desktop;
 
-  if (!subPageApiResult) return <Loading />;
+  if (!subPageApiResult) return <Loader />;
   const items = subPageApiResult.slides.map((slide) => ({
     id: slide.id,
     image: {

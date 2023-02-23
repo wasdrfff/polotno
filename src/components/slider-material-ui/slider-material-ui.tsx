@@ -57,7 +57,7 @@ export const SliderMaterialUi = ({ items, height }: TProps) => {
         {items.map((item) => {
           return (
             <ImageWrapper key={item.id} onClick={openModalSlider}>
-              <Image src={item.image.url} />
+              <Image src={item.url} />
             </ImageWrapper>
           );
         })}
@@ -80,7 +80,7 @@ export const SliderMaterialUi = ({ items, height }: TProps) => {
             {items.map((item) => {
               return (
                 <ModalSlider key={item.id}>
-                  <ModalImage src={item.image.url} />
+                  <ModalImage src={item.url} />
                 </ModalSlider>
               );
             })}

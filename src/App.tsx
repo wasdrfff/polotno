@@ -7,8 +7,6 @@ import { DecorationPage } from "./pages/decoration-page";
 import { QuestionnairePage } from "./pages/questionnaire-page";
 import { InteriorDecorationPage } from "./pages/interior-decoration-page";
 import { InteriorsPage } from "./pages/interiors-page";
-import { PlanPage } from "./pages/interiors-page/pages-interiors/plan";
-import { BlueprintPage } from "./pages/interiors-page/pages-interiors/blueprint";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { BreadCrumbs } from "./components/bread-crumbs";
@@ -53,13 +51,6 @@ export const App = () => (
 
         <Route path="/interiors" exact>
           <InteriorsPage />
-        </Route>
-
-        <Route path="/interiors/plan-:id">
-          <PlanPage />
-        </Route>
-        <Route path="/interiors/blueprint-:id">
-          <BlueprintPage />
         </Route>
         <Route path="/">
           <MainPage />

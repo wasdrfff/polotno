@@ -29,13 +29,7 @@ export const ManufacturingPage = () => {
             размерам
           </Title>
           <SliderMaterialUi
-            items={furniturePageData.slides.map((slide) => ({
-              id: slide.id,
-              image: {
-                url: slide.url,
-                name: slide.name,
-              },
-            }))}
+            items={furniturePageData.slides}
             height={isDesktop ? 650 : 235}
           />
         </Block>

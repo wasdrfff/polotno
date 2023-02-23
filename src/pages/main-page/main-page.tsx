@@ -74,13 +74,7 @@ export const MainPage = () => {
         <SliderWrapper>
           <BlueSquare position="left" isHidden={!isDesktop} />
           <SliderMaterialUi
-            items={mainPageData.slides.map((slide) => ({
-              id: slide.id,
-              image: {
-                url: slide.url,
-                name: slide.name,
-              },
-            }))}
+            items={mainPageData.slides}
             height={isDesktop ? 650 : 235}
           />
         </SliderWrapper>

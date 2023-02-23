@@ -29,14 +29,6 @@ export const InteriorsSubPage = () => {
   const isDesktop = screenType === ScreenType.Desktop;
 
   if (!subPageApiResult) return <Loader />;
-  const items = subPageApiResult.slides.map((slide) => ({
-    id: slide.id,
-    image: {
-      url: slide.url,
-      name: slide.name,
-      description: slide.name,
-    },
-  }));
 
   return (
     <Wrapper>
@@ -55,7 +47,10 @@ export const InteriorsSubPage = () => {
         </Text>
       </TitleWrapper>
       <SliderWrapper>
-        <SliderMaterialUi items={items} height={isDesktop ? 585 : 235} />
+        <SliderMaterialUi
+          items={subPageApiResult.slides}
+          height={isDesktop ? 585 : 235}
+        />
         <BlueSquare position="right" isHidden={isDesktop ? true : false} />
       </SliderWrapper>
       <BlockWrapper>
@@ -65,8 +60,6 @@ export const InteriorsSubPage = () => {
             Планировочное решение
           </Text>
           <Content>
-            {/* <Image src={subPageApiResult.page.planImageUrl} />
-            <Image src={subPageApiResult.page.planImageUrl} /> */}
             {subPageApiResult.blueprints.map((blueprint) => (
               <Image
                 key={blueprint.id}
@@ -82,8 +75,6 @@ export const InteriorsSubPage = () => {
             План до начала работ
           </Text>
           <Content>
-            {/* <Image src={subPageApiResult.page.blueprintImageUrl} />
-            <Image src={subPageApiResult.page.blueprintImageUrl} /> */}
             {subPageApiResult.plans.map((plan) => (
               <Image key={plan.id} src={plan.url} alt={plan.name} />
             ))}

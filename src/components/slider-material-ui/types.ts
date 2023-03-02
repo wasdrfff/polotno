@@ -1,7 +1,5 @@
 export type TItem = {
   id: number;
-  image: {
-    url: string;
-    name: string;
-  };
+  url: string;
+  name: string;
 };

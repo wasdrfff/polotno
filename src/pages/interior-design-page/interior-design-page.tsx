@@ -50,13 +50,7 @@ export const InteriorDesignPage = () => {
 
       <SliderContainer>
         <SliderMaterialUi
-          items={interiorDesignData.slides.map((slide) => ({
-            id: slide.id,
-            image: {
-              name: slide.name,
-              url: slide.url,
-            },
-          }))}
+          items={interiorDesignData.slides}
           height={isMobile ? 235 : 585}
         />
         <BlueSquare position="right" isHidden={!isDesktop} />

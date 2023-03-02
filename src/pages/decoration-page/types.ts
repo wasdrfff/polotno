@@ -5,9 +5,12 @@ export type TPage = {
 type TCard = {
   id: number;
   title: string;
-  image: {
-    id: number;
-    name: string;
-    url: string;
-  };
+  image: TImage;
+  slides: TImage[];
+};
+
+type TImage = {
+  id: number;
+  name: string;
+  url: string;
 };

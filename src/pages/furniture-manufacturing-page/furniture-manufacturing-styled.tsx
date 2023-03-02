@@ -1,47 +1,92 @@
-import styled from "styled-components";
-import { theme } from "../../variables";
+import styled, { css } from "styled-components";
+import square from "../main-page/assets/images/Square.svg";
 
 export const ManufacturingWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 50px 12px;
+  padding: 50px 0;
   gap: 24px;
 `;
 
 export const Block = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: center;
-  max-width: 1110px;
   width: 100%;
+  align-items: center;
+  gap: 50px;
 `;
 
-export const Title = styled.p`
-  font-weight: 400;
-  font-size: 25px;
-`;
-
-export const DrawingsWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  @media screen and (max-width: ${theme.sizes.tablet}) {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+export const SeparatorWrapper = styled.div`
+  width: 100%;
+  @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
+    display: none;
   }
 `;
 
-export const Drawing = styled.div`
-  padding: 15px;
-  border: 2px solid ${theme.colors.mainColor};
+export const DrawingsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
 `;
 
-export const ImageDrawing = styled.img`
-  max-width: 510px;
+export const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;
+
+export const TextWrapper = styled.div`
+  padding-left: 161px;
+  @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
+    padding-left: 20px;
+  }
+`;
+
+export const SliderWrapper = styled.div`
+  position: relative;
+  max-width: 935px;
   width: 100%;
-  height: 310px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  @media screen and (max-width: ${(props) => props.theme.sizes.tablet}) {
+    width: 100%;
+    padding: 0;
+  }
+`;
+
+export const DrawingsBlock = styled.div`
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const BlueSquare = styled.img.attrs(() => ({
+  src: square,
+  alt: "square",
+}))<{ position: "left" | "right"; isHidden?: boolean }>`
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+
+  ${(p) => {
+    switch (p.position) {
+      case "left":
+        return css`
+          left: 0;
+        `;
+      case "right":
+        return css`
+          right: 0;
+        `;
+    }
+  }};
+
+  display: ${(p) => (p.isHidden ? "none" : "block")};
+
+  @media screen and (max-width: ${(props) => props.theme.sizes.desktop}) {
+    width: 50px;
+  }
 `;

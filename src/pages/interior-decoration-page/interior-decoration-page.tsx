@@ -55,13 +55,7 @@ export const InteriorDecorationPage = () => {
       </SeparatorWrapper>
       <SliderWrapper>
         <SliderMaterialUi
-          items={interiorsDecorationPage.slides.map((slide) => ({
-            id: slide.id,
-            image: {
-              url: slide.url,
-              name: slide.name,
-            },
-          }))}
+          items={interiorsDecorationPage.slides}
           height={isDesktop ? 585 : 235}
         />
         <BlueSquare position="right" isHidden={!isDesktop} />

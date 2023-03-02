@@ -12,6 +12,9 @@ export const Image = styled.img`
 
 export const LinkWrapper = styled(Link)`
   text-decoration: none;
+  :active {
+    box-shadow: 100px 100px 100px 100px rgba(34, 60, 80, 0.12) inset;
+  }
 `;
 
 export const CardWrapper = styled.div`

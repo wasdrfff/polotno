@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { MobileMenu } from "../mobile-menu";
 import {
   Content,
+  CustomLink,
   HeaderWrapper,
   ItemsSelect,
   ItemsSelectContent,
@@ -20,7 +21,7 @@ export const Header = () => {
     <HeaderWrapper>
       <Content>
         <Link to="/">
-          <Icon name="logo" size={isDesktop ? 90 : 50} color="white" />
+          <Icon name="logo" size={isDesktop ? 60 : 45} color="white" />
         </Link>
         <Menu>
           <ItemsSelect>
@@ -29,43 +30,56 @@ export const Header = () => {
             </Text>
             <Icon name="bottomArrowSmall" size={10} />
             <ItemsSelectContent className="items-select-content">
-              <Link to="/services/interior-design">
-                <Text variant={"sMob"} textColor="textColor">
+              <Text variant={"mWeb"} textColor="textColor">
+                <CustomLink
+                  activeClassName="selected"
+                  to="/services/interior-design"
+                >
                   Дизайн интерьеров
-                </Text>
-              </Link>
-              <Link to="/services/interior-decoration">
-                <Text variant={"sMob"} textColor="textColor">
+                </CustomLink>
+              </Text>
+
+              <Text variant={"mWeb"} textColor="textColor">
+                <CustomLink
+                  activeClassName="selected"
+                  to="/services/interior-decoration"
+                >
                   Декорирование интерьеров
-                </Text>
-              </Link>
-              <Link to="/services/furniture-manufacturing">
-                <Text variant={"sMob"} textColor="textColor">
+                </CustomLink>
+              </Text>
+
+              <Text variant={"mWeb"} textColor="textColor">
+                <CustomLink
+                  activeClassName="selected"
+                  to="/services/furniture-manufacturing"
+                >
                   Изготовление мебели на заказ
-                </Text>
-              </Link>
+                </CustomLink>
+              </Text>
             </ItemsSelectContent>
           </ItemsSelect>
-          <Link to="/interiors">
-            <Text variant={"mWeb"} textColor="textColor">
+
+          <Text variant={"mWeb"} textColor="textColor">
+            <CustomLink activeClassName="selected" to="/interiors">
               Интерьеры
-            </Text>
-          </Link>
-          <Link to="/decoration">
-            <Text variant={"mWeb"} textColor="textColor">
+            </CustomLink>
+          </Text>
+
+          <Text variant={"mWeb"} textColor="textColor">
+            <CustomLink activeClassName="selected" to="/decoration">
               Декорирование
-            </Text>
-          </Link>
-          <Link to="/contact">
-            <Text variant={"mWeb"} textColor="textColor">
+            </CustomLink>
+          </Text>
+          <Text variant={"mWeb"} textColor="textColor">
+            <CustomLink activeClassName="selected" to="/contact">
               Контакты
-            </Text>
-          </Link>
-          <Link to="/questionnaire">
-            <Text variant={"mWeb"} textColor="textColor">
+            </CustomLink>
+          </Text>
+          <Text variant={"mWeb"} textColor="textColor">
+            <CustomLink activeClassName="selected" to="/questionnaire">
               Заполнить анкету
-            </Text>
-          </Link>
+            </CustomLink>
+          </Text>
         </Menu>
       </Content>
       <MobileMenu />

@@ -22,10 +22,9 @@
     position: absolute;
     right: 0px;
     top: 0px;
-    height: 440px;
     width: 265px;
+    padding: 40px 0;
     background-color: white;
-    font-size: 15px;
   }
   &__menu-image {
     padding: 0 30px 40px 0;
@@ -40,6 +39,7 @@
   &__content {
     display: flex;
     padding-left: 20px;
+
     flex-direction: column;
     gap: 30px;
   }
@@ -55,11 +55,8 @@
     flex-direction: column;
   }
   &__dropdown-link {
-    font-size: 14px;
-    text-transform: lowercase;
     text-decoration: none;
-    color: $dark;
-    margin-top: 15px;
+    color: #323232;
     &:hover {
       color: $blue;
     }

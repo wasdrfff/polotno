@@ -19,7 +19,6 @@ export const SeparatorWrapper = styled.div`
   }
 `;
 
-
 export const Container = styled.div`
   display: flex;
   gap: 30px;

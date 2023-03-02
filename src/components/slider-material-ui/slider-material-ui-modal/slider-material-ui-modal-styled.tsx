@@ -1,19 +1,10 @@
+import { Text } from "../../../components/text";
 import styled from "styled-components";
 
-export const Image = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  cursor: pointer;
-`;
-
-export const ImageWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-`;
 export const ModalWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.6);
-
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -34,8 +25,26 @@ export const ModalImage = styled.img`
 export const ModalHeader = styled.div`
   display: flex;
   justify-content: flex-end;
+  padding-top: 20px;
 `;
 export const IconWrapper = styled.div`
   cursor: pointer;
-  padding: 10px;
+  margin-right: 25px;
+  padding: 8px;
+  background-color: #494949;
+  border-radius: 50%;
+  :active {
+    opacity: 0.6;
+  }
+`;
+export const TextWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+`;
+
+export const CustomText = styled(Text)`
+  background-color: #494949;
+  padding: 8px;
+  border-radius: 8px;
 `;

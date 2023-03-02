@@ -9,7 +9,7 @@ export const useDecoration = () => {
     const params = {
       populate: {
         cards: {
-          populate: ["image"],
+          populate: ["image", "slides"],
         },
       },
     };
@@ -18,6 +18,7 @@ export const useDecoration = () => {
       setDecorationData(resp.attributes);
     });
   }, []);
+
   return {
     decorationData,
   };

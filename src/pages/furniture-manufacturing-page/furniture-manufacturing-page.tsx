@@ -3,13 +3,19 @@ import { SliderMaterialUi } from "../../components/slider-material-ui";
 import { useFurnitureManufacturing } from "./use-furniture-manufacturing";
 import {
   Block,
-  Drawing,
+  BlueSquare,
+  DrawingsBlock,
   DrawingsWrapper,
-  ImageDrawing,
   ManufacturingWrapper,
-  Title,
+  SeparatorWrapper,
+  SliderWrapper,
+  TextWrapper,
+  TitleWrapper,
 } from "./furniture-manufacturing-styled";
 import { Loader } from "../../components/loader";
+import { DrawingCard } from "../../components/drawing-card";
+import { Text } from "../../components/text";
+import { Separator } from "../../components/separator";
 
 export const ManufacturingPage = () => {
   const screenType = useScreenType();
@@ -19,32 +25,44 @@ export const ManufacturingPage = () => {
   const { furniturePageData } = useFurnitureManufacturing();
 
   if (!furniturePageData) return <Loader />;
-
   return (
     <div>
       <ManufacturingWrapper>
+        <SeparatorWrapper>
+          <Separator />
+        </SeparatorWrapper>
         <Block>
-          <Title>
-            Проектирование и изготовление корпусной мебели по индивидуальным
-            размерам
-          </Title>
-          <SliderMaterialUi
-            items={furniturePageData.slides}
-            height={isDesktop ? 650 : 235}
-          />
+          <TitleWrapper>
+            <Text variant={isDesktop ? "h2Web" : "mMob"} textColor="textColor">
+              Проектирование и изготовление корпусной мебели по индивидуальным
+              размерам
+            </Text>
+          </TitleWrapper>
+          <SliderWrapper>
+            <SliderMaterialUi
+              items={furniturePageData.slides}
+              height={isDesktop ? 585 : 235}
+            />
+            <BlueSquare position="right" isHidden={!isDesktop} />
+          </SliderWrapper>
         </Block>
-        <Block>
-          <Title>Чертежи</Title>
+        <DrawingsBlock>
+          <TextWrapper>
+            <Text variant={isDesktop ? "h2Web" : "mMob"} textColor="textColor">
+              Чертежи
+            </Text>
+          </TextWrapper>
           <DrawingsWrapper>
-            {furniturePageData.drawings.map((drawing) => {
-              return (
-                <Drawing key={drawing.id}>
-                  <ImageDrawing src={drawing.url} alt={drawing.name} />
-                </Drawing>
-              );
-            })}
+            {furniturePageData.drawingCards.map((drawingCard) => (
+              <DrawingCard
+                key={drawingCard.id}
+                imageUrl={drawingCard.drawing.url}
+                name={drawingCard.drawing.name}
+                details={drawingCard.details}
+              />
+            ))}
           </DrawingsWrapper>
-        </Block>
+        </DrawingsBlock>
       </ManufacturingWrapper>
     </div>
   );

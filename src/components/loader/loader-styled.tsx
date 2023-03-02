@@ -31,7 +31,7 @@ export const Loading = styled.div`
   }
 `;
 
-export const LoadingContent = styled.div`
+export const LoadingSection = styled.div`
   box-sizing: border-box;
   display: block;
   position: absolute;

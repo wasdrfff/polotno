@@ -23,7 +23,7 @@ export const Footer = () => {
           <CustomLink href="instagram.com">
             <Icon name="instagram" size={isDesktop ? 30 : 25} />
           </CustomLink>
-          <CustomLink href="web.telegram.org">
+          <CustomLink href="https://telegram.me/wasdrfff">
             <Icon name="message" size={isDesktop ? 30 : 25} />
           </CustomLink>
         </Social>

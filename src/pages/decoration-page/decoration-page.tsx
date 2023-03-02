@@ -21,6 +21,7 @@ import { Loader } from "../../components/loader";
 
 export const DecorationPage = () => {
   const { decorationData } = useDecoration();
+
   const screenType = useScreenType();
 
   const isDesktop = screenType === ScreenType.Desktop;
@@ -50,14 +51,21 @@ export const DecorationPage = () => {
             <DecorationCard
               imageUrl={firstElement.image.url}
               title={firstElement.title}
+              items={firstElement.slides}
+              name={firstElement.image.name}
               isLarge
             />
           </CardWrapper>
           <Container>
-            {otherElements.map(({ image, title }) => {
+            {otherElements.map(({ image, title, slides }) => {
               return (
                 <CardsColumn key={image.id}>
-                  <DecorationCard imageUrl={image.url} title={title} />
+                  <DecorationCard
+                    name={image.name}
+                    imageUrl={image.url}
+                    title={title}
+                    items={slides}
+                  />
                 </CardsColumn>
               );
             })}

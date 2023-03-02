@@ -6,7 +6,17 @@ export const useFurnitureManufacturing = () => {
   const [furniturePageData, setFurniturePageData] = useState<TPage>();
 
   useEffect(() => {
-    api<TPage>("/api/furniture-page").then((resp) => {
+    const params = {
+      populate: {
+        drawingCards: {
+          populate: ["drawing", "details"],
+        },
+        slides: {
+          populate: ["slide"],
+        },
+      },
+    };
+    api<TPage>("/api/furniture-page", params).then((resp) => {
       setFurniturePageData(resp.attributes);
     });
   }, []);

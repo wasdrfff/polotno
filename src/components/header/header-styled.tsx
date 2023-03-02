@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
@@ -10,6 +11,7 @@ export const HeaderWrapper = styled.div`
   background-color: white;
   z-index: 1000;
   padding-right: 30px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
 `;
 
 export const Content = styled.div`
@@ -35,7 +37,8 @@ export const Menu = styled.div`
 `;
 
 export const ItemsSelect = styled.div`
-  padding: 8px 0;
+  position: relative;
+  padding: 12px 0;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -46,11 +49,26 @@ export const ItemsSelect = styled.div`
 
 export const ItemsSelectContent = styled.div`
   position: absolute;
-  top: 96px;
-  width: 160px;
+  top: 40px;
+  left: -21px;
+  width: 360px;
   display: none;
   flex-direction: column;
-  padding: 15px 0;
+  padding: 35px 20px;
   z-index: 1000;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 5%);
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   gap: 10px;
+`;
+
+export const CustomLink = styled(NavLink)`
+  color: ${(props) => props.theme.colors.textColor};
+  :hover {
+    color: ${(props) => props.theme.colors.activeColor};
+  }
+  &.selected {
+    color: ${(props) => props.theme.colors.activeColor};
+  }
 `;
